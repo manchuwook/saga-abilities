@@ -1,0 +1,10 @@
+{
+  "sonarlint.workDir": ".sonarlint/work",
+  "sonarlint.analysisProperties": {
+    "sonar.typescript.node": "node",
+    "sonar.javascript.node.maxspace": "8192",
+    "sonar.typescript.exclusions": "**/node_modules/**,**/dist/**,**/build/**,**/coverage/**",
+    "sonar.javascript.exclusions": "**/node_modules/**,**/dist/**,**/build/**,**/coverage/**",
+    "sonar.exclusions": "**/node_modules/**,**/dist/**,**/build/**,**/coverage/**,**/*.test.*,**/*.spec.*,**/*.d.ts"
+  }
+}

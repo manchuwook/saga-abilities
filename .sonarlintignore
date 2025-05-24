@@ -1,0 +1,30 @@
+# Node modules
+**/node_modules/**
+
+# Build output
+**/dist/**
+**/build/**
+
+# Test files
+**/*.test.js
+**/*.test.ts
+**/*.test.jsx
+**/*.test.tsx
+**/*.spec.js
+**/*.spec.ts
+**/*.spec.jsx
+**/*.spec.tsx
+
+# Code coverage output
+**/coverage/**
+
+# CodeQL directories
+**/codeql-database/**
+**/codeql-custom-queries-javascript/**
+
+# Misc
+**/.git/**
+**/.github/**
+**/.vscode/**
+**/.sonarlint/**
+**/pnpm-lock.yaml

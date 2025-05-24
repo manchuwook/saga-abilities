@@ -1,0 +1,3098 @@
+[
+    {
+        "abilityName": "Advance!",
+        "abilityCp": 8,
+        "abilityDiscipline": "Leadership",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (M+10T)",
+        "abilityDescription": "Boost to a Motivate Action.  In addition to the normal effects of a Motivate Action, the recipient reduces their current Initiative by a number of Ticks equal to your Effect.  This cannot make their Initiative less than your current Initiative.  If it were to do so, it instead makes their Initiative equal to yours."
+    },
+    {
+        "abilityName": "Aerial Flip",
+        "abilityCp": 16,
+        "abilityDiscipline": "Tumbling",
+        "abilityLevel": "Advanced",
+        "abilityType": "Reaction (G+25T)",
+        "abilityDescription": "Aerial Flip can be bid as a Reaction to an Attack Made while moving declared against you that ends at Measure 0.  Make a Agility (Acrobatics): the Size of the attacker.  The TN increases by +2 if you are Burdened, and +4 if you are Encumbered.  You may move yourself forward 1 yd per DoS and assign your Facing, having tumbled over the head of your attacker, landing behind them."
+    },
+    {
+        "abilityName": "Aeromancy I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Elementalism",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Aeromancy spell or ritual you treat the Complexity as 1 less (to a minimum of 0).   Farbolt: Expend a Charge Token as a Surge to increase the listed range of a Short Range (15yd) Aeromancy Spell to Long (30yds), or a Long Range Aeromancy Spell to Far (60yds).  If the spell has a Range Increment, increase it by +5.",
+        "complexityAeromancy": -1
+    },
+    {
+        "abilityName": "Aeromancy II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Elementalism",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Aeromancy spell or ritual you treat the Complexity as 1 less (to a minimum of 0).   Arc: Expend a 3 Charge Tokens as a Surge when casting an Aeromancy Spell that deals damage.  Damage from this spell is considered Pervasive (9).",
+        "complexityAeromancy": -1
+    },
+    {
+        "abilityName": "Alchemy I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sorcery",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Alchemy spell or ritual you treat the Complexity as 1 less (to a minimum of 0).   Self-Analysis: Select One Beacon at the start of the Chapter that is at the highest level, choosing your preference if there are multiple beacons that qualify.  Any Flare gained in this Beacon during this Chapter will not cause a Beacon Shift, and all overflow will move to your lowest rated Beacon instead.  If, for example, you select Rage, and it is at a 6 Beacon, any Flare you gain over 5 will instead fill your lowest Beacon Flare instead.",
+        "complexityAlchemy": -1
+    },
+    {
+        "abilityName": "Alchemy II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sorcery",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Alchemy spell or ritual you treat the Complexity as 1 less (to a minimum of 0).   Self-Correction: At the end of a Chapter you may force a Beacon Shift on yourself, selecting the Beacon that is lowest, and raising it by one, and lowering a Beacon that is not Polar to it.  For example, if you elect to raise the Rage Beacon (Visceral), you could not lower the Vengeance Beacon, its Polar Beacon on the Ethical side.  You would be limited to lowering another Ethical Beacon (Desire, Shame, Anxiety, or Contempt).  All Flare in both Beacons selected is removed.",
+        "complexityAlchemy": -1
+    },
+    {
+        "abilityName": "Alendra's Emanation",
+        "abilityCp": 8,
+        "abilityDiscipline": "Inner_Pillar",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (Special)",
+        "abilityDescription": "You may expend a stored spell from your Spell Matrix as a boost to casting another spell from your Matrix.  Each Flare of the expended spell grants a +1d bonus to cast the boosted spell."
+    },
+    {
+        "abilityName": "Animist Adept",
+        "abilityCp": 16,
+        "abilityDiscipline": "Animism",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Animism spell you treat the Complexity of that spell as 1 less (to a minimum of 0).  Each Cycle Maintenance in a Combat Scene, all Adversary Class Animants under your control gain Guard, and you gain +2 Encounter Pool to use for any Extras and Actors under your command.",
+        "complexityPsychomancy": -1,
+        "complexityNecromancy": -1,
+        "complexityPhytomancy": -1,
+        "complexityZoomancy": -1
+    },
+    {
+        "abilityName": "Apsychomancy I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Animism",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Apsychomancy spell you treat the Complexity of that spell as 1 less (to a minimum of 0).  \u000a\u000aMechanical Efficiency: Gain Momentum anytime you successfully cast an Apsychomancy Spell for which you treat the Complexity as 0.",
+        "complexityPsychomancy": -1
+    },
+    {
+        "abilityName": "Apsychomancy II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Animism",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Apsychomancy spell you treat the Complexity of that spell as 1 less (to a minimum of 0).  Gain +3d to Counterspell any Apsychomancy Spell.  \u000a\u000aAnalytical Understanding: Gain +2d to all Cunning (Plan) Action Checks.",
+        "complexityPsychomancy": -1
+    },
+    {
+        "abilityName": "Arcane Reinforcement",
+        "abilityCp": 8,
+        "abilityDiscipline": "Inner_Pillar",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Spells cast from your Spell Matrix are especially complex.  Any attempt to Counterspell any spell cast from your Spell Matrix, or your Rod of Channeling, treat your spell as if it were +3 Complexity.  If this Counterspell targets you, your defenses are considered +2 against the Counterspelling Attempt.  If the attempt to Counterspell calls for you to make an Action Check, you are +4d to this Action Check."
+    },
+    {
+        "abilityName": "Arcanum I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Magus",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When performing any Arcanum Ritual (Circles and Wards) you treat the Complexity of that ritual as 1 less (to a minimum of 0).  Intertwined Design: When creating any Circle or Ward, you may create two Circles or Two Wards, woven into the design, for the same amount of time.  Quintessence Investments to sustain these effects must be paid for both effects.",
+        "complexityCircles": -1,
+        "complexityWards": -1
+    },
+    {
+        "abilityName": "Arcanum II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Magus",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When performing any Arcanum Ritual (Circles and Wards) you treat the Complexity of that ritual as 1 less (to a minimum of 0).  Call Circle: When crafting a Circle, you may invest a TSA to the circle.  As a Surge (M), you may summon the magics of any prepared Circle you have created and call it to your immediate person.  The circle flashes on the floor around you as brilliant yellow-orange runes and script.  Once summoned to you, the circle is affixed to the summoned location, and is a size equal to the size of the original drawn circle, and the TSA is removed.  The magic of the original circle ends, but the summoned circle lasts for the remainder of the Scene, or 1 Segment, then ends, regardless of the original duration.  Summoned circles cannot be moved.",
+        "complexityCircles": -1,
+        "complexityWards": -1
+    },
+    {
+        "abilityName": "Argus",
+        "abilityCp": 16,
+        "abilityDiscipline": "Sentinel",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to an attack action with a range increment made in the first range increment.  Ignore up to 3 points of Cover or Concealment."
+    },
+    {
+        "abilityName": "Arm Wrap",
+        "abilityCp": 8,
+        "abilityDiscipline": "Beast_Tamer",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Ranged Grapple Maneuver (2 Effect)",
+        "abilityDescription": "Manuever for a Ranged Grapple made with a Flexible Weapon. The target cannot use one of their arms or anything held in that arm (which arm is effected is chosen by you) as long as you maintain Control."
+    },
+    {
+        "abilityName": "Around the World",
+        "abilityCp": 16,
+        "abilityDiscipline": "Flexible_Weapons",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (M+15T)",
+        "abilityDescription": "As a boost to an Arc, or Heavy Arc attack with a Flexible Weapon, you may make a single attack action and compare against all targets Threatened by you.  This attack is considered Massive."
+    },
+    {
+        "abilityName": "Assassin Strike",
+        "abilityCp": 8,
+        "abilityDiscipline": "Opportunist",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Your Capitalize Boosts grant an additional Accurate (+1) per TAG expended."
+    },
+    {
+        "abilityName": "Assense the Veil",
+        "abilityCp": 8,
+        "abilityDiscipline": "Magus",
+        "abilityLevel": "Intermediate",
+        "abilityType": "1 Prep Action",
+        "abilityDescription": "You are able to determine the thickness of the Veil in your current location.  Make a Axiomatic Magic (Ritual): 3 Action Check.  You may detect any change in the veil within 100 yds per DoS on the Action Check.  The Veil is read as one of the following categories:  Weak (Veil Rating -5 or Lower),  Thin (Veil Rating -2 to -4) ,  Normal (Veil Rating -1 to 1), Thick (Veil Rating 2 to 4), Strong (Veil Rating 5 or Higher).  If the veil shifts anywhere in your detection range, you know what the shift is, its direction, and rough approximation, within 20 yds, of how far away it is."
+    },
+    {
+        "abilityName": "Aura of Deflection",
+        "abilityCp": 16,
+        "abilityDiscipline": "Lictor",
+        "abilityLevel": "Advanced",
+        "abilityType": "Complex (50T+1RP)",
+        "abilityDescription": "Make a Bonds Magic (Ego): 3 Action Check.  Gain Resistance against H (Fire, Cold), and E (Electrical) equal to your Magic Power.  This lasts for 1 Cycle per DoS."
+    },
+    {
+        "abilityName": "Aura of Purity",
+        "abilityCp": 16,
+        "abilityDiscipline": "Lictor",
+        "abilityLevel": "Advanced",
+        "abilityType": "Complex (50T+1RP)",
+        "abilityDescription": "Make a Bonds Magic (Ego): 3 Action Check.  Gain Resistance against D (Etheric, Psychic), and X (Necrotic) equal to your Magic Power.  This lasts for 1 Cycle per DoS."
+    },
+    {
+        "abilityName": "Back Stance",
+        "abilityCp": 4,
+        "abilityDiscipline": "Melee_Form",
+        "abilityLevel": "Basic",
+        "abilityType": "Stance",
+        "abilityDescription": "Your main attacking hand is kept behind you.  All Cut, Slice and Strike attacks are Accurate (+2), all other attacks are Accurate (-2)."
+    },
+    {
+        "abilityName": "Bestial Howl",
+        "abilityCp": 8,
+        "abilityDiscipline": "Bearskin_Warrior",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Complex (20T+1RP)",
+        "abilityDescription": "You unleash a guttural howl.  This is a Burst (10), centered on the Bearskin Warrior that effects all allies that can hear the Howl, and who have the Bearskin Warrior in their facing.  All allies gain 2 Morale Pool if their Grit is 3 or less, this bonus decreases to 1 Morale for any ally with Grit of 4 or higher."
+    },
+    {
+        "abilityName": "Beat Aside",
+        "abilityCp": 8,
+        "abilityDiscipline": "Balanced_Sword",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (M)",
+        "abilityDescription": "As a Reaction to an opponent\u2019s successful Parry or Block made against one of your Cut or Strike attacks, expend Momentum to apply a C-TAG on that opponent, and prevent them from taking that reaction against new attacks until the end of the next Full Cycle."
+    },
+    {
+        "abilityName": "Beat Aside",
+        "abilityCp": 4,
+        "abilityDiscipline": "Weighted_Weapons",
+        "abilityLevel": "Basic",
+        "abilityType": "Reaction (M)",
+        "abilityDescription": "As a Reaction to an opponent\u2019s successful Parry or Block made against one of your Cut or Strike attacks, expend Momentum to apply a C-TAG on that opponent, and prevent them from taking that reaction against new attacks until the end of the next Full Cycle."
+    },
+    {
+        "abilityName": "Behind You",
+        "abilityCp": 8,
+        "abilityDiscipline": "Trickery",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Maneuver (3 Effect)",
+        "abilityDescription": "Logic Effect: You convince them that they need to turn around.  This is a Maneuver to your Absurd Distraction Action.  For 3 Effect, you may force the target to shift their Facing by 1 in a direction of your choosing."
+    },
+    {
+        "abilityName": "Bell Ringer",
+        "abilityCp": 4,
+        "abilityDiscipline": "Balanced_Sword",
+        "abilityLevel": "Basic",
+        "abilityType": "Maneuver (Effect=BOD)",
+        "abilityDescription": "You may use the Bell Ringer Maneuver with any Melee Attack that deals type I (Impact) Damage. Spend Effect equal to the target\u2019s Body Defense to daze your target."
+    },
+    {
+        "abilityName": "Bell Ringer",
+        "abilityCp": 4,
+        "abilityDiscipline": "Light_Blades",
+        "abilityLevel": "Basic",
+        "abilityType": "Maneuver (Effect=BOD)",
+        "abilityDescription": "You may use the Bell Ringer Maneuver with any Melee Attack that deals type I (Impact) Damage. Spend Effect equal to the target\u2019s Body Defense to daze your target."
+    },
+    {
+        "abilityName": "Bell Ringer",
+        "abilityCp": 4,
+        "abilityDiscipline": "Pugilism",
+        "abilityLevel": "Basic",
+        "abilityType": "Maneuver (Effect=BOD)",
+        "abilityDescription": "You may use the Bell Ringer Maneuver with any Melee Attack that deals type I (Impact) Damage. Spend Effect equal to the target\u2019s Body Defense to daze your target."
+    },
+    {
+        "abilityName": "Bell Ringer",
+        "abilityCp": 4,
+        "abilityDiscipline": "Staves",
+        "abilityLevel": "Basic",
+        "abilityType": "Maneuver (Effect=BOD)",
+        "abilityDescription": "You may use the Bell Ringer Maneuver with any Melee Attack that deals type I (Impact) Damage. Spend Effect equal to the target\u2019s Body Defense to daze your target."
+    },
+    {
+        "abilityName": "Bell Ringer",
+        "abilityCp": 4,
+        "abilityDiscipline": "Unbalanced_Sword",
+        "abilityLevel": "Basic",
+        "abilityType": "Maneuver (Effect=BOD)",
+        "abilityDescription": "You may use the Bell Ringer Maneuver with any Melee Attack that deals type I (Impact) Damage. Spend Effect equal to the target\u2019s Body Defense to daze your target."
+    },
+    {
+        "abilityName": "Bell Ringer",
+        "abilityCp": 4,
+        "abilityDiscipline": "Weighted_Weapons",
+        "abilityLevel": "Basic",
+        "abilityType": "Maneuver (Effect=BOD)",
+        "abilityDescription": "You may use the Bell Ringer Maneuver with any Melee Attack that deals type I (Impact) Damage. Spend Effect equal to the target\u2019s Body Defense to daze your target."
+    },
+    {
+        "abilityName": "Bewilder the Mage",
+        "abilityCp": 8,
+        "abilityDiscipline": "Lictor",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Complex (50T)",
+        "abilityDescription": "Psychic Effect: Engage a single target you have Sighted and is within 40 yds in a Bonds Magic (Ego): SPI.  The target adds your DoS to the Complexity of the next spell they cast this Scene."
+    },
+    {
+        "abilityName": "Beyond The Limit",
+        "abilityCp": 8,
+        "abilityDiscipline": "Bearskin_Warrior",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Surge (Special)",
+        "abilityDescription": "Deliver to yourself one block of Unmitigated, Lingering Damage, and restore 2 Action Pool and 1 Reserve Pool."
+    },
+    {
+        "abilityName": "Big Mistake",
+        "abilityCp": 8,
+        "abilityDiscipline": "Opportunist",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (G+Weapon Speed)",
+        "abilityDescription": "As a Reaction to a target you have Threatened making a move such that they are considered Out of Facing to you, while still Threatened, make an immediate Basic Melee Attack with a readied weapon.  This costs Guard, and adds the weapon speed of the attack to your current Initiative."
+    },
+    {
+        "abilityName": "Bind",
+        "abilityCp": 8,
+        "abilityDiscipline": "Melee_Defense",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to a Parry Reaction, costing Momentum. If this Parry induces a Botch by the attacker, add +10T to the attacker\u2019s Initiative."
+    },
+    {
+        "abilityName": "Binding Bane",
+        "abilityCp": 16,
+        "abilityDiscipline": "Animism",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to a spell that targets an Animant under the control of an Animist.  When you target an Animant with any spell, if that Animant is under the control of an Animist, the Animist takes Disruptive Damage (D) Psychic, Lingering, equal to the Complexity of the Spell you cast."
+    },
+    {
+        "abilityName": "Block and Step",
+        "abilityCp": 4,
+        "abilityDiscipline": "Shield_Use",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (5T)",
+        "abilityDescription": "A +5T Boost to a Block Reaction, allows you to take a 1 yd Step after the Block is resolved."
+    },
+    {
+        "abilityName": "Blood Lust",
+        "abilityCp": 4,
+        "abilityDiscipline": "Bearskin_Warrior",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "If you deliver a Moderate Wound, or greater, to a target via a Melee Attack, immediately restore 1 Reserve Pool."
+    },
+    {
+        "abilityName": "Blood Purity",
+        "abilityCp": 8,
+        "abilityDiscipline": "Hekikaria",
+        "abilityLevel": "Intermediate",
+        "abilityType": "1 Segment",
+        "abilityDescription": "If you are infected by a disease, poison, or illness, you can put yourself into a pain fraught fevered sleep. Make a Blood Magic (Inherited):BOD-2 Action Check.  At the end of this, the Virulence of the disease is directly lowered by your Effect. Gain 2 Strain from this Segment.  This Segment of \u201crest\u201d does not recover any Strain. "
+    },
+    {
+        "abilityName": "Blood Rush",
+        "abilityCp": 16,
+        "abilityDiscipline": "Hekikaria",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (10T)",
+        "abilityDescription": "Requires The Jagged Blade be readied.  You run your Jagged Blade across your own exposed flesh, delivering a Moderate Cutting \u201cC\u201d Wound to yourself. Gain Momentum and 4 Pain Counters for this Spell. Each Pain Counter can be used to either gain +1d to the casting of this spell, or ignore 1 point of Flare it generates. You may split your Pain Counters between powering your spell, or mitigating your flare, as you see fit."
+    },
+    {
+        "abilityName": "Bluff",
+        "abilityCp": 8,
+        "abilityDiscipline": "Deception",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "In a Social Scene, you can make Artful Actions, but the target of the action perceives it as Hostile or Brazen, your choice."
+    },
+    {
+        "abilityName": "Boar Killer",
+        "abilityCp": 16,
+        "abilityDiscipline": "Spears",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "As a Boost to any Impale Attack made with a Skewering Weapon, expend Momentum to make that attack Deadly (+2)."
+    },
+    {
+        "abilityName": "Bob and Weave",
+        "abilityCp": 8,
+        "abilityDiscipline": "Pugilism",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "This is a Boost to a Dodge Reaction, costing Momentum.  This dodge reaction does not apply a C-TAG on you.  Additionally, after the attack action is resolved at the new measure conferred by the dodge, you may opt to return to your original hex."
+    },
+    {
+        "abilityName": "Body Check",
+        "abilityCp": 4,
+        "abilityDiscipline": "Brute",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Shove Actions gain +2d."
+    },
+    {
+        "abilityName": "Bold Face",
+        "abilityCp": 16,
+        "abilityDiscipline": "Deception",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "In a Social Scene, should you Botch on a Hostile or Brazen Action, you may convert your Botch Rate into immediate Effect for an Artful Action of your choice instead."
+    },
+    {
+        "abilityName": "Booming Voice",
+        "abilityCp": 4,
+        "abilityDiscipline": "Wud",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "Morale Effect: The Wud Wizard\u2019s voice takes on a loud, menacing, and dark timbre.  You may use Booming Voice as a Boost to any action check that uses Command (Intimidate) by expending Momentum.  Gain bonus d10 to this Action Check equal to your Magic Power."
+    },
+    {
+        "abilityName": "Bounce Off",
+        "abilityCp": 16,
+        "abilityDiscipline": "Hurling",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (1AP)",
+        "abilityDescription": "This is a Boost to an attack in the first range increment.  The attack gains Accurate (+1), and If the attack is already Impact \u201cI\u201d then you may expend Effect equal to the target\u2019s Body to inflict the Stunned condition on the target. If the target is wearing a Helmet, they gain Dazed instead of Stunned."
+    },
+    {
+        "abilityName": "Bound in Tragedy",
+        "abilityCp": 4,
+        "abilityDiscipline": "Hekikaria",
+        "abilityLevel": "Basic",
+        "abilityType": "Complex (30T)",
+        "abilityDescription": "You may bind yourself to any single target you have Sighted who is within 30 yds of you by making a Blood Magic (Morphic):BOD Action Check. If you take Damage from any source, the target takes Disruptive Damage\u201dD\u201d (Psychic), Pervasive (9), in equal amount, up to your Effect. Persists until the target has taken any amount of Damage from Bound in Tragedy, or the end of the Scene. "
+    },
+    {
+        "abilityName": "Brand the Witch",
+        "abilityCp": 4,
+        "abilityDiscipline": "Lictor",
+        "abilityLevel": "Basic",
+        "abilityType": "Standard (30T)",
+        "abilityDescription": "When fighting a mage that has more than two gates opened, you treat that mage as having a C-TAG while the gates remain opened.  Only participants with Brand the Witch treats the target has having a C-TAG."
+    },
+    {
+        "abilityName": "Break Magic",
+        "abilityCp": 16,
+        "abilityDiscipline": "Magus",
+        "abilityLevel": "Advanced",
+        "abilityType": "Complex (30T+M)",
+        "abilityDescription": "Counterspell: As a Complex Action (30T+M) you may attempt to break a magical effect.  You may target any persistent, sustained, or in active duration spell you have Sensed.  This is an Axiomatic Magic (Formulae): Target Spell Complexity + 3.  At DoS 1 or more, the spell effects immediately end."
+    },
+    {
+        "abilityName": "Break Through",
+        "abilityCp": 8,
+        "abilityDiscipline": "Brute",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to a Shove Action that is paired with a Move.  If your Shove is successful in knocking your target Sprawled, you may continue your Move instead of stopping in the target hex as normal.  If your continued movement takes you into an occupied Hex, you may make an additional Shove Action, which can also be boosted by Break Through.  The Ticks for each Shove Action are cumulative."
+    },
+    {
+        "abilityName": "Bruiser",
+        "abilityCp": 4,
+        "abilityDiscipline": "Pugilism",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Landing an Unarmed Attack on a target, even if it deals no damage, grants Momentum."
+    },
+    {
+        "abilityName": "Burst",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sprinting",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Gain Momentum on making a Sprint Move Action."
+    },
+    {
+        "abilityName": "Calloused Soul",
+        "abilityCp": 8,
+        "abilityDiscipline": "Hekikaria",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Gain 1 permanent Minor Wound. You may increase this to 3 Minor Wounds by Fate Binding the Calloused Soul ability."
+    },
+    {
+        "abilityName": "Censure",
+        "abilityCp": 4,
+        "abilityDiscipline": "Theurgy",
+        "abilityLevel": "Basic",
+        "abilityType": "Complex (30T + 10 Favor)",
+        "abilityDescription": "You engage a target you have Sensed in a Command (Intimidate): SPI.  They are restricted from using any Invocations for a number of Cycles equal to your DoS.  They may, alternatively, expend 10 Favor for each DoS you scored to negate this effect as a Surge."
+    },
+    {
+        "abilityName": "Chant of Kraa",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sahari",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Standard (15T), Sustained (1AP)",
+        "abilityDescription": "The Chant of Kraa is a rhythmic phrase spoken in Amonite.  The spoken phrase is \u201cin\u0113 ma\u2018ikeli nenyi\u201d, which means \u201cI am the Center.\u201d  Once uttered by the caster, the phrase is carried by ghostly voices in the background, repeating the phrase in harsh whispers for as long as the caster sustains it.  The caster no longer needs to speak the chant.  Chant of Kraa also counts as a Casting Modality, and can replace any other Modality.  This is treated as an Intonation Modality.  While sustaining the Chant you may expend Sarmundi Pool to perform Spell Maneuvers. 2 Sarmundi Pool -\u0009Increase the Range Increment of a Bolt Spell by 10, 5 Sarmundi Pool - Change the Target of a Spell from Single to Burst (2), 4 Sarmundi Pool - Any Etheric Damage from a Spell gains Deadly (+1), 2 Sarmundi Pool - Any Fire Damage from a spell gains Deadly (+1), 4 Sarmundi Pool - Any Spell that deals damage with the Pervasive (\u201cx\u201d) Keyword, adds an additional +3 to the Pervasive value."
+    },
+    {
+        "abilityName": "Chant of Mandeus",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sahari",
+        "abilityLevel": "Basic",
+        "abilityType": "Standard (15T), Sustained (1AP)",
+        "abilityDescription": "The Chant of Mandeus is a rhythmic phrase spoken in Amonite.  The spoken phrase is \u201cwisit\u2019i ina wich\u2019\u012b\u201d, which means \u201cWithin and Without.\u201d  Once uttered by the caster, the phrase is carried by ghostly voices in the background, repeating the phrase in harsh whispers for as long as the caster sustains it.  The caster no longer needs to speak the chant.  Chant of Mandeus also counts as a Casting Modality, and can replace any other Modality.  This is treated as an Intonation Modality.  While sustaining the Chant of Mandeus, should the caster gain any Sarmundi Pool, the gain is doubled. "
+    },
+    {
+        "abilityName": "Chant of Totmus",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sahari",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Standard (15T), Sustained (1AP)",
+        "abilityDescription": "The Chant of Totmus is a rhythmic phrase spoken in Amonite.  The spoken phrase is \u201cyashenifu\u201d, which means \u201cConquer.\u201d  Once uttered by the caster, the phrase is carried by ghostly voices in the background, repeating the phrase in harsh whispers for as long as the caster sustains it.  The caster no longer needs to speak the chant.  Chant of Totmus also counts as a Casting Modality, and can replace any other Modality.  This is treated as an Intonation Modality.  While sustaining the Chant you may expend 1 Sarmundi Pool, as a Surge, to gain Momentum or Guard."
+    },
+    {
+        "abilityName": "Charger",
+        "abilityCp": 4,
+        "abilityDiscipline": "Brute",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to a Melee Attack made when making a Move Action.  Ignore all Accuracy Penalties applied from the move."
+    },
+    {
+        "abilityName": "Charms I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Eldritch",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Charm spell or ritual you treat the Complexity of that spell as 1 less (to a minimum of 0).   Guardian Energy: Gain Guard anytime you successfully cast an Charm Spell for which you treat the Complexity as 0.",
+        "complexityCharms": -1
+    },
+    {
+        "abilityName": "Charms II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Eldritch",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Charm spell or ritual you treat the Complexity of that spell as 1 less (to a minimum of 0).  Energetic Spark: When casting any Charm Spell, as a Maneuver, expend 3 Effect to restore 1 lost Action Pool.",
+        "complexityCharms": -1
+    },
+    {
+        "abilityName": "Choked Grip",
+        "abilityCp": 4,
+        "abilityDiscipline": "Spears",
+        "abilityLevel": "Basic",
+        "abilityType": "Grip",
+        "abilityDescription": "Choked Grip requires a Hafted Weapon in 1 Hand, allowing you to grip that weapon nearer to the head. Choked Grip reduces your Min and Max Measures by 1 (not reduced below 0) and confers Accurate (-1) to all attacks. If Max Measure reduces to 0, then the attack gains Efficient (2)."
+    },
+    {
+        "abilityName": "Chop",
+        "abilityCp": 4,
+        "abilityDiscipline": "Unbalanced_Sword",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "This is a boost to a \u201cCut\u201d attack with an Unbalanced Sword.  The attack gains Deadly (+1)."
+    },
+    {
+        "abilityName": "Circular Cuts",
+        "abilityCp": 4,
+        "abilityDiscipline": "Unbalanced_Sword",
+        "abilityLevel": "Basic",
+        "abilityType": "Maneuver (1 Effect)",
+        "abilityDescription": "A Maneuver to a successful \u201cCut\u201d attack with an Unbalanced Sword costing 2 Effect.  Gain Guard."
+    },
+    {
+        "abilityName": "Close In Training",
+        "abilityCp": 8,
+        "abilityDiscipline": "Spears",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Any Butt Strike or Butt Impale attack with a Hafted Weapon gains Efficient (2)."
+    },
+    {
+        "abilityName": "College Specialist",
+        "abilityCp": 4,
+        "abilityDiscipline": "Inner_Pillar",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Increase the bonus to cast from your Magic Specialist core ability to +3d, and lower your penalty for the opposing school to -1d."
+    },
+    {
+        "abilityName": "Combat Mobility",
+        "abilityCp": 8,
+        "abilityDiscipline": "Beast_Tamer",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Surge (M)",
+        "abilityDescription": "Take a Step Move."
+    },
+    {
+        "abilityName": "Combat Mobility",
+        "abilityCp": 8,
+        "abilityDiscipline": "Footwork",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Surge (M)",
+        "abilityDescription": "Take a Step Move."
+    },
+    {
+        "abilityName": "Combo",
+        "abilityCp": 8,
+        "abilityDiscipline": "Pugilism",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (Special)",
+        "abilityDescription": "This is a Boost to an Unarmed Attack.  Make two Unarmed Attacks in the Same Pass.  The first Unarmed Attack is Accurate (-2) and half the normal Ticks, the second Unarmed Attack is Accurate (+2), and Ticks as listed.  The Ticks from both attacks are added together to modify your Initiative.  These are treated as two separate attacks.  Reactions bid must be declared per attack.  Similarly, Boosts to these attacks must be applied per attack.  The Combo Boost cannot be bid more than once per Pass."
+    },
+    {
+        "abilityName": "Commune",
+        "abilityCp": 4,
+        "abilityDiscipline": "Theurgy",
+        "abilityLevel": "Basic",
+        "abilityType": "1 Segment (10 Favor)",
+        "abilityDescription": "After spending a Segment in meditation and expending 10 Favor, your god visits portents and visions of what is to come.  Make a Bonds Magic (Spirit): 1 Action Check.  Gain 1 Prophecy Pool per Effect for use in this Chapter.  This ability can only be used once per Chapter."
+    },
+    {
+        "abilityName": "Confound the Conjurer",
+        "abilityCp": 4,
+        "abilityDiscipline": "Lictor",
+        "abilityLevel": "Basic",
+        "abilityType": "Reaction (G+1RP)",
+        "abilityDescription": "As a Reaction to having a TSA Applied to you, expend Guard and 1 Reserve Pool to immediately remove the applied TSA, cancelling any associated effect that required it."
+    },
+    {
+        "abilityName": "Conjuration I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sorcery",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Conjuration spell or ritual you treat the Complexity as 1 less (to a minimum of 0).   Space-Time: You have additional TSA slots equal to your Milestone.  Normally, an individual only has TSA slots equal to their Magic Power.",
+        "complexityConjuration": -1
+    },
+    {
+        "abilityName": "Conjuration II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sorcery",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Conjuration spell or ritual you treat the Complexity as 1 less (to a minimum of 0).   Void: As a Reaction to having a TSA placed on you, spend Guard, and +10 Ticks to your Initiative, and suspend one of your TSA for the scene.  This immediately removes the TSA applied to you, and nullifies its associated effects.",
+        "complexityConjuration": -1
+    },
+    {
+        "abilityName": "Conserve Momentum",
+        "abilityCp": 4,
+        "abilityDiscipline": "Weighted_Weapons",
+        "abilityLevel": "Basic",
+        "abilityType": "Reaction (G)",
+        "abilityDescription": "As a reaction to missing with a \u201cCut\u201d or \u201cStrike\u201d attack, Gain Momentum."
+    },
+    {
+        "abilityName": "Constant Companion",
+        "abilityCp": 8,
+        "abilityDiscipline": "Hekikaria",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Modifies the Article of Mortification Raiment.  While wearing your Article of Mortification Raiment, Flare Reduction is increased by 1 per your current accrued Mortality."
+    },
+    {
+        "abilityName": "Contest of Faith",
+        "abilityCp": 8,
+        "abilityDiscipline": "Theurgy",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (Special)",
+        "abilityDescription": "As a Reaction to a Invocation being used in a scene, you may attempt to cancel it.  The character does not need to be aware of the invocation for the player to declare a Contest of Faith, as the god intercedes on their behalf.  This reaction costs twice the amount of Favor bid to fuel the Invocation.  If, for example, a 20 Favor Invocation is used, by expending 40 Favor, you flatly negate and cancel the Invocation."
+    },
+    {
+        "abilityName": "Conviction",
+        "abilityCp": 4,
+        "abilityDiscipline": "Theurgy",
+        "abilityLevel": "Basic",
+        "abilityType": "Reaction (10 Favor)",
+        "abilityDescription": "As a Reaction to an action that targets your GRI or SPI defense, gain +1 to GRI\/SPI defense for every 10 Favor you expend.  You may not increase your GRI\/SPI by more than +5 using Conviction."
+    },
+    {
+        "abilityName": "Counterspell",
+        "abilityCp": 4,
+        "abilityDiscipline": "Magus",
+        "abilityLevel": "Basic",
+        "abilityType": "Reaction (G+20T)",
+        "abilityDescription": "As a Reaction to spell (a magical effect with a Complexity Rating) being cast, that you have Sensed, you may attempt to interrupt and cancel the spell.  Make a Axiomatic Magic (Formulae): Target Spell Complexity.  Each Effect removes one Hit from the caster\u2019s Action Check.  If this moves the spell to Botch, the caster of the target spell gains Dazed, and the spell fails.  "
+    },
+    {
+        "abilityName": "Counterstrike",
+        "abilityCp": 8,
+        "abilityDiscipline": "Staves",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (M)",
+        "abilityDescription": "If your Parry with a Hafted Weapon successfully induces your opponent to Botch, you may expend Momentum to strike a melee hit on your opponent with a basic attack at an Effect equal to the Botch rate of the opponent\u2019s parried attack."
+    },
+    {
+        "abilityName": "Cry Havoc",
+        "abilityCp": 4,
+        "abilityDiscipline": "Leadership",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M+10T)",
+        "abilityDescription": "Boost to a Motivate Action.  You may make a Motivate Action to affect all allies within Earshot.  "
+    },
+    {
+        "abilityName": "Curses I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Eldritch",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Curse spell or ritual you treat the Complexity of that spell as 1 less (to a minimum of 0).   Salt: You may remove a Doom Token placed on you by tossing a pinch of salt over your shoulder.  This is a 20T Complex Action to toss the salt, plus the time to ready the reagent from a pouch or belt.",
+        "complexityCurses": -1
+    },
+    {
+        "abilityName": "Curses II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Eldritch",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Curse spell or ritual you treat the Complexity of that spell as 1 less (to a minimum of 0).   Miasmic Cloud: When casting any Curse Spell, as a Maneuver, expend 3 Effect to surround the target in a dim Miasmic Cloud.  This persists until Cycle Maintenance, and follows the target.  While in the Miasmic Cloud, the target is -1 GRI, SPI, BOD against any spell you cast on them.  If Multiple targets were affected by the Spell, Miasmic Cloud can only be bid on one of them.",
+        "complexityCurses": -1
+    },
+    {
+        "abilityName": "Dart",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sneak",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (1AP)",
+        "abilityDescription": "This is a Boost to a Hustle Movement that only reduces your Stealth Rating by -1 (normally -2)."
+    },
+    {
+        "abilityName": "Dazzling Display",
+        "abilityCp": 4,
+        "abilityDiscipline": "Challenger",
+        "abilityLevel": "Basic",
+        "abilityType": "Complex (30T)",
+        "abilityDescription": "Morale and Logic Effect: Make a Weapon Skill action check for a readied weapon. Anyone within the burst area that have you in their Facing and can observe you compare their Grit to your Hits, and suffer a -1d to any action check that specifically targets you for every DoS you gain, for the duration of the Scene."
+    },
+    {
+        "abilityName": "Deadly Aim",
+        "abilityCp": 8,
+        "abilityDiscipline": "Black_Powder_Weapons",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (G+M)",
+        "abilityDescription": "When taking a shot at range category 1 (Short Range), the attack gains Precision (+2), and the attack gains Deadly (+1) with an additional +1 for every Accuracy Bonus the attack has (from aim actions for example).  This Boost may not be done with a shot that is Veering."
+    },
+    {
+        "abilityName": "Deadly Aim",
+        "abilityCp": 8,
+        "abilityDiscipline": "Bows",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (G+M)",
+        "abilityDescription": "When taking a shot at range category 1 (Short Range), the attack gains Precision (+2), and the attack gains Deadly (+1) with an additional +1 for every Accuracy Bonus the attack has (from aim actions for example).  This Boost may not be done with a shot that is Veering."
+    },
+    {
+        "abilityName": "Deadly Aim",
+        "abilityCp": 8,
+        "abilityDiscipline": "Crossbows",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (G+M)",
+        "abilityDescription": "When taking a shot at range category 1 (Short Range), the attack gains Precision (+2), and the attack gains Deadly (+1) with an additional +1 for every Accuracy Bonus the attack has (from aim actions for example).  This Boost may not be done with a shot that is Veering."
+    },
+    {
+        "abilityName": "Deadly Throw",
+        "abilityCp": 8,
+        "abilityDiscipline": "Hurling",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (G+M)",
+        "abilityDescription": "When taking a ranged attack with a thrown weapon at range category 1 (Short Range), the attack gains Precision (+2), and the attack gains Deadly (+1) with an additional +1 for every Accuracy Bonus the attack has (from aim actions for example).  "
+    },
+    {
+        "abilityName": "Decebal's Mnemonic Seal",
+        "abilityCp": 8,
+        "abilityDiscipline": "Inner_Pillar",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "You may maintain a practiced library of common spells. The sum Flare of this Library cannot exceed your Magic Power. You may cast these spells outside of your Spell Matrix, and in so doing, they inflict their listed Flare on you when cast (normally double for non-Spell Matrix spells). The spells you select must be given a name, something simple that explains what they are and do. When casting a spell with Mnemonic Seal you must shout the name you have assigned the spell, fulfilling the \u201cIntonation\u201d Modality for Spell Casting.  Adding a spell into the Mnemonic Seal takes 1 Segment per Flare of the Spell.  Removing a spell from the Mnemonic Seal takes 1 Segment per Flare of the Spell.  Visually, spells cast in this way look as if they were cast from a Spell Matrix, but the color is a brilliant yellow as opposed to the vibrant blue of the traditional Spell Matrix."
+    },
+    {
+        "abilityName": "Decipher Magic",
+        "abilityCp": 4,
+        "abilityDiscipline": "Magus",
+        "abilityLevel": "Basic",
+        "abilityType": "1 Prep Action",
+        "abilityDescription": "You may decipher the nature of any magic that you have Sensed.  Make a Axiomatic Magic (Formulae): 3.  DOS 1: Learn the Spell School, DOS 2: Learn the Spell Tradition and Complexity, DOS 3: Learn the Spell Description and Duration, DOS 4: Gain +2d to perform Break Magic or Sever Magic, DOS 5: Gain +6d to perform Break Magic or Sever Magic"
+    },
+    {
+        "abilityName": "Deduce",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sleuth",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (1AP)",
+        "abilityDescription": "This is a Boost to an Assess Action.  Gain an additional S-TAG at DoS 1 and 2."
+    },
+    {
+        "abilityName": "Deep Cuts",
+        "abilityCp": 8,
+        "abilityDiscipline": "Unbalanced_Sword",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "This is a boost to a \u201cCut\u201d attack with an Unbalanced Sword.  The attack gains Penetration of C-2."
+    },
+    {
+        "abilityName": "Defensive Insight",
+        "abilityCp": 8,
+        "abilityDiscipline": "Insight",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (Special)",
+        "abilityDescription": "As a Reaction to an attack that targets your Evasion or Avoidance, from an enemy on whom you have an S-TAG, you may burn any number of S-TAG\u2019s you hold on that target, granting you a +2 to Evasion or Avoidance, per S-TAG consumed."
+    },
+    {
+        "abilityName": "Demonology I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sorcery",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Demonology spell or ritual you treat the Complexity as 1 less (to a minimum of 0).    Demonic Whispers: At the start of a Chapter you open yourself up to the voices of the ethereal.  You gain 1 Prophecy Pool and 1 Intelligence for use in the Chapter.",
+        "complexityDemonology": -1
+    },
+    {
+        "abilityName": "Demonology II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sorcery",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Demonology spell or ritual you treat the Complexity as 1 less (to a minimum of 0).   Demonic Designs: As a Surge, you may apply a Doom Token on yourself, and apply 3 S-TAGs on any target you have Sensed.",
+        "complexityDemonology": -1
+    },
+    {
+        "abilityName": "Deny the Elementalist",
+        "abilityCp": 4,
+        "abilityDiscipline": "Lictor",
+        "abilityLevel": "Basic",
+        "abilityType": "Reaction (G+10T)",
+        "abilityDescription": "You hold up your hand as a barrier to flung magic.  Gain +3 AVO against any Bolt Spell targeting you."
+    },
+    {
+        "abilityName": "Desperate Block",
+        "abilityCp": 8,
+        "abilityDiscipline": "Shield_Use",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (Special)",
+        "abilityDescription": "A Boost to a Block Reaction, this places a C-TAG on you until the start of your next Pass. The Boosted Block gains +1 EVA."
+    },
+    {
+        "abilityName": "Desperate Parry",
+        "abilityCp": 8,
+        "abilityDiscipline": "Melee_Defense",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (Special)",
+        "abilityDescription": "A Boost to a Parry Reaction, this places a C-TAG on you until the start of your next Pass. The Boosted Parry gains +1 EVA."
+    },
+    {
+        "abilityName": "Detailed Plan",
+        "abilityCp": 4,
+        "abilityDiscipline": "Strategist",
+        "abilityLevel": "Basic",
+        "abilityType": "Prep Action (3)",
+        "abilityDescription": "Prior to a Scene, you, and all allies who allocate 3 Prep Actions with you, rally around a plan of your design.  Make a Cunning (Plan): 3 Action Check.  Generate 1 Tactics Pool per Effect.  You may use this Tactics Pool in the upcoming scene without using Communicate Actions."
+    },
+    {
+        "abilityName": "Dirty Tricks",
+        "abilityCp": 8,
+        "abilityDiscipline": "Wrestling",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "While you have Control in the Grapple, you are considered to have 1 C-TAG on the target you have Control over."
+    },
+    {
+        "abilityName": "Dirty Tricks",
+        "abilityCp": 8,
+        "abilityDiscipline": "Vale_Lord",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "While you have Control in the Grapple, you are considered to have 1 S-TAG on the target you have Control over."
+    },
+    {
+        "abilityName": "Discharge",
+        "abilityCp": 16,
+        "abilityDiscipline": "Elementalism",
+        "abilityLevel": "Advanced",
+        "abilityType": "Complex  (40T)",
+        "abilityDescription": "As a 40T Complex Action you may expend Stored Charges to produce a pulse around you.  This Pulse is a Burst (3) Attack that deals damage of your choosing from the list below:  Impact: Damage Dice equal to three times the expended Stored Charges, Lethality (8+), Damage Type Impact \u201cI\u201d (Concussive).  Pervasive 6, Penetration I-3.  Electrical: Damage Dice equal to the expended Stored Charges, Lethality (6+), Damage Type Impact \u201cE\u201d (Electrical).  Pervasive 9, Penetration E-1.  Fire: Damage Dice equal to one and a half times the expended Stored Charges, Lethality (7+), Damage Type Impact \u201cH\u201d (Fire).  Pervasive 6, Penetration H-3.  Ice Shards: Damage Dice equal to the expended Stored Charges, Lethality (6+), Damage Type Piercing \u201cP\u201d (Piercing).  Pervasive 3, Penetration P-6. "
+    },
+    {
+        "abilityName": "Double Strike",
+        "abilityCp": 16,
+        "abilityDiscipline": "Staves",
+        "abilityLevel": "Advanced",
+        "abilityType": "Maneuver (2 Effect)",
+        "abilityDescription": "This is a Maneuver (2 Effect) for an attack made with a Staff.  This attack is treated as having hit the target again.  You may split your remaining Effect between the two hits as you see fit, and apply maneuvers appropriately to each with the applied effect, including more Double Strike Maneuvers, divvying out effect across all landed hits.  Gain Guard after executing this Maneuver."
+    },
+    {
+        "abilityName": "Draw Energy",
+        "abilityCp": 4,
+        "abilityDiscipline": "Selifren_Song",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (+2 Flare)",
+        "abilityDescription": "You may draw energy from your Soul Stone when casting a spell as a Boost, increasing the Flare from the spell by +2.  This Boost grants Momentum."
+    },
+    {
+        "abilityName": "Dreaming I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Eldritch",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Dreaming spell or ritual you treat the Complexity of that spell as 1 less (to a minimum of 0).  Portentous Dreams: After 2 Consecutive Segments of Sleep, you gain 1 Prophecy Pool.  This Prophecy Pool is lost after 2 Consecutive Segments of Sleep if unspent, but then refreshed by a new one.  No more than 1 Prophecy Pool can be held at any time from using this ability.",
+        "complexityDreaming": -1
+    },
+    {
+        "abilityName": "Dreaming II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Eldritch",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Dreaming spell or ritual you treat the Complexity of that spell as 1 less (to a minimum of 0).  Somnic Depth: One Segment of Sleep is treated as if you had two full Segments of Sleep.",
+        "complexityDreaming": -1
+    },
+    {
+        "abilityName": "Duck and Move",
+        "abilityCp": 4,
+        "abilityDiscipline": "Footwork",
+        "abilityLevel": "Basic",
+        "abilityType": "Complex (10T)",
+        "abilityDescription": "Move 1 yd, gain Guard, assign Facing, gain +1 Avoidance until your next Pass."
+    },
+    {
+        "abilityName": "Dueling Stance",
+        "abilityCp": 8,
+        "abilityDiscipline": "Challenger",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Stance",
+        "abilityDescription": "Dueling Stance disallows movement beyond Steps, or 1 yd at a time per Pass. Dueling Stance requires a main hand weapon, and a free off-hand. While in Dueling Stance all melee attacks are assumed to have Reach. Parries grant an additional +1 Evasion. All Melee Attacks are considered Weak (1)."
+    },
+    {
+        "abilityName": "Dynamic Presence",
+        "abilityCp": 4,
+        "abilityDiscipline": "Oratory",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "At the start of a Social Scene, select one Tone, and for the remainder of the Social Scene you are treated as being +3 to that Tone."
+    },
+    {
+        "abilityName": "Ear for Truth",
+        "abilityCp": 4,
+        "abilityDiscipline": "Insight",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "If you have an S-TAG on a target, gain +3d to any Cunning (Discern) checks to resist any Persuade (Con) checks that target makes against you."
+    },
+    {
+        "abilityName": "Eldritch Adept",
+        "abilityCp": 16,
+        "abilityDiscipline": "Eldritch",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Eldritch spell or ritual you treat the Complexity as 1 less (to a minimum of 0).  When you are within 30 yards of a shift in the Veil, you are aware of it, and whether the shift is up or down in strength.",
+        "complexityCharms": -1,
+        "complexityCurses": -1,
+        "complexityDreaming": -1,
+        "complexityGlamours": -1
+    },
+    {
+        "abilityName": "Elementalist Adept",
+        "abilityCp": 16,
+        "abilityDiscipline": "Elementalism",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Elementalist spell or ritual you treat the Complexity as 1 less (to a minimum of 0).  Increase the amount of Charge Tokens you can hold to twice your Magic Power.",
+        "complexityAeromancy": -1,
+        "complexityGeomancy": -1,
+        "complexityHydromancy": -1,
+        "complexityPyromancy": -1
+    },
+    {
+        "abilityName": "Elementary",
+        "abilityCp": 16,
+        "abilityDiscipline": "Sleuth",
+        "abilityLevel": "Advanced",
+        "abilityType": "Surge (1 Fate)",
+        "abilityDescription": "Immediately generate +4 Intelligence for the Chapter.  This Intelligence cannot be used as Counter Intelligence by the Sage."
+    },
+    {
+        "abilityName": "Embrace the Shadows",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sneak",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Augment your Visual Stealth Rating from Shadows or Concealment by +1 the listed value."
+    },
+    {
+        "abilityName": "Empowered Oaken Staff",
+        "abilityCp": 8,
+        "abilityDiscipline": "Wud",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Your Oaken Staff now rolls 3d10+3 when casting a spell to check for whether it Detonates."
+    },
+    {
+        "abilityName": "En Passant",
+        "abilityCp": 16,
+        "abilityDiscipline": "Beast_Tamer",
+        "abilityLevel": "Advanced",
+        "abilityType": "Reaction (G)",
+        "abilityDescription": "As a Reaction to an opponent making a Move Action within your Facing, expend Guard to take a Step and freely re-assign your Facing."
+    },
+    {
+        "abilityName": "En Passant",
+        "abilityCp": 16,
+        "abilityDiscipline": "Footwork",
+        "abilityLevel": "Advanced",
+        "abilityType": "Reaction (G)",
+        "abilityDescription": "As a Reaction to an opponent making a Move Action within your Facing, expend Guard to take a Step and freely re-assign your Facing."
+    },
+    {
+        "abilityName": "Embolden",
+        "abilityCp": 4,
+        "abilityDiscipline": "Field_Commander",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "As a Boost to a Rally Action, in addition to the normal effects of a Rally Action, the target gains Momentum."
+    },
+    {
+        "abilityName": "Enhanced Modality",
+        "abilityCp": 16,
+        "abilityDiscipline": "Magus",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "Select one spell casting modality: Intonations, Gestures, Tokens, Implements, or Raiments.  When this modality is used when casting a spell, it fulfills two of the three modality requirements, and grants Accurate (+1) to spell casting action checks when used."
+    },
+    {
+        "abilityName": "Enter the Circle",
+        "abilityCp": 16,
+        "abilityDiscipline": "Challenger",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "Dueling Stance no longer applies Weak (1), and while the stance is maintained gain 1 S-TAG on each enemy as they become Engaged with you.  May only apply to an enemy once per scene."
+    },
+    {
+        "abilityName": "Eviscerate",
+        "abilityCp": 16,
+        "abilityDiscipline": "Opportunist",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "Modifies the Deathstroke Boost.  When making a Deathstroke Surge, increase the Wound Level of the delivered Wound by one level: (Light to Moderate, Moderate to Heavy, Heavy to Severe, Severe to Mortal, Mortal to Dead)."
+    },
+    {
+        "abilityName": "Extreme Distance Archery",
+        "abilityCp": 8,
+        "abilityDiscipline": "Bows",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "The archer may now fire into Range Category 5 (Extreme Range) when wielding a Bow."
+    },
+    {
+        "abilityName": "Extreme Distance Bolt",
+        "abilityCp": 8,
+        "abilityDiscipline": "Crossbows",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "The crossbowman may now fire into Range Category 5 (Extreme Range) when wielding a Crossbow."
+    },
+    {
+        "abilityName": "Extreme Distance Shooting",
+        "abilityCp": 8,
+        "abilityDiscipline": "Black_Powder_Weapons",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "The gunner may now fire into Range Category 5 (Extreme Range) when wielding a Black Powder Weapon."
+    },
+    {
+        "abilityName": "Fast Talk",
+        "abilityCp": 4,
+        "abilityDiscipline": "Trickery",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Any Communicate Action you make costs 10 fewer Ticks.  This applies to general Communicate Actions, as well as Absurd Distraction, Daunt, Rally, Goad, Monologue, and Motivate Actions."
+    },
+    {
+        "abilityName": "Feed on Fear",
+        "abilityCp": 4,
+        "abilityDiscipline": "Daunt",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "If your Daunt Action gains 2 or more DoS, gain 1 S-TAG on the target, and Momentum."
+    },
+    {
+        "abilityName": "Feign Weakness",
+        "abilityCp": 4,
+        "abilityDiscipline": "Trickery",
+        "abilityLevel": "Basic",
+        "abilityType": "Standard (30T)",
+        "abilityDescription": "Logic Effect: If you hold an S-TAG applied by an opponent, and they have you Sighted, you may perform Feign Weakness on them.  This is a Persuade (Con): Cunning (Discern) against them.  Each DoS scored sabotages a S-TAG, such that if it is used to fuel a Capitalize Boost, instead of granting the normal bonus, it instead confers Accurate (-2) for each sabotaged S-TAG capitalized.  Feign Weakness affects the S-TAGs as they are bid against you, and are not discretionary.   Meaning, if an opponent has 4 S-TAGs applied on you, and your Feign Weakness sabotages 3 of them, the first 3 Capitalized are considered Sabotaged."
+    },
+    {
+        "abilityName": "Feint",
+        "abilityCp": 8,
+        "abilityDiscipline": "Balanced_Sword",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (M+10T) ",
+        "abilityDescription": "As a Reaction to an opponent declaring a Parry Reaction versus one of your melee attacks made with a Light Blade, Balanced Sword or Unbalanced Sword, you may negate that Parry and reroll your initial attack at a -2d penalty.  This new attack cannot be parried by the same weapon."
+    },
+    {
+        "abilityName": "Feint",
+        "abilityCp": 8,
+        "abilityDiscipline": "Light_Blades",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (M+10T) ",
+        "abilityDescription": "As a Reaction to an opponent declaring a Parry Reaction versus one of your melee attacks made with a Light Blade, Balanced Sword or Unbalanced Sword, you may negate that Parry and reroll your initial attack at a -2d penalty.  This new attack cannot be parried by the same weapon."
+    },
+    {
+        "abilityName": "Feint",
+        "abilityCp": 8,
+        "abilityDiscipline": "Unbalanced_Sword",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (M+10T) ",
+        "abilityDescription": "As a Reaction to an opponent declaring a Parry Reaction versus one of your melee attacks made with a Light Blade, Balanced Sword or Unbalanced Sword, you may negate that Parry and reroll your initial attack at a -2d penalty.  This new attack cannot be parried by the same weapon."
+    },
+    {
+        "abilityName": "Final Strike",
+        "abilityCp": 16,
+        "abilityDiscipline": "Bearskin_Warrior",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to a Melee Attack delivered as part of a Move Action, that benefited from a Long Jump Boost.  The Boosted Attack gains Deadly (+1) for every yard traveled in the jump.  This attack is Massive, and Overwhelming."
+    },
+    {
+        "abilityName": "Find the Gaps",
+        "abilityCp": 16,
+        "abilityDiscipline": "Vale_Lord",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "Any attack with a Light Blade that is made at Measure 0 gain Precision (+2)."
+    },
+    {
+        "abilityName": "Find the Weak Point",
+        "abilityCp": 8,
+        "abilityDiscipline": "Mounted_Combat",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Maneuver (2 Effect)",
+        "abilityDescription": "This is a Maneuver, costing 2 Effect, that can be made on any Melee Attack While Moving made while in Couch Stance, delivered while atop a moving mount.  Increase Penetration of your attack by +2."
+    },
+    {
+        "abilityName": "Finesse",
+        "abilityCp": 8,
+        "abilityDiscipline": "Balanced_Sword",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (Free)",
+        "abilityDescription": "A Boost to any Attack with a Balanced Sword.  Either at the beginning or upon the conclusion to your attack, you may change your Grip or Stance for free. This Boost may be applied only once per attack."
+    },
+    {
+        "abilityName": "Flair",
+        "abilityCp": 8,
+        "abilityDiscipline": "Field_Commander",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Maneuver (2 Effect)",
+        "abilityDescription": "As a Maneuver to any Attack Action, any ally who sees you perform this maneuver (has you Sighted) gains Momentum."
+    },
+    {
+        "abilityName": "Fleetness",
+        "abilityCp": 16,
+        "abilityDiscipline": "Sprinting",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "Gain +1 to your Speed Statistic."
+    },
+    {
+        "abilityName": "Flourish",
+        "abilityCp": 8,
+        "abilityDiscipline": "Challenger",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (M)",
+        "abilityDescription": "As a reaction to Defeating an enemy with a Melee Attack, you may grant all allies who have you in their facing 1 Morale Pool if the target was an Actor or an Extra, or 2 Morale Pool if it was an Adversary."
+    },
+    {
+        "abilityName": "Fluid Motion",
+        "abilityCp": 16,
+        "abilityDiscipline": "Unbalanced_Sword",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "You may change your Stance or Grip for free either at the start of or at the conclusion of any \u201cStrike\u201d or \u201cCut\u201d Attack.   You may only make one change per such attack."
+    },
+    {
+        "abilityName": "Fluid Motion",
+        "abilityCp": 16,
+        "abilityDiscipline": "Weighted_Weapons",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "You may change your Stance or Grip for free either at the start of or at the conclusion of any \u201cStrike\u201d or \u201cCut\u201d Attack.   You may only make one change per such attack."
+    },
+    {
+        "abilityName": "Fluid Tactics",
+        "abilityCp": 8,
+        "abilityDiscipline": "Strategist",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Surge (Special)",
+        "abilityDescription": "You may burn any Tactics Pool you currently have in your Pool (not distributed to others) and make a new Tactics Action.  This converts all Tactics Pool so burned into a Accurate (+\u201dx\u201d) bonus to the Tactics Action, where the bonus is equal to  the Tactics Pool burned.  "
+    },
+    {
+        "abilityName": "Flurry",
+        "abilityCp": 16,
+        "abilityDiscipline": "Light_Blades",
+        "abilityLevel": "Advanced",
+        "abilityType": "Maneuver (1 Effect)",
+        "abilityDescription": "This is a Maneuver (1 Effect) for an attack made with a Light Blade.  This attack is treated as having hit the target again with a 0 Effect Hit.  You may split your remaining Effect between the two hits as you see fit, and apply maneuvers appropriately to each with the applied effect, including more Flurry Maneuvers, divvying out effect across all landed hits."
+    },
+    {
+        "abilityName": "Focused Defense",
+        "abilityCp": 8,
+        "abilityDiscipline": "Shield_Use",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Each Cycle Maintenance, as a Periodic Effect, gain Guard."
+    },
+    {
+        "abilityName": "Follow Through",
+        "abilityCp": 4,
+        "abilityDiscipline": "Balanced_Sword",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Gain Momentum after successfully inflicting any wound with any Cut attack."
+    },
+    {
+        "abilityName": "Follow Through",
+        "abilityCp": 4,
+        "abilityDiscipline": "Unbalanced_Sword",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Gain Momentum after successfully inflicting any wound with any Cut attack."
+    },
+    {
+        "abilityName": "Form of the Willow",
+        "abilityCp": 4,
+        "abilityDiscipline": "Wud",
+        "abilityLevel": "Basic",
+        "abilityType": "Gesture Modality",
+        "abilityDescription": "With the Oaken Staff in hand, and arms slightly outstretched such that you appear as a double-u, with the staff angled 45 degrees behind you, you take the Form of the Willow.  If take on Flare from the cast spell, you gain Momentum.  You may only use one Gesture when casting a spell."
+    },
+    {
+        "abilityName": "Form of the Yew",
+        "abilityCp": 8,
+        "abilityDiscipline": "Wud",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Gesture Modality",
+        "abilityDescription": "With your primary hand holding the Oaken Staff, point the head of the staff forward, with the butt of the staff tucked under the arm.  The off-hand arm is raised over your head, pointing straight up.  This Gesture empowers the spell such that any attempts to Counterspell treat the spell as if it was +3 Complexity.  You may only use one Gesture when casting a spell."
+    },
+    {
+        "abilityName": "Forward Stance",
+        "abilityCp": 4,
+        "abilityDiscipline": "Melee_Form",
+        "abilityLevel": "Basic",
+        "abilityType": "Stance",
+        "abilityDescription": "Your main attacking hand is extended far in front of you.  Thrust, Stab and Impale Attacks may make Keep at Bay Reactions and are at Accurate (+2), all other attacks are at Accurate (-2)."
+    },
+    {
+        "abilityName": "Furtive Step",
+        "abilityCp": 16,
+        "abilityDiscipline": "Sneak",
+        "abilityLevel": "Advanced",
+        "abilityType": "Reaction (2AP)",
+        "abilityDescription": "If you are Detected or Sighted in a combat scene from your Stealth Rating being overcome, and you are within 3 yds of something that would grant you full cover from the ones that detected you, you may make a Furtive Step Reaction by expending 2 AP.  Make an immediate move to the cover (must be within 3 yds), and reduce their detection to Sensed."
+    },
+    {
+        "abilityName": "Geomancy I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Elementalism",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Geomancy spell or ritual you treat the Complexity as 1 less (to a minimum of 0).  Mountain Roots: Expend a Charge Token As a Surge when casting an Geomancy Spell to reduce Flare Generated from that spell by -1.",
+        "complexityGeomancy": -1
+    },
+    {
+        "abilityName": "Geomancy II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Elementalism",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Geomancy spell or ritual you treat the Complexity as 1 less (to a minimum of 0).   Draw Strength: Expend 3 Charge Tokens to restore 1 lost Reserve Pool.",
+        "complexityGeomancy": -1
+    },
+    {
+        "abilityName": "Glamours I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Eldritch",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Glamours spell or ritual you treat the Complexity of that spell as 1 less (to a minimum of 0).  Lambent Aura: As a 20T Standard Action you may grant yourself a glowing aura.  This is Sustained with 1AP.  This aura sheds light akin to a lit torch, and grants you Distinctive (2).",
+        "complexityGlamours": -1
+    },
+    {
+        "abilityName": "Glamours II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Eldritch",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Glamours spell or ritual you treat the Complexity of that spell as 1 less (to a minimum of 0).  Glimmer of Authority: You are treated as having +2 Station at all times.",
+        "complexityGlamours": -1
+    },
+    {
+        "abilityName": "Glare",
+        "abilityCp": 4,
+        "abilityDiscipline": "Daunt",
+        "abilityLevel": "Basic",
+        "abilityType": "Standard  (10T)",
+        "abilityDescription": "Morale Effect: Glare can be performed on any target with whom you are Engaged.  It functions as a Daunt Action."
+    },
+    {
+        "abilityName": "Goad",
+        "abilityCp": 16,
+        "abilityDiscipline": "Trickery",
+        "abilityLevel": "Advanced",
+        "abilityType": "Standard (40T)",
+        "abilityDescription": "You goad a target into attacking you through insults, or cunning logic.  Engage a single target in a Persuade (Con): Cunning (Discern) Action Check.  Each DoS Scored forces the target to spend the same number of passes, expressly attacking you.  For the duration of Goad, the target is Berserk, and all of your allies gain 1 S-TAG on the target.  A target can only be the target of Goad once per Scene."
+    },
+    {
+        "abilityName": "Grab",
+        "abilityCp": 8,
+        "abilityDiscipline": "Vale_Lord",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Maneuver (2 Effect)",
+        "abilityDescription": "A Maneuver to an Attack with a Hooked Weapon on a target who is at Measure 0, or who is brought to Measure 0 by the Attack. You immediately drop the Hooked weapon and seize the target in your hands, transferring to a normal grapple at whatever effect you have remaining after the manuever.  You and the target are immediate Grappled."
+    },
+    {
+        "abilityName": "Grace",
+        "abilityCp": 16,
+        "abilityDiscipline": "Light_Blades",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "You may change your Stance or Grip for free either at the start of or at the conclusion of any Attack made with a Light Blade. You may only make one change per such attack."
+    },
+    {
+        "abilityName": "Guard the Left",
+        "abilityCp": 16,
+        "abilityDiscipline": "Shield_Use",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "An ally at Measure 0 on your shield arm side benefits from half the cover rating of your Readied Shield, and you may make Block Reactions on their behalf as if you were the intended target.  Their bonus to EVA from this Block Reaction are -1."
+    },
+    {
+        "abilityName": "Hammer Home",
+        "abilityCp": 8,
+        "abilityDiscipline": "Weighted_Weapons",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "Reduce the Evasion increase granted by the opponent\u2019s Parry or Block Reaction by -1. If making a Heavy Strike Attack (two handed), Evasion is instead reduced by -2."
+    },
+    {
+        "abilityName": "Hand Switch",
+        "abilityCp": 4,
+        "abilityDiscipline": "Light_Blades",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (5T)",
+        "abilityDescription": "As a boost to an attack with a light blade, you can move your weapon to your other free hand.  Parries against this attack are -1.  If the new hand you attack with is your off-hand, this follows the rules for attacks with an off-hand."
+    },
+    {
+        "abilityName": "Hard Block",
+        "abilityCp": 4,
+        "abilityDiscipline": "Shield_Use",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (5T)",
+        "abilityDescription": "A +5T Boost to a Block Reaction; increase your bonus to EVA from the Block by +1."
+    },
+    {
+        "abilityName": "Hard Parry",
+        "abilityCp": 4,
+        "abilityDiscipline": "Melee_Defense",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (5T)",
+        "abilityDescription": "A +5T Boost to a Parry Reaction; increase your bonus to EVA from the Parry by +1."
+    },
+    {
+        "abilityName": "Heartseeker",
+        "abilityCp": 16,
+        "abilityDiscipline": "Balanced_Sword",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to a Thrust Attack with a Balanced Sword that benefits from a Capitalize Boost.  In addition to the standard benefits for a Capitalize Boost, this attack gains Precision (+2) and Deadly (+1)."
+    },
+    {
+        "abilityName": "Heavy Block",
+        "abilityCp": 8,
+        "abilityDiscipline": "Shield_Use",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (M+5T)",
+        "abilityDescription": "A Boost to a Block Reaction, costing Momentum and +5T.  The Boosted Block gains +1 EVA."
+    },
+    {
+        "abilityName": "Heavy Parry",
+        "abilityCp": 8,
+        "abilityDiscipline": "Melee_Defense",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (M+5T)",
+        "abilityDescription": "A Boost to a Parry Reaction, costing Momentum and +5T.  The Boosted Parry gains +1 EVA."
+    },
+    {
+        "abilityName": "Heroic Presence",
+        "abilityCp": 8,
+        "abilityDiscipline": "Leadership",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "On taking a Heavy, Severe, or Mortal Wound, you may perform a Motivate Action as a Surge (0 Cost) on any Ally who witnessed you receive the wound (had you Sighted).  Any target who benefits from this Motivate Action gains Momentum.  Targets may benefit from this Motivate Action, even if they already benefited from a prior action from you earlier in the scene."
+    },
+    {
+        "abilityName": "High Stance",
+        "abilityCp": 8,
+        "abilityDiscipline": "Melee_Form",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Stance",
+        "abilityDescription": "Your main attacking hand is held at your head or higher.  While in this stance all Cut and Strike attacks are Accurate (+3), but at the cost of suffering a -1 penalty to your EVA and only being able to make Cut or Strike attacks."
+    },
+    {
+        "abilityName": "Higher Calling",
+        "abilityCp": 8,
+        "abilityDiscipline": "Theurgy",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (Special)",
+        "abilityDescription": "As a Reaction to gaining a Doom Counter, or the Dying Condition, you may expend 5 Favor per Doom Counter to immediately remove them, or 50 Favor to immediately end the Dying Condition.  "
+    },
+    {
+        "abilityName": "Hog Tie",
+        "abilityCp": 4,
+        "abilityDiscipline": "Beast_Tamer",
+        "abilityLevel": "Basic",
+        "abilityType": "Grapple Maneuver (3 Effect)",
+        "abilityDescription": "Functions as the Restrain Grapple Maneuver, but requires a rope, chord, or whip in hand.  By performing this maneuver, the rope is considered dropped, and performing this maneuver does not require you to lose Control."
+    },
+    {
+        "abilityName": "Hold Attention",
+        "abilityCp": 4,
+        "abilityDiscipline": "Oratory",
+        "abilityLevel": "Basic",
+        "abilityType": "Narrative",
+        "abilityDescription": "You can get the attention of a group of people and hold it.  This is a Persuade (Handle) Action Check.  The TN is set by the Sage, ranging from 0 to 10: (0 being you are doing a puppet show for a group of 4 year olds, and 10 being you are trying to get the attention of a large group of people that are running through the streets on fire).  Each Effect grants you a minute of their occupied attention, from which they are not easily distracted."
+    },
+    {
+        "abilityName": "Hook And Drag",
+        "abilityCp": 4,
+        "abilityDiscipline": "Beast_Tamer",
+        "abilityLevel": "Basic",
+        "abilityType": "Ranged Grapple Maneuver (2 Effect)",
+        "abilityDescription": "When executing a Ranged Grapple, you may expend 2 eff in order to drag or pull the target of the grapple one yard closer to yourself.  The target must be the same Mass and Size as you, or Smaller."
+    },
+    {
+        "abilityName": "Hook And Drag",
+        "abilityCp": 4,
+        "abilityDiscipline": "Vale_Lord",
+        "abilityLevel": "Basic",
+        "abilityType": "Ranged Grapple Maneuver (2 Effect)",
+        "abilityDescription": "Ranged Grapple Maneuver (2 Effect) - When executing a Ranged Grapple, you may expend 2 eff in order to drag or pull the target of the grapple one yard closer to yourself.  The target must be the same Mass and Size as you, or Smaller."
+    },
+    {
+        "abilityName": "Hook and Twist",
+        "abilityCp": 8,
+        "abilityDiscipline": "Vale_Lord",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (M+10T) ",
+        "abilityDescription": "As a reaction to successfully using a Hooked weapon in parrying an attack (Parry reduces their Attack to a Botch), you may immediately Disarm the opponent of their held weapon.  The weapon is dropped 2 yds away from the opponent, in a direction of your choosing (limited to their left or right)."
+    },
+    {
+        "abilityName": "Hook Shield",
+        "abilityCp": 4,
+        "abilityDiscipline": "Vale_Lord",
+        "abilityLevel": "Basic",
+        "abilityType": "Maneuver (1-4 Effect)",
+        "abilityDescription": "When attacking with a weapon with the Hooked Keyword against a target that has a held shield, you may expend Effect equal to the cover rating of the Shield to force the opponent to drop their shield to the floor."
+    },
+    {
+        "abilityName": "Humiliate",
+        "abilityCp": 8,
+        "abilityDiscipline": "Deception",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Complex  (40T)",
+        "abilityDescription": "Morale and Logic Effect: You hurl insults at the target, flustering them. This is a Persuade (Con): Cunning (Discern).  Their next Action gains Clumsy (-1) per DoS, and they are unable to expend Action Pool or benefit from Encounter Pool, until the next Cycle Maintenance."
+    },
+    {
+        "abilityName": "Hydromancy I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Elementalism",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Hydromancy spell or ritual you treat the Complexity as 1 less (to a minimum of 0).   Crashing Waves: Expend a Charge Token as a Surge when casting an Hydromancy Spell to increase the listed Damage Penetration from that spell by +3.",
+        "complexityHydromancy": -1
+    },
+    {
+        "abilityName": "Hydromancy II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Elementalism",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Hydromancy spell or ritual you treat the Complexity as 1 less (to a minimum of 0).   Calm Before the Storm: Expend 3 Charge Tokens to restore 1 lost Action Pool.",
+        "complexityHydromancy": -1
+    },
+    {
+        "abilityName": "Impetus",
+        "abilityCp": 8,
+        "abilityDiscipline": "Footwork",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (Special)",
+        "abilityDescription": "A Boost to a Melee Attack Action.  If you move at least 1 yd prior to making a Melee Attack, then gain Accurate (+1) to that Attack Action."
+    },
+    {
+        "abilityName": "Improved Block",
+        "abilityCp": 4,
+        "abilityDiscipline": "Shield_Use",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to a Block Reaction, costing Momentum, increase your bonus to EVA from the Block by +1."
+    },
+    {
+        "abilityName": "Improved Parry",
+        "abilityCp": 4,
+        "abilityDiscipline": "Melee_Defense",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to a Parry Reaction, costing Momentum, increase your bonus to EVA from the Parry by +1."
+    },
+    {
+        "abilityName": "In the Flow",
+        "abilityCp": 4,
+        "abilityDiscipline": "Wrestling",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "As long as you have Control in the Grapple, you do not need to expend Reserve to make Prosecute the Grapple Actions."
+    },
+    {
+        "abilityName": "In the Flow",
+        "abilityCp": 4,
+        "abilityDiscipline": "Vale_Lord",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "As long as you have Control in the Grapple, you do not need to expend Reserve to make Prosecute the Grapple Actions."
+    },
+    {
+        "abilityName": "Instinctive Aim",
+        "abilityCp": 16,
+        "abilityDiscipline": "Black_Powder_Weapons",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "Reduce the ticks for any Aim Boost made with a firearm attack to 0."
+    },
+    {
+        "abilityName": "Instinctive Drill",
+        "abilityCp": 16,
+        "abilityDiscipline": "Black_Powder_Weapons",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (G)",
+        "abilityDescription": "Reduce the ticks for a Reload Action with a firearm by 10T."
+    },
+    {
+        "abilityName": "Intercede",
+        "abilityCp": 8,
+        "abilityDiscipline": "Challenger",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (G+15T)",
+        "abilityDescription": "As a Reaction to an Ally, who is at Measure 0 and in Facing to you, being struck by a Melee Attack, you make a Parry Reaction on their behalf. This Parry grants the ally +2 to their Evasion against the attack, and cannot be Boosted."
+    },
+    {
+        "abilityName": "Intervention",
+        "abilityCp": 16,
+        "abilityDiscipline": "Theurgy",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "You may expend 50 Favor to for use as if it were 1 Fate."
+    },
+    {
+        "abilityName": "Interviewer",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sleuth",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Narrative",
+        "abilityDescription": "It takes at least two minutes of conversation to be able to use the Interviewer Ability.  This gives you an understanding into the nature of a target.  Make an Cunning (Discern): Persuade (Con) against the person you interview.  Each DoS secured grants you the ability to nominate one Beacon and learn the target\u2019s current Rating in it.  Gain 1 S-TAG on the target for every beacon you discover that is in a Stress range.  This S-TAG is not lost until you expend it, and does not end at the close of a scene.  You may never use Interviewer on the same target more than once."
+    },
+    {
+        "abilityName": "Investigator",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sleuth",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Gain Accurate (+2) on all Observation (Search) Action Checks to find hidden items or details."
+    },
+    {
+        "abilityName": "Invoke the Name",
+        "abilityCp": 8,
+        "abilityDiscipline": "Theurgy",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Complex (40T)",
+        "abilityDescription": "As a 40 Tick Complex Action, you summon the awareness of your deity to your area.  This is a Burst (20) Effect centered on you, Immovable, and is Sustained (1AP).  Any Flare gained in the area  by anyone in range while this is Sustained grants you 3 Favor with your deity.  If another instance of Invoke the Name is bid such that it overlaps an area already under effect, the encroacher must engage the sustainer of the first in a Bonds Magic (Ego): Bonds Magic (Ego).  The winner cancels the loser\u2019s Invoke the Name."
+    },
+    {
+        "abilityName": "Jarring Push",
+        "abilityCp": 16,
+        "abilityDiscipline": "Shield_Use",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to a Shove Action made while you have a Readied Shield.    If your Shove is successful in knocking your target Sprawled, they are also Stunned."
+    },
+    {
+        "abilityName": "Jousting",
+        "abilityCp": 4,
+        "abilityDiscipline": "Mounted_Combat",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "While in a Couch Stance, increase the Cover Rating of your Shield by +1."
+    },
+    {
+        "abilityName": "Juke",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sprinting",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Increase your bonus to AVO for making a Move Action by +1 the listed value (must have a minimum value of 1)."
+    },
+    {
+        "abilityName": "K.I.S.S.",
+        "abilityCp": 8,
+        "abilityDiscipline": "Strategist",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (Special)",
+        "abilityDescription": "As a Boost to a Tactics Action, you may add +2 to the TN for the Cunning (Plan) Action Check, and reduce the Ticks of the Tactics Action by -20T."
+    },
+    {
+        "abilityName": "Key Details",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sleuth",
+        "abilityLevel": "Basic",
+        "abilityType": "Narrative",
+        "abilityDescription": "As an Opening Action in a Social Scene, you evaluate the nature of the participants.  This is a Observation (Search): 3.  Each DoS grants your party +1d to any effort to modify their tone."
+    },
+    {
+        "abilityName": "Knock Back",
+        "abilityCp": 8,
+        "abilityDiscipline": "Weighted_Weapons",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (M)",
+        "abilityDescription": "As a Reaction to a successful \u201cStrike\u201d Attack, force the target to Strafe such that their measure to you increases by 1. If the target cannot Strafe back, they are instead knocked Sprawled in their hex."
+    },
+    {
+        "abilityName": "Knock Off Balance",
+        "abilityCp": 4,
+        "abilityDiscipline": "Melee_Defense",
+        "abilityLevel": "Basic",
+        "abilityType": "Reaction (M)",
+        "abilityDescription": "As a Reaction to your Parry successfully inducing your opponent to botch, you may expend Momentum to place a C-TAG on that opponent."
+    },
+    {
+        "abilityName": "Know My Face",
+        "abilityCp": 8,
+        "abilityDiscipline": "Daunt",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "If your Daunt Action gains 3 or more DoS, the target is forever Clumsy (-2) on all Actions that specifically target you, forever.  "
+    },
+    {
+        "abilityName": "Lancer",
+        "abilityCp": 16,
+        "abilityDiscipline": "Mounted_Combat",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "Melee Attacks while Moving on a Mount that has made a Hustle or Sprint Move are treated as Deadly (+2) if you are in Couch Stance."
+    },
+    {
+        "abilityName": "Lead from the Front",
+        "abilityCp": 4,
+        "abilityDiscipline": "Leadership",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "If an ally has you Sighted, your Motivate Action against them is treated as having an additional 2 Hits.  If you moved while making this Motivate Action, this applies if the ally had you Sighted at any point along your Movement path."
+    },
+    {
+        "abilityName": "Lead in Prayer",
+        "abilityCp": 4,
+        "abilityDiscipline": "Theurgy",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Modifies the Prayer mechanism for gaining Favor (Magic and Miracles Chapter).  You may perform the prayer with multiple participants who share devotion in the deity you are praying to.  Each participant (not the Theurgist) gains 10 Favor, instead of the normal 5.  You gain an additional 5 Favor per participant beyond yourself, for a maximum number of participants equal to your Magic Power."
+    },
+    {
+        "abilityName": "Leg Wrap",
+        "abilityCp": 8,
+        "abilityDiscipline": "Beast_Tamer",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Ranged Grapple Maneuver (2 Effect)",
+        "abilityDescription": "Manuever for a Ranged Grapple made with a Flexible Weapon. The target is Tripped, becoming Sprawled, and has their legs bound, preventing the victim from standing as long as you maintain Control."
+    },
+    {
+        "abilityName": "Leverage",
+        "abilityCp": 16,
+        "abilityDiscipline": "Melee_Defense",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "You may Boost a Parry Reaction by expending Momentum in order to allow the Parry Reaction to be declared against an attack that is Overwhelming.  "
+    },
+    {
+        "abilityName": "Life is Pain",
+        "abilityCp": 4,
+        "abilityDiscipline": "Hekikaria",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Reduce penalties from accrued Mortality by 1."
+    },
+    {
+        "abilityName": "Life of the Party",
+        "abilityCp": 8,
+        "abilityDiscipline": "Oratory",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "In a Social Scene, if you are not making the Closing Action, you may grant the leader on the Closing Action Check +3d to the Closing Action."
+    },
+    {
+        "abilityName": "Limb Taker",
+        "abilityCp": 16,
+        "abilityDiscipline": "Balanced_Sword",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to a Cut Attack with a Balanced Sword that benefits from a Capitalize Boost.  In addition to the standard benefits for a Capitalize Boost, this attack increases Cutting Penetration (C) by +4, and gains Deadly (+1)."
+    },
+    {
+        "abilityName": "Long Distance Archery",
+        "abilityCp": 4,
+        "abilityDiscipline": "Bows",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "The archer may now fire into Range Category 4 (Very Long Range) when wielding a Bow."
+    },
+    {
+        "abilityName": "Long Distance Bolt",
+        "abilityCp": 4,
+        "abilityDiscipline": "Crossbows",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "The crossbowman may now fire into Range Category 4 (Very Long Range) when wielding a Crossbow."
+    },
+    {
+        "abilityName": "Long Distance Shooting",
+        "abilityCp": 4,
+        "abilityDiscipline": "Black_Powder_Weapons",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "The gunner may now fire into Range Category 4 (Very Long Range) when wielding a Black Powder Weapon."
+    },
+    {
+        "abilityName": "Lookout",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sentinel",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When determining Detection against Stealth Rating by Detection Range, your Awareness is considered +1."
+    },
+    {
+        "abilityName": "Lorimar's Equation",
+        "abilityCp": 4,
+        "abilityDiscipline": "Inner_Pillar",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Increase the maximum capacity of your Spell Matrix by half your Magic Power (hM)."
+    },
+    {
+        "abilityName": "Low Stance",
+        "abilityCp": 8,
+        "abilityDiscipline": "Melee_Form",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Stance",
+        "abilityDescription": "Your main attacking hand is held low, at the waist or even knee.  Stance grants +2 to the EVA bonus from any Parry or Block Reaction, but all attacks suffer Accurate (-2). You may also take a Rest Action while in this stance without losing the stance. Resting while in this stance is not a Risky Action."
+    },
+    {
+        "abilityName": "Lunge",
+        "abilityCp": 4,
+        "abilityDiscipline": "Balanced_Sword",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to any Melee Attack with a Balanced Sword.  Increase the maximum measure of your Balanced Sword by one step (0r > 1 > 1r > 2 > 2r > 3)."
+    },
+    {
+        "abilityName": "Lunging Strike",
+        "abilityCp": 8,
+        "abilityDiscipline": "Spears",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (Free)",
+        "abilityDescription": "Make a 1 yd Move into your Facing with an Impale Attack.  This is not considered a Move.  "
+    },
+    {
+        "abilityName": "Lure",
+        "abilityCp": 4,
+        "abilityDiscipline": "Deception",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Modifies Posturing Stance.  When you make a Capitalize Boost, while in Posturing Stance, gain Momentum."
+    },
+    {
+        "abilityName": "Marathon",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sprinting",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Your \u201cRun Full Out\u201d Complex Action no longer requires 1 Reserve Pool."
+    },
+    {
+        "abilityName": "Mark of Ibin Sar",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sahari",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "This modifies the Mask of Zurankhai Raiment by adding white marks that coat the chin, and when combined with the Mark of Zhemotet, creates the image of a skull over the face. The white pigment of the mask becomes a brilliant white when a the Sahari casts a spell, almost glowing.  The Mark of Ibin Sar conceals the Mask of Zurankhai, only revealing it when the Sahari casts a spell.  Otherwise it is imperceptible to the onlooker.  This increases the time to apply the Mask of Zurankhai to 5 Prep Actions."
+    },
+    {
+        "abilityName": "Mark of Zhemotet",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sahari",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "This modifies the Mask of Zurankhai Raiment by adding a white pigment made of dried lime or chalk, to encircle the eyes and highlight the cheek.  This material is fairly common and simply increases the cost for the Mask of Zurankhai by 1sp per tin (10 applications).  This modified mask augments the bonus to Persuade, Bonds Magic, and Command Action Checks to Accurate (+3).  Additionally, if any target gains the Dead Condition, while within 30 yds of you, immediately gain 1 Sarmundi Pool."
+    },
+    {
+        "abilityName": "Mark the Wicked",
+        "abilityCp": 4,
+        "abilityDiscipline": "Lictor",
+        "abilityLevel": "Basic",
+        "abilityType": "Complex (60T)",
+        "abilityDescription": "Psychic Effect: You may use Mark the Wicked on any Spell Caster you have Sighted and is within 20 yds.  Engage the target in a Bonds Magic (Ego): GRI.  On success, the target carries a Psychic Mark on them that can only be sensed by you, or detected with Aura Perception spells.  The Mark stays branded on their psyche for a number of days equal to your Effect.  You always have \u201cSensed\u201d on the bearer of your Mark, and you know their direction and distance from you at all times while it persists."
+    },
+    {
+        "abilityName": "Marking Rune",
+        "abilityCp": 4,
+        "abilityDiscipline": "Wud",
+        "abilityLevel": "Basic",
+        "abilityType": "Prep Action (2)",
+        "abilityDescription": "Using the butt of your Oaken Staff, you may mark stone, wood, or metal, with a Wud Rune.  The Rune appears as if carved into the item, although it is not, and glows a vibrant blue, with the illumination equivalent of a candle.  This Rune will last for up to one day, but you can empower a rune of your making with Quintessence (15) to make it permanent.  As long as you are within 10 miles of the Rune, you are aware of where it is, and how far away from it you are.  The Rune conveys a message that anyone who has the Wud Discipline can understand.  The message is delivered telepathically, in your voice, to anyone who can see the rune, has the Wud Discipline, and expends 30 Ticks listening to it.  The message is equivalent to three seconds of speaking, enough to deliver a simple instruction, issue a warning, etc."
+    },
+    {
+        "abilityName": "Mathowny's Circulation",
+        "abilityCp": 4,
+        "abilityDiscipline": "Inner_Pillar",
+        "abilityLevel": "Basic",
+        "abilityType": "Surge (Special)",
+        "abilityDescription": "You may expend a spell from your Spell Matrix.  The Flare of this spell restores an equal amount of lost Reserve Pool."
+    },
+    {
+        "abilityName": "Mercy",
+        "abilityCp": 8,
+        "abilityDiscipline": "Light_Blades",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "All attacks with a Light Blade that benefit from a positive Precision  (+\u201dx\u201d) keyword, gain Deadly (+1)."
+    },
+    {
+        "abilityName": "Mirror Step",
+        "abilityCp": 4,
+        "abilityDiscipline": "Challenger",
+        "abilityLevel": "Basic",
+        "abilityType": "Reaction (G)",
+        "abilityDescription": "If a target you are Engaged with makes a Step, or moves 1 yd in total, you may React by expending Guard, and taking a Step yourself. This Step must be to keep the target Engaged."
+    },
+    {
+        "abilityName": "Misleading Attack",
+        "abilityCp": 4,
+        "abilityDiscipline": "Deception",
+        "abilityLevel": "Basic",
+        "abilityType": "Complex  (40T)",
+        "abilityDescription": "Logic Effect: This action can be made against a target who has you in their Facing and has you Sighted  You announce false intentions, or carry yourself in a misleading way, leaving your target unsure of what you\u2019re going to do next. Make a Persuade (Con): Cunning (Discern) Action Check against the target.  Each DoS grants 1 S-TAG on the target.  A target can only succumb to a Misleading Attack once per scene."
+    },
+    {
+        "abilityName": "Monologue",
+        "abilityCp": 8,
+        "abilityDiscipline": "Oratory",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Complex (60T)",
+        "abilityDescription": "Logic Effect: You may engage all enemies within Earshot in a Persuade (Handle): GRI Action Check.  This is one Action Check compared to the GRI of each target.  Antagonists Lose Guard at DoS 1, and add +5T to their Initiative for each DoS, Adversaries Lose Guard at DoS 1, and add +10T to their Initiative for each DoS, Actors Cannot benefit from Encounter Pool for 1 Cycle per DoS, and add +10T to their Initiative for each DoS, Extras Cannot benefit from Encounter Pool for 1 Cycle per DoS, and at DoS 3+, lose their next Cycle Maintenance Action."
+    },
+    {
+        "abilityName": "Mount",
+        "abilityCp": 4,
+        "abilityDiscipline": "Wrestling",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When performing a \u201cTake Down\u201d or \u201cDrive\u201d Grapple Maneuver in a Grapple, assume the Mount Stance.  While in the Mount Stance you may not perform the following Grapple Maneuvers: \u201cLift and Drop\u201d, or \u201cKnockdown\u201d.  While in the Mount Stance you gain +2d to all Athletics (Grapple) Action Checks against the target."
+    },
+    {
+        "abilityName": "My Captain!",
+        "abilityCp": 16,
+        "abilityDiscipline": "Leadership",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "Your Motivate Actions provide 2 Morale Pool per DoS (normally only one)."
+    },
+    {
+        "abilityName": "Neck Wrap",
+        "abilityCp": 16,
+        "abilityDiscipline": "Beast_Tamer",
+        "abilityLevel": "Advanced",
+        "abilityType": "Ranged Grapple Maneuver (4 Effect)",
+        "abilityDescription": "Manuever for a Ranged Grapple made with a Flexible Weapon. Target is Suffocating for as long as you maintain Control in the Grapple."
+    },
+    {
+        "abilityName": "Necromancy I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Animism",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Necromancy spell you treat the Complexity of that spell as 1 less (to a minimum of 0).  \u000a\u000aInvigormortis: As a 20T Complex Action you may generate 2 Encounter Pool to use in any combat scene where you have necromantic Animants Extras or Actors under your command.  Can be done once per scene.",
+        "complexityNecromancy": -1
+    },
+    {
+        "abilityName": "Necromancy II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Animism",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Necromancy spell you treat the Complexity of that spell as 1 less (to a minimum of 0).  Gain +3d to Counterspell any Necromancy Spell.  \u000a\u000aCorpus Adamant: Gain Resistance (2) against Necrotic Damage.",
+        "complexityNecromancy": -1
+    },
+    {
+        "abilityName": "Offensive Insight",
+        "abilityCp": 8,
+        "abilityDiscipline": "Insight",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When making a Capitalize Boost, increase the bonus by +1d per S-TAG expended."
+    },
+    {
+        "abilityName": "Offhand Balance",
+        "abilityCp": 4,
+        "abilityDiscipline": "Ambidexterity",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Attacks with your off hand weapon are no longer considered to be CLUMSY from dual wielding, though they can still be CLUMSY from other sources.  These attacks are normally Clumsy (2) without this training."
+    },
+    {
+        "abilityName": "Offhand Strength",
+        "abilityCp": 8,
+        "abilityDiscipline": "Ambidexterity",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Attacks with the off hand weapon no longer suffer Weak (1) modifier for Off-Hand Attacks"
+    },
+    {
+        "abilityName": "Offhand Strength",
+        "abilityCp": 8,
+        "abilityDiscipline": "Beast_Tamer",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Attacks with the off hand weapon no longer suffer Weak (1) modifier for Off-Hand Attacks"
+    },
+    {
+        "abilityName": "On Target",
+        "abilityCp": 4,
+        "abilityDiscipline": "Hurling",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (5T)",
+        "abilityDescription": "Boost to thrown weapon attack.  When determining Scatter from a thrown attack, roll 2 scatter dice and choose which one you want to use."
+    },
+    {
+        "abilityName": "Oomph",
+        "abilityCp": 8,
+        "abilityDiscipline": "Hurling",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "Your thrown weapon attacks may now be thrown an additional Range Increment.  Without this training, Thrown Weapons cannot be thrown past Range Increment 2."
+    },
+    {
+        "abilityName": "Over the Lip",
+        "abilityCp": 4,
+        "abilityDiscipline": "Flexible_Weapons",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "Boost to a melee attack with a Flexible Weapon. Ignore up to three (3) points of Cover the target of the attack benefits from."
+    },
+    {
+        "abilityName": "Overwhelming Charge",
+        "abilityCp": 8,
+        "abilityDiscipline": "Brute",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to Melee Attack that is paired with a Move where you move at least 4 yds.  This attack is considered Overwhelming."
+    },
+    {
+        "abilityName": "Pact",
+        "abilityCp": 16,
+        "abilityDiscipline": "Sahari",
+        "abilityLevel": "Advanced",
+        "abilityType": "Narrative",
+        "abilityDescription": "Once per Chapter, you may expend 1 Fate to enter into a pact with a spirit.   The spirit you contact is a servant of one of the three Sahari Gods: Amon, Moti, or Nadya.  The Pact is a promise from you for the spirit that you will deliver to them a mortal soul. The mortal must be killed by your direct efforts, as long as before the mortal dies, you speak their name to them, and inform them that you have promised their soul to the spirit, who must also be named.  If you succeed in the offering, the pact is fulfilled, and you immediately gain 2 Bonus Fate for use in the next Chapter, and gain 100 Favor with the Sahari God the spirit serves."
+    },
+    {
+        "abilityName": "Pain Is Fuel",
+        "abilityCp": 8,
+        "abilityDiscipline": "Bearskin_Warrior",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When you perform a Shrug it Off Boost to any Action, in addition to the normal effects of ignoring penalties to the action due to accrued Mortality, you gain +1d to that action per Mortality gained."
+    },
+    {
+        "abilityName": "Pain Train",
+        "abilityCp": 16,
+        "abilityDiscipline": "Brute",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "Anytime you knock an opponent Sprawled you gain Momentum, and your Stomp Kick Unarmed Attacks are considered Deadly (+1)."
+    },
+    {
+        "abilityName": "Parry and Step",
+        "abilityCp": 4,
+        "abilityDiscipline": "Melee_Defense",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (5T)",
+        "abilityDescription": "A +5T Boost to a Parry Reaction, allows you to take a 1 yd Step after the Parry is resolved."
+    },
+    {
+        "abilityName": "Parry And Strike",
+        "abilityCp": 8,
+        "abilityDiscipline": "Ambidexterity",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (M+5T)",
+        "abilityDescription": "Boost a Parry Reaction.  If successful in Parrying the incoming attack with one weapon while dual wielding, you may make an immediate Basic Attack with the weapon in your other hand that the opponent cannot parry with the weapon they used in their initial attack."
+    },
+    {
+        "abilityName": "Peer",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sentinel",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Modifies the Surveil Action by making the action check Accurate (+1), and adding +2 to your Facing.  This Facing modifier is limited by any helmet restrictions with the Limited Facing keyword, or other effects that restrict Facing."
+    },
+    {
+        "abilityName": "Pep Talk",
+        "abilityCp": 4,
+        "abilityDiscipline": "Field_Commander",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M+10T)",
+        "abilityDescription": "As a Boost to a Rally Action, you may make the Rally Action Burst to affect all allies within Earshot."
+    },
+    {
+        "abilityName": "Phenom",
+        "abilityCp": 16,
+        "abilityDiscipline": "Wrestling",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "You may perform the following additional Grapple Maneuvers:  Drive (6 Effect + Control) - You drive your opponent head first into the ground.  Target is Sprawled.  Target takes xB+2(8+): I-2 Damage.  This attack is Stunning.  Wrench (4 Effect + Control) - Pain Effect - You twist on the opponent\u2019s shoulder, elbow, or wrist.  The target suffer\u2019s -1d to all Action Checks that use that arm for the remainder of the Scene."
+    },
+    {
+        "abilityName": "Phytomancy I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Animism",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Phytomancy spell you treat the Complexity of that spell as 1 less (to a minimum of 0).  \u000a\u000aSunstore: once every day (or every 6 Segments), while in direct sunlight, as a Surge (0 Ticks), restore up to 2 spent Reserves from your Pool, and remove 1 Strain.",
+        "complexityPhytomancy": -1
+    },
+    {
+        "abilityName": "Phytomancy II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Animism",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Phytomancy spell you treat the Complexity of that spell as 1 less (to a minimum of 0).  Gain +3d to Counterspell any Phytomancy Spell.  \u000a\u000aGreenblood: Gain +2 to BOD Defense against Poisons, Toxins, and Venoms.",
+        "complexityPhytomancy": -1
+    },
+    {
+        "abilityName": "Pinpoint",
+        "abilityCp": 16,
+        "abilityDiscipline": "Spears",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "As a Boost to any Impale Attack made with a Skewering Weapon, expend Momentum to grant the attack Precision (+2)."
+    },
+    {
+        "abilityName": "Point Control",
+        "abilityCp": 8,
+        "abilityDiscipline": "Balanced_Sword",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (G+M)",
+        "abilityDescription": "A Boost to a Thrust Attack with a Balanced Sword.  Reduce the Threshold for the attack Action Check for the boosted attack by one step.  8+ becomes 7+, and 7+ becomes 6+, etc."
+    },
+    {
+        "abilityName": "Poised",
+        "abilityCp": 16,
+        "abilityDiscipline": "Melee_Form",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "All Parry and Block Reactions grant an additional +1 EVA."
+    },
+    {
+        "abilityName": "Pounce",
+        "abilityCp": 4,
+        "abilityDiscipline": "Bearskin_Warrior",
+        "abilityLevel": "Basic",
+        "abilityType": "Reaction (G+Weapon Speed)",
+        "abilityDescription": "As a Reaction to a target within your Measure and Facing becoming Sprawled or Prone you may expend Guard to make a Basic Attack with a readied Melee Weapon against the target."
+    },
+    {
+        "abilityName": "Pounce",
+        "abilityCp": 4,
+        "abilityDiscipline": "Beast_Tamer",
+        "abilityLevel": "Basic",
+        "abilityType": "Reaction (G+Weapon Speed)",
+        "abilityDescription": "As a Reaction to a target you have Threatened becoming Sprawled or Prone you may expend Guard to make a Basic Attack with a readied Melee Weapon against the target.  The Ticks of this Basic Attack are added to your Initiative."
+    },
+    {
+        "abilityName": "Pounce",
+        "abilityCp": 4,
+        "abilityDiscipline": "Opportunist",
+        "abilityLevel": "Basic",
+        "abilityType": "Reaction (G+Weapon Speed)",
+        "abilityDescription": "As a Reaction to a target you have Threatened becoming Sprawled or Prone you may expend Guard to make a Basic Attack with a readied Melee Weapon against the target.  The Ticks of this Basic Attack are added to your Initiative."
+    },
+    {
+        "abilityName": "Power Attack",
+        "abilityCp": 4,
+        "abilityDiscipline": "Staves",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "You may expend Momentum as a Boost to an attack with any Strike Attack.  This attack gains Deadly (+1)."
+    },
+    {
+        "abilityName": "Power Attack",
+        "abilityCp": 4,
+        "abilityDiscipline": "Weighted_Weapons",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "You may expend Momentum as a Boost to an attack with any Strike Attack.  This attack gains Deadly (+1)."
+    },
+    {
+        "abilityName": "Practiced Drill",
+        "abilityCp": 4,
+        "abilityDiscipline": "Black_Powder_Weapons",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Reduces the time for a Reload Firearm Action by 5 Ticks (Reload Firearm Actions are 30T Complex Actions normally). "
+    },
+    {
+        "abilityName": "Practiced Hands",
+        "abilityCp": 8,
+        "abilityDiscipline": "Bows",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Reduces the Ticks to Nock an Arrow on to a Bow by 10 Ticks (Nock Arrow is normally a 20 Tick Action) and makes it a Standard Action (Normally Complex)."
+    },
+    {
+        "abilityName": "Practiced Plays",
+        "abilityCp": 16,
+        "abilityDiscipline": "Strategist",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "You create a run book of commonly used field tactics.  You can perform these plays with members of your adventuring party, or allies that you know well (Sage adjudicated): Advance! Surge (10T + M + 2 Tactics Pool), Loose! Surge (10T + M + 1 Tactics Pool), Shields Up! Surge (10T + M + 3 Tactics Pool), Press! Surge (10T + M + 4 Tactics Pool), Fall Back! Surge (10T + M + 2 Tactics Pool), Incoming! Surge (10T + M + 2 Tactics Pool)"
+    },
+    {
+        "abilityName": "Practiced Ritualist",
+        "abilityCp": 8,
+        "abilityDiscipline": "Magus",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "All Action Checks to perform any Ritual are done as Accurate (+3)."
+    },
+    {
+        "abilityName": "Precise Shot",
+        "abilityCp": 4,
+        "abilityDiscipline": "Black_Powder_Weapons",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "When taking a ranged attack at range category 1 (Short Range), the attack gains Precision (+2).  This Boost may not be done with a attack that is Veering."
+    },
+    {
+        "abilityName": "Precise Shot",
+        "abilityCp": 4,
+        "abilityDiscipline": "Bows",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "When taking a ranged attack at range category 1 (Short Range), the attack gains Precision (+2).  This Boost may not be done with a attack that is Veering."
+    },
+    {
+        "abilityName": "Precise Shot",
+        "abilityCp": 4,
+        "abilityDiscipline": "Crossbows",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "When taking a ranged attack at range category 1 (Short Range), the attack gains Precision (+2).  This Boost may not be done with a attack that is Veering."
+    },
+    {
+        "abilityName": "Precise Throw",
+        "abilityCp": 4,
+        "abilityDiscipline": "Hurling",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "When taking a ranged attack with a thrown weapon into range category 1 (Short Range), the attack gains Precision (+2).  "
+    },
+    {
+        "abilityName": "Psychic Resilience",
+        "abilityCp": 16,
+        "abilityDiscipline": "Eldritch",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "Gain Resistance to Disruptive Damage (Psychic) equal to your Spirit Defense."
+    },
+    {
+        "abilityName": "Pull On To  Spear",
+        "abilityCp": 4,
+        "abilityDiscipline": "Beast_Tamer",
+        "abilityLevel": "Basic",
+        "abilityType": "Reaction (M)",
+        "abilityDescription": "As a Reaction to your performing the Hook and Drag Maneuver that successfully moves the target into Measure of your readied spear, you may make a Basic Thrust attack with that spear. This attack is considered to be a Heavy Impale for all purposes excepting that it only requires one hand to execute. The attack also loses any Clumsy penalties that may apply if it is in your off-hand."
+    },
+    {
+        "abilityName": "Pulse",
+        "abilityCp": 16,
+        "abilityDiscipline": "Wud",
+        "abilityLevel": "Advanced",
+        "abilityType": "Complex (30T)",
+        "abilityDescription": "This action causes your Oaken Staff to act as it Detonated with +10 to the Stored Flare.  The Oaken Staff is not destroyed, no Flare is depleted, and you are not affected by the blast.  Otherwise, everyone else in Burst (3) takes Disruptive (Etheric Damage), Lethality (9+), with Damage Dice equal to Stored Flare +10."
+    },
+    {
+        "abilityName": "Push Back",
+        "abilityCp": 4,
+        "abilityDiscipline": "Shield_Use",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to a Shove Action made while you have a Readied Shield.  The Shove Action gains Accurate (+1) per Cover Rating of the Readied Shield, and is no longer Risky."
+    },
+    {
+        "abilityName": "Pyromancy I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Elementalism",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Pyromancy spell or ritual you treat the Complexity as 1 less (to a minimum of 0).   Blue Flame: Expend a Charge Token As a Surge when casting an Pyromancy Spell, increase the dice pool for Damage  Checks that are dealing Thermal \u201cH\u201d Damage (Fire) by an amount equal to half your Magic Power.",
+        "complexityPyromancy": -1
+    },
+    {
+        "abilityName": "Pyromancy II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Elementalism",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Pyromancy spell or ritual you treat the Complexity as 1 less (to a minimum of 0).   Cauterize: Expend 3 Charge Tokens to completely heal a Light Wound on yourself, or reduce a Moderate Wound to a Light Wound.  The Wound must be from Cutting \u201cC\u201d or Piercing \u201cP\u201d damage.",
+        "complexityPyromancy": -1
+    },
+    {
+        "abilityName": "Quick Assessment",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sentinel",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (1 S-TAG or 1 TP)",
+        "abilityDescription": "You may expend an S-TAG or 1 Tactics Pool on a target as a boost to an attack action to grant that attack Precision (+3)."
+    },
+    {
+        "abilityName": "Quick Fire",
+        "abilityCp": 16,
+        "abilityDiscipline": "Bows",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (Accuracy -2)",
+        "abilityDescription": "A Boost to an attack with a Bow.  The attack suffered Accuracy (-2),  but the total Ticks of the Attack are reduced by half.  The Tick Reduction includes any Boosts applied to the attack from Aiming."
+    },
+    {
+        "abilityName": "Quick Jab at the Face",
+        "abilityCp": 8,
+        "abilityDiscipline": "Spears",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Standard (5T)",
+        "abilityDescription": "While wielding a Skewering Weapon, make a Hafted Weapons (Impale): GRI.  At DoS 1 the target loses Guard.  At DoS 2 or higher, you gain 1 S-TAG on the target.  No more than 1 S-TAG can be gained on the same target from Quick Jab in a given scene."
+    },
+    {
+        "abilityName": "Rallying Cry",
+        "abilityCp": 8,
+        "abilityDiscipline": "Field_Commander",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Modifies a Rally Action to replenish one lost Action Pool to the target of the Rally Action per Degree of Success on the Rally Action.  Additionally, the target of the Rally Action may spend 1 Reserve Pool, as a Reaction to the Rally Action, to immediately gain the Berserk Condition."
+    },
+    {
+        "abilityName": "Ranged Disarm",
+        "abilityCp": 8,
+        "abilityDiscipline": "Flexible_Weapons",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Ranged Grapple Maneuver (4 \/ 6 Effect)",
+        "abilityDescription": "While engaged in a Ranged Grapple with a Flexible Weapon, you may expend 4 effect on your Ranged Grapple Check to pull an item held in one of the target\u2019s hands free so that it falls to the 2 yards from them in a random direction assigned by the Sage. By spending 6 effect, you can do the same to an item held with two hands by the target."
+    },
+    {
+        "abilityName": "Rapid Retrieval",
+        "abilityCp": 16,
+        "abilityDiscipline": "Bows",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "Reduces the Ticks to Retrieve an Arrow (using the Ready Weapon Action) by -10T.  This assumes the arrow is in a belted Quiver.  "
+    },
+    {
+        "abilityName": "Ravage",
+        "abilityCp": 4,
+        "abilityDiscipline": "Bearskin_Warrior",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (2 RP)",
+        "abilityDescription": "This is a Boost to a Melee Attack.  The Attack gains Deadly (+2)."
+    },
+    {
+        "abilityName": "Ready Multiple Arrows",
+        "abilityCp": 4,
+        "abilityDiscipline": "Bows",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (Free)",
+        "abilityDescription": "As a boost to a Ready Weapon to draw an arrow, you may ready up to three (3) arrows at once. These arrows are held in the archer\u2019s left hand while shooting and still need to be nocked, drawn and shot individually."
+    },
+    {
+        "abilityName": "Ready to Fight",
+        "abilityCp": 16,
+        "abilityDiscipline": "Challenger",
+        "abilityLevel": "Advanced",
+        "abilityType": "Surge (1RP)",
+        "abilityDescription": "At the start of a Combat Scene, expend 1 Reserve to give yourself +10 Reflexes for determining Initial Initiative."
+    },
+    {
+        "abilityName": "Ready to Strike",
+        "abilityCp": 4,
+        "abilityDiscipline": "Opportunist",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Melee Attacks made against a target from Outside their Facing confer 1 S-TAG in addition to the normal C-TAG.  Can also apply to a target of a ranged attack in the first Range Increment."
+    },
+    {
+        "abilityName": "Rebuke of Kazul",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sahari",
+        "abilityLevel": "Basic",
+        "abilityType": "Complex (30T+Special)",
+        "abilityDescription": "Expend 1 Sarmundi Pool to immediately burn off 1 point of Flare.  You may expend any amount of Sarmundi Pool during the Chant of Kazul.  Each Flare consumed in this fashion inflicts on you 5d(9+):D-5; Etheric, Lingering, Pervasive (9), damage."
+    },
+    {
+        "abilityName": "Reckless Assault",
+        "abilityCp": 16,
+        "abilityDiscipline": "Brute",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (C-TAG)",
+        "abilityDescription": "As a Boost to a Melee Attack that benefits from a \u201cCharger\u201d Boost, you may elect to deliver the melee attack at any point along the move (not just at the end of the move).  You may then elect to continue your movement, and make a second melee attack at the end of the move.  The Ticks for both Melee Attack executed are added together for a total Action Cost.  You have a C-TAG active on you until the start of your next Pass."
+    },
+    {
+        "abilityName": "Red Rage",
+        "abilityCp": 16,
+        "abilityDiscipline": "Bearskin_Warrior",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "Modifies how the Berserk condition affects the Bearskin Warrior.  While Berserk, in addition to the normal rules from the condition, the Bearskin Warrior has the following modifications:\u000a\u000a\u2022  Gain 1 Minor Wound on gaining Berserk.\u000a\u2022  While Berserk, you have 1 C-TAG\u000a\u2022  May gain Guard, but can not make Dodge, Dive, Parry, or Block Reactions\u000a\u2022  Each Cycle Maintenance, gain 1AP, and Momentum"
+    },
+    {
+        "abilityName": "Rend of Flesh and Veil",
+        "abilityCp": 4,
+        "abilityDiscipline": "Hekikaria",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (10T)",
+        "abilityDescription": "Requires The Jagged Blade be readied.  You run your Jagged Blade across your own exposed flesh, delivering a Light Cutting \u201cC\u201d Wound to yourself. Gain Momentum and 2 Pain Counters for this Spell. Each Pain Counter can be used to either gain +1d to the casting of this spell, or ignore 1 point of Flare it generates. You may split your Pain Counters between powering your spell, or mitigating your flare, as you see fit."
+    },
+    {
+        "abilityName": "Reveal the Imp",
+        "abilityCp": 8,
+        "abilityDiscipline": "Lictor",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Complex (40T+2RP)",
+        "abilityDescription": "As a Complex Action (40T + 2 RP) you may remove any Magically applied Invisible Conditions on all targets within 20 yards of you."
+    },
+    {
+        "abilityName": "Revealing Defense",
+        "abilityCp": 16,
+        "abilityDiscipline": "Insight",
+        "abilityLevel": "Advanced",
+        "abilityType": "Reaction (G+1AP)",
+        "abilityDescription": "As a reaction to any Melee Attack made against you from a target you have engaged, you may make an immediate Assess Action. "
+    },
+    {
+        "abilityName": "Revealing Light",
+        "abilityCp": 8,
+        "abilityDiscipline": "Selifren_Song",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (1RP)",
+        "abilityDescription": "This is a boost to the Soul Light ability, costing 1 Reserve Pool.  Targets and items that are magically Invisible gain a glowing aura when they are within measure 10 of the light.  This does not reveal them in detail, but their Invisibility lowers to Obscured."
+    },
+    {
+        "abilityName": "Reverberating Shout",
+        "abilityCp": 8,
+        "abilityDiscipline": "Wud",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (M+1RP)",
+        "abilityDescription": "As a Boost to casting a spell with an Intonation Modality, expend Momentum and 1 Reserve Pool to empower the spell with Reverberating Shout.  Earshot Range for purposes of Detection increases by 50% when using this Boost, and it cannot be paired with the Whispered Secrets Boost.  The Boosted Spell generates +3 Flare, and you gain +4d to the Action Check to manifest this spell."
+    },
+    {
+        "abilityName": "Reverse Grip",
+        "abilityCp": 4,
+        "abilityDiscipline": "Light_Blades",
+        "abilityLevel": "Basic",
+        "abilityType": "Grip",
+        "abilityDescription": "This grip provides for training in holding the light blade with the blade down.  All Stab attacks with a light blade in this grip are Accurate (+1), while Slice attacks are Accurate (-1)."
+    },
+    {
+        "abilityName": "Reverse Grip",
+        "abilityCp": 4,
+        "abilityDiscipline": "Vale_Lord",
+        "abilityLevel": "Basic",
+        "abilityType": "Grip",
+        "abilityDescription": "Reverse Grip adds Accuracy (+1) for all Stab Attacks made with a Light Blade at Measure 0 or while in a Grapple, with a Accuracy (-2) penalty on all other attacks with the Light Blade. "
+    },
+    {
+        "abilityName": "Rhino Lift",
+        "abilityCp": 8,
+        "abilityDiscipline": "Brute",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Grapple Maneuver (3 Effect)",
+        "abilityDescription": "You may make a Rhino Lift Grapple Maneuver during a Initiate Grapple Action that benefited from a \u201cTackle Boost.\u201d  This Maneuver functions as the \u201cLift and Drop\u201d Grapple Maneuver."
+    },
+    {
+        "abilityName": "Ride By Attack",
+        "abilityCp": 4,
+        "abilityDiscipline": "Mounted_Combat",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When making an Attack While Moving from a Mount, you may make a melee attack against an opponent at any point during your mount\u2019s movement.  Normally, the attack occurs at the end of the declared movement."
+    },
+    {
+        "abilityName": "Rile",
+        "abilityCp": 4,
+        "abilityDiscipline": "Bearskin_Warrior",
+        "abilityLevel": "Basic",
+        "abilityType": "Complex (30T+2RP)",
+        "abilityDescription": "Gain the Berserk Condition."
+    },
+    {
+        "abilityName": "Riposte",
+        "abilityCp": 8,
+        "abilityDiscipline": "Melee_Defense",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (M)",
+        "abilityDescription": "As a Reaction to your Parry successfully inducing your opponent to botch, you may expend Momentum to land an immediate hit on the attacker, with the weapon you parried with.  This hit must be a Basic Attack Option, and is treated as if it hit with the same Effect as the attacker\u2019s Botch."
+    },
+    {
+        "abilityName": "Rod of Channeling",
+        "abilityCp": 4,
+        "abilityDiscipline": "Inner_Pillar",
+        "abilityLevel": "Basic",
+        "abilityType": "Implement",
+        "abilityDescription": "The magus carries an ornate rod, typically of well polished wood with metal reinforcement and adornment. This rod is of 100sp in value. You may store spells in the rod, as if it were a second Spell Matrix. You may store spells whose total flare is equal to or less than your half you Magic Power (hM). Casting spells stored in the rod require you have the rod readied in hand.  The Rod of Channeling functions as an Implement for spell casting requirements when not using a Spell Matrix.  Visually, spells cast in this way look as if they were cast from a Spell Matrix, but the color is a deep green as opposed to the vibrant blue of the traditional Spell Matrix."
+    },
+    {
+        "abilityName": "Rolling Recovery",
+        "abilityCp": 8,
+        "abilityDiscipline": "Tumbling",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (G+M)",
+        "abilityDescription": "As a Reaction to becoming Sprawled, in so long as you do not have the Immobilized, Restrained, or Grappled Condition, you may expend Guard and Momentum to remove the Sprawled Condition and instead Strafe 2 yds and assign your Facing."
+    },
+    {
+        "abilityName": "Rousing Speech",
+        "abilityCp": 16,
+        "abilityDiscipline": "Oratory",
+        "abilityLevel": "Advanced",
+        "abilityType": "3 Prep Actions",
+        "abilityDescription": "This is an action made against all allies within Earshot who expend 3 Prep Actions with you.  Make a Persuade (Handle): GRI against all allies.  Each ally begins the proceeding combat scene with 1 Morale Pool, and +1 Reflexes per DoS.  At DoS 3+, they gain +1 to GRI defense, which increases by an additional +1 at DoS 4, and 5."
+    },
+    {
+        "abilityName": "Runic I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Magus",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When performing any Runic Ritual (Seals and Sigils) you treat the Complexity of that ritual as 1 less (to a minimum of 0).  Devour Design: Any Sigil you have crafted on yourself, while the duration is active, can, as a Surge (Free), be drained of its enchantment.  This immediately refreshes for you 1 AP per Complexity of the Sigil, and ends the magic on your Sigil.",
+        "complexitySigils": -1,
+        "complexitySeals": -1
+    },
+    {
+        "abilityName": "Runic II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Magus",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When performing any Runic Ritual (Seals and Sigils) you treat the Complexity of that ritual as 1 less (to a minimum of 0).   Sigilum: You are able to inscribe two sigils per body location.  These must be applied as separate actions.",
+        "complexitySigils": -1,
+        "complexitySeals": -1
+    },
+    {
+        "abilityName": "Running Start",
+        "abilityCp": 4,
+        "abilityDiscipline": "Brute",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "If you move at least 4 yds. on a Hustle, or Sprint Move Action, immediately gain Momentum."
+    },
+    {
+        "abilityName": "S.O.P.",
+        "abilityCp": 4,
+        "abilityDiscipline": "Strategist",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When making a Communicate Action to spend Tactics Pool with a member of your party, reduce the Ticks by 20.  This is normally a 40T Standard Action.  This cannot be used to provide quick communication to anyone other than your core party members, and only for purposes of distributing Tactics Pool."
+    },
+    {
+        "abilityName": "Sarmundi's Grace",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sahari",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Modifies the Sarmundi Trance stance.  You may now gain Guard while in Sarmundi Trance, and no longer have a C-TAG applied."
+    },
+    {
+        "abilityName": "Sarmundi's Rapture",
+        "abilityCp": 16,
+        "abilityDiscipline": "Sahari",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (1RP)",
+        "abilityDescription": "This is a Boost to entering the Sarmundi Trance stance costing 1 Reserve Pool.  While in Sarmundi Trance you gain Hover (4:2) and Resistance: Etheric (1), and Resistance: Psychic (3)."
+    },
+    {
+        "abilityName": "Scathing Insult",
+        "abilityCp": 8,
+        "abilityDiscipline": "Challenger",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (G+20T)",
+        "abilityDescription": "Morale and Logic Effect: As a Reaction to enemy, with whom you are Engaged, making a Move Action such that they break Engagement, you may engage them in a Persuade (Handle): GRI Action Check.  They gain 1 Doom Counter per DoS."
+    },
+    {
+        "abilityName": "Seal of Disruption",
+        "abilityCp": 16,
+        "abilityDiscipline": "Inner_Pillar",
+        "abilityLevel": "Advanced",
+        "abilityType": "Reaction (G+20T+Special)",
+        "abilityDescription": "As a reaction to spell being cast, and that you have Sensed, you may attempt to disrupt the spell.  This is not treated as a Counterspell.  Expend a Spell from your Spell Matrix and roll a Static Check, with a dice pool equal to the Flare of the expended spell.  If any of these dice roll a 10, the spell is Disrupted, and fails to cast."
+    },
+    {
+        "abilityName": "Seal of Dissipation",
+        "abilityCp": 8,
+        "abilityDiscipline": "Inner_Pillar",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (G+10T+Special)",
+        "abilityDescription": "As a reaction to elemental damage occurring to you, or to a single target within Facing and 10 yards, remove one spell from your Spell Matrix. Double the Flare of the spell you burn away is directly added to the Resistance of the target against one elemental damage type of your choice: \u201cE\u201d Electrical, \u201cH\u201d Fire, or \u201cX\u201d Disintegration.  This is treated as Resistance, and not armor Hardness."
+    },
+    {
+        "abilityName": "Selifren Choir",
+        "abilityCp": 16,
+        "abilityDiscipline": "Selifren_Song",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "You may affix two more Sister Stones to your Shard Wand.  These stones cannot be the same as prior gem selections.  In addition to their normal benefit, each Sister Stone can also Sustain one spell, similar to the Sustaining Song Basic Ability.  The reduction to Audial Stealth is cumulative for each sustained spell.  Bolt Spells cast while wielding a Shard Wand gain Precision (+2) in the first Range Increment."
+    },
+    {
+        "abilityName": "Set Up",
+        "abilityCp": 4,
+        "abilityDiscipline": "Balanced_Sword",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to any Melee Attack with a Balanced Sword.  If the attack hits (regardless of if it inflicts damage or not), the target gains a S-TAG."
+    },
+    {
+        "abilityName": "Sever Bond",
+        "abilityCp": 8,
+        "abilityDiscipline": "Hekikaria",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Complex (30T+M)",
+        "abilityDescription": "Counterspell: Requires The Jagged Blade be readied.  If you are within melee measure (Jagged Blade) of an item or person bound by a Time-Space Anchor (TSA) that you have Sensed, you may sever it, unbinding it from the holder. This is a Blood Magic (Morphic):SPI of the target that holds the TSA."
+    },
+    {
+        "abilityName": "Sever Magic",
+        "abilityCp": 16,
+        "abilityDiscipline": "Hekikaria",
+        "abilityLevel": "Advanced",
+        "abilityType": "Complex (30T+M)",
+        "abilityDescription": "Counterspell: Requires The Jagged Blade be readied.  If you are within melee measure (Jagged Blade) of an item or person under the effects of a spell you have Sensed, and that has a duration greater than Instant, but shorter than Permanent or Fate Bound, immediately end the effects of that spell on making a Blood Magic (Morphic):SPI of the target that cast the spell."
+    },
+    {
+        "abilityName": "Shank",
+        "abilityCp": 8,
+        "abilityDiscipline": "Light_Blades",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Any Stab attacks with a Light Blade that benefit from a positive Precision  (+\u201dx\u201d) keyword, made on a target you have engaged in a Grapple, gain Deadly (+1)."
+    },
+    {
+        "abilityName": "Shaping Words",
+        "abilityCp": 8,
+        "abilityDiscipline": "Wud",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (Special)",
+        "abilityDescription": "The Wud Wizard adds Shaping Words to their Lexicon of Words of Power.  The Following Boosts can be used when casting a Spell with the Intonation Modality."
+    },
+    {
+        "abilityName": "Shift Focus",
+        "abilityCp": 4,
+        "abilityDiscipline": "Ambidexterity",
+        "abilityLevel": "Basic",
+        "abilityType": "Reaction (M)",
+        "abilityDescription": "As a reaction to having your attack successfully parried or blocked by your opponent, you may expend MOMENTUM in order to negate that Parry or Block and have the weapon in your other hand strike at the originally rolled Effect minus two. Your opponent may choose to react to this new attack as if it were a fresh hit and can therefore choose to PARRY or BLOCK it as normal."
+    },
+    {
+        "abilityName": "Signature Move",
+        "abilityCp": 8,
+        "abilityDiscipline": "Wrestling",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Select one Grapple Maneuver from the following: Choke, Drive, Knockdown, Lift and Drop, Smash, Take Down, or Wrench.  This is a permanent selection.  Gain Momentum, and gain 1 Morale Pool, anytime you perform this Grapple Maneuver.  Any ally who witnesses this grapple maneuver also gains 1 Morale Pool."
+    },
+    {
+        "abilityName": "Silf's Masterful Efficiency",
+        "abilityCp": 16,
+        "abilityDiscipline": "Inner_Pillar",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "You may augment your Spell Matrix to hold more spells, adding your Magic Power (M) to its maximum capacity.  You may also increase the maximum capacity of flare for your Rod of Channeling by half your Magic Power (hM)."
+    },
+    {
+        "abilityName": "Sister Stone I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Selifren_Song",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "This gem becomes a Sister Stone, and is affixed to your Shard Wand, either in the middle of the wand, or at its tip.  Attuning a gem is a 2 Segment Action.  You may only have one Sister Stone, and should your Soul Stone become destroyed, you will have to re-attune the Sister Stone once you have crafted a new one.  The Sister Stone confers Accurate (+1) when casting spells or rituals from the school bound to the gem, as long as the Shard Wand implement is wielded with Sister Stone affixed."
+    },
+    {
+        "abilityName": "Sister Stone II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Selifren_Song",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "You may affix a second Sister Stone to your Shard Wand.  This second stone must be different from the original.  In addition to their normal benefit, each Sister Stone can also Sustain one spell, similar to the Sustaining Song Basic Ability.  The reduction to Audial Stealth is cumulative for each sustained spell."
+    },
+    {
+        "abilityName": "Size Up",
+        "abilityCp": 4,
+        "abilityDiscipline": "Insight",
+        "abilityLevel": "Basic",
+        "abilityType": "Surge (Special)",
+        "abilityDescription": "If you have an S-TAG on a target, you may elect to remove that S-TAG, and nominate one Skill.  That target suffers a -1d penalty to make that Skill Check against you for the remainder of the Scene. If the Skill Check performed affects a group of targets, even if you are among them, this penalty does not apply.  You may elect to burn more than one S-TAG when declaring this Surge, augmenting the penalty by -1d per S-TAG consumed."
+    },
+    {
+        "abilityName": "Skillful Parries",
+        "abilityCp": 16,
+        "abilityDiscipline": "Melee_Defense",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "If your Parry Reaction induces the attacker to Botch, you immediately gain Guard."
+    },
+    {
+        "abilityName": "Snap Shot",
+        "abilityCp": 16,
+        "abilityDiscipline": "Crossbows",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (Free)",
+        "abilityDescription": "You may boost a shot with a Crossbow and cut the Weapon Speed down to 5T.  This attack cannot be made any faster.  Snapshot confers Accuracy (-2) on the shot."
+    },
+    {
+        "abilityName": "Sorcerer Adept",
+        "abilityCp": 16,
+        "abilityDiscipline": "Sorcery",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Sorcery spell or ritual you treat the Complexity as 1 less (to a minimum of 0). Gain Resistance to Disruptive Damage (Etheric) equal to your Spirit Defense.",
+        "complexityAlchemy": -1,
+        "complexityConjuration": -1,
+        "complexityDemonology": -1,
+        "complexityTelekinesis": -1
+    },
+    {
+        "abilityName": "Soul Healing",
+        "abilityCp": 8,
+        "abilityDiscipline": "Selifren_Song",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Complex (30T+1RP)",
+        "abilityDescription": "You may perform Soul Healing on any target at Measure 0, but this cannot be performed on yourself.  You flood into the mind of the target thoughts of peace, calm, and serenity.  Make a Focus Magic (Banish): SPI against the target.  Each Effect removes 1 Block of Disruptive Damage (Psychic or Etheric)."
+    },
+    {
+        "abilityName": "Soul Light",
+        "abilityCp": 4,
+        "abilityDiscipline": "Selifren_Song",
+        "abilityLevel": "Basic",
+        "abilityType": "Complex (30T), Sustain (1AP)",
+        "abilityDescription": "You may cause your Soul Stone to give off a faint silvery glow.  This light is equivalent to a torch.  In addition to providing a source of light, at the start of each Cycle, as a Periodic Effect, place 1 S-TAG on any one target of your choice.  This TAG lasts until Capitalized on, or until at the start of a new Cycle you elect to move it to another available target."
+    },
+    {
+        "abilityName": "Spear Deflection",
+        "abilityCp": 4,
+        "abilityDiscipline": "Spears",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Your Hafted Weapon gains the Can Parry Keyword against attacks from opponents who are at Measure 2 or more from you."
+    },
+    {
+        "abilityName": "Spear Jab",
+        "abilityCp": 4,
+        "abilityDiscipline": "Spears",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Gain Guard when you make a Keep at Bay Reaction that successfully halts the target\u2019s movement."
+    },
+    {
+        "abilityName": "Spell Reinforcement",
+        "abilityCp": 8,
+        "abilityDiscipline": "Selifren_Song",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (1RP+4 Flare)",
+        "abilityDescription": "You pull enormous energy through the spiritual world, directing it through your Soul Stone into the material world.  This is a Boost to casting any spell that requires you expend 1 Reserve Pool, and add 4 Flare to the spell\u2019s generated Flare.  The cast spell cannot be countered by a Counterspell Reaction.  This Boost causes your Soul Stone to flare brilliantly in a flash as the spell is cast, removing any and all Visual Stealth Rating."
+    },
+    {
+        "abilityName": "Spelleater",
+        "abilityCp": 16,
+        "abilityDiscipline": "Sorcery",
+        "abilityLevel": "Advanced",
+        "abilityType": "Reaction (G+15T+Special)",
+        "abilityDescription": "Counterspell: If you are the target, or in the target area, of a manifested spell you have Sensed (not ritual), as a reaction you may attempt to devour the magic.  Expend Guard, add 15 Ticks to your Initiative, and gain 1 Flare per Effect of the Manifested Spell, and take 2d(9+):D-1 (Etheric) Damage per Flare gained.  The Spell fails to cast.  Gain Momentum on devouring a spell."
+    },
+    {
+        "abilityName": "Spinning Defense",
+        "abilityCp": 8,
+        "abilityDiscipline": "Staves",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Standard (15T)",
+        "abilityDescription": "You spin and twirl your staff around, gaining +1 EVA, gain Guard, and an additional +1 EVA from any Parry Reactions until the start of your next Pass."
+    },
+    {
+        "abilityName": "Spiritual Healing",
+        "abilityCp": 8,
+        "abilityDiscipline": "Theurgy",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Complex (30T)",
+        "abilityDescription": "As a 40 Tick Complex Action, you may attempt to heal Etheric Damage on yourself, or a single target at Measure 0.  This is a Bonds Magic (Ego) Action Check, with a Target Number equal to the Mortality of the Etheric Lingering Wound (max TN of 5 for a Mortal Wound).  Each DoS Scored reduces the Wound Level by one category: Mortal -> Catastrophic -> Severe -> Heavy -> Moderate -> Light -> No Wound."
+    },
+    {
+        "abilityName": "Spring",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sneak",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (G+10T+Weapon Speed)",
+        "abilityDescription": "On being Detected or Sighted, you may make an immediate 3 yd Move toward a target and make an immediate Basic Attack with a readied weapon, provided this move brings you into Measure with the target.  This attack action is Accurate (+2)."
+    },
+    {
+        "abilityName": "Spring",
+        "abilityCp": 4,
+        "abilityDiscipline": "Tumbling",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "Spring modifies a Hurdle, or Long Jump Boost to a Movement Action by granting +2d to the Athletics (Prowess) Action Check."
+    },
+    {
+        "abilityName": "Stab and Grab",
+        "abilityCp": 4,
+        "abilityDiscipline": "Light_Blades",
+        "abilityLevel": "Basic",
+        "abilityType": "Maneuver (2 Effect)",
+        "abilityDescription": "This is a Maneuver (2 Effect) for a Stab attack made with a Light Blade  at Measure 0.  Make an Initiate a Grapple action with the target for 0T. This grapple is not considered to be Risky."
+    },
+    {
+        "abilityName": "Stalwart of the Faith",
+        "abilityCp": 16,
+        "abilityDiscipline": "Theurgy",
+        "abilityLevel": "Advanced",
+        "abilityType": "Modifier",
+        "abilityDescription": "If you have Devotion with a god, you may add Devotion with two additional gods from the same religion: The Nine, Domseras, Keeper of the Gates, The Sovereigns, or Sahari.  These devotions do not require additional Fate to bind them."
+    },
+    {
+        "abilityName": "Stand At The Ready",
+        "abilityCp": 4,
+        "abilityDiscipline": "Bows",
+        "abilityLevel": "Basic",
+        "abilityType": "Reaction (G + Weapon Speed Ticks)",
+        "abilityDescription": "An archer whose previous action was Wait and who is holding a bow with a nocked arrow makes an interrupt attack with that bow against any target who takes an action within the archer\u2019s range and line of sight. This attack is treated as a Reaction (preempting the action that initiated it), and is treated as having an Under Draw Boost (-2 Power on the Attack)."
+    },
+    {
+        "abilityName": "Stand With Me",
+        "abilityCp": 16,
+        "abilityDiscipline": "Field_Commander",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to a Rally Action costing Momentum.  Any target of the Rally Action may elect to gain Guard, as a Surge, and as a Surge, move up to 2 yds, and assign Facing."
+    },
+    {
+        "abilityName": "Step And Shoot",
+        "abilityCp": 8,
+        "abilityDiscipline": "Bows",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "As a Boost to an attack with a Bow, make a free Step Move either before or after making a bow attack. This move does not apply any penalty to that attack."
+    },
+    {
+        "abilityName": "Step In",
+        "abilityCp": 8,
+        "abilityDiscipline": "Weighted_Weapons",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When making any \u201cStrike\u201d attack that requires Momentum, you may take a Step (1 yd movement in facing) that does not increase your measure to your target as a part of the attack in lieu of expending Momentum."
+    },
+    {
+        "abilityName": "Stepping Attack",
+        "abilityCp": 4,
+        "abilityDiscipline": "Challenger",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (Free)",
+        "abilityDescription": "As a Boost to making a Melee Attack you may make a 1 yd Step and resolve the attack at the new measure.  This Movement is not considered a Move, and does not trigger Reactions to Movement."
+    },
+    {
+        "abilityName": "Stepping Attack",
+        "abilityCp": 4,
+        "abilityDiscipline": "Footwork",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (Free)",
+        "abilityDescription": "As a Boost to making a Melee Attack you may make a 1 yd Step and resolve the attack at the new measure.  This Movement is not considered a Move, and does not trigger Reactions to Movement."
+    },
+    {
+        "abilityName": "Stick 'em",
+        "abilityCp": 16,
+        "abilityDiscipline": "Vale_Lord",
+        "abilityLevel": "Advanced",
+        "abilityType": "Reaction (G)",
+        "abilityDescription": "As a Reaction to gaining Control in a Grapple, while you are holding a Light Blade, you may immediately expend Control to make a Stab Attack for no Cost, and Deadly (+2)."
+    },
+    {
+        "abilityName": "Stoic Heart",
+        "abilityCp": 8,
+        "abilityDiscipline": "Lictor",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Gain +2 GRI against Morale Effects (including positive ones)."
+    },
+    {
+        "abilityName": "Strike True",
+        "abilityCp": 8,
+        "abilityDiscipline": "Lictor",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (2RP)",
+        "abilityDescription": "A Boost to a Melee Attack that requires adding 5 Ticks to the attack, and expending 1 Reserve Pool.  The Boosted Melee Attack gains Accurate (+3) and Precision (+2)."
+    },
+    {
+        "abilityName": "Sure Footed",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sprinting",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "In a Chase Scene, increase all Advantage gained for overcoming an Obstacle by +2."
+    },
+    {
+        "abilityName": "Sustaining Song",
+        "abilityCp": 4,
+        "abilityDiscipline": "Selifren_Song",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When you have a spell with a Sustaining Cost of 1AP, in lieu of allocating the 1AP, you may instead assign this spell to your Soul Stone.  A Soul Stone can sustain one spell.  While sustaining this spell the Soul Stone gives off a low haunting melody.  This reduces your Audial Stealth Rating by 2."
+    },
+    {
+        "abilityName": "Sweeping Arc",
+        "abilityCp": 4,
+        "abilityDiscipline": "Flexible_Weapons",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "Boost to a melee attack with a Flexible Weapon.  The attack gains the Hooked Keyword."
+    },
+    {
+        "abilityName": "Tackle",
+        "abilityCp": 4,
+        "abilityDiscipline": "Brute",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to a Move Action.  You may make a Initiate Grapple Action at the end of your move.  This action, while technically now a Standard Action, is still considered Risky."
+    },
+    {
+        "abilityName": "Taunt",
+        "abilityCp": 4,
+        "abilityDiscipline": "Challenger",
+        "abilityLevel": "Basic",
+        "abilityType": "Complex (30T)",
+        "abilityDescription": "Morale and Logic Effect: You may target a single combatant within earshot (30 yds). Engage them in a Persuade (Handle): GRI Action Check. The target must make you the focus of their attacks for a number of full cycles equal to your degree of success. A target can only fall victim to Taunt once per Scene, and if applicable (they survive) are immune to Taunt from you in any future Scene."
+    },
+    {
+        "abilityName": "Telekinesis I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sorcery",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Telekinesis spell or ritual you treat the Complexity as 1 less (to a minimum of 0).    Energy Conversion: As a Maneuver to casting a Telekinesis Spell, spend 2 Effect to grant yourself a Charge Token.  You may expend Charge Tokens as a Surge to gain Momentum.  You may only store a number of Charge Tokens equal to your Magic Power.  Charge Tokens dissipate by -1 per hour after being stored.  You may also elect to generate a maximum amount of Charge Tokens as a Prep Action.  These tokens are interchangeable with the Charge Up ability from Elementalism, but are one pool, limited by your Magic Power in quantity.",
+        "complexityTelekinesis": -1
+    },
+    {
+        "abilityName": "Telekinesis II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sorcery",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Telekinesis spell or ritual you treat the Complexity as 1 less (to a minimum of 0).   Point Defense: As a Reaction to taking damage, expend Guard, and any number of Charge Tokens.  Each Charge Token expended is treated as Resistance (1): Cutting, Piercing, Impact damage delivered from the attack.",
+        "complexityTelekinesis": -1
+    },
+    {
+        "abilityName": "The Song of Making",
+        "abilityCp": 16,
+        "abilityDiscipline": "Selifren_Song",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (40T)",
+        "abilityDescription": "The Selifren Mage intones the notes and vibrations spiritual generation, which is echoed and carried in chorus by their Soul Stone and their Sister Stones.  This is a boost to the casting of a spell that adds 40 Ticks.  The Boosted Spell generates 1 fewer flare, and an additional 1 flare reduction for each Sister Stone.  If this causes the cast spell to generate negative flare, for each flare lower than 0, the spell gains Accurate (+1).  In this fashion, a Spell that would normally generate 4 Flare, using the Song of Making with four Sister Stones, (For a total of -6 to generated Flare) is at -2 Flare, granting the spell Accurate (+2)."
+    },
+    {
+        "abilityName": "Thousand Cuts",
+        "abilityCp": 16,
+        "abilityDiscipline": "Unbalanced_Sword",
+        "abilityLevel": "Advanced",
+        "abilityType": "Maneuver (2 Effect)",
+        "abilityDescription": "This is a Maneuver (2 Effect) for an attack made with a Unbalanced Sword.  This attack is treated as having hit the target again with a 0 Effect Hit.  You may split your remaining Effect between the two hits as you see fit, and apply maneuvers appropriately to each with the applied effect, including more Thousand Cuts Maneuvers, divvying out effect across all landed hits."
+    },
+    {
+        "abilityName": "Thread the Needle",
+        "abilityCp": 8,
+        "abilityDiscipline": "Tumbling",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "This Modifies a Squeeze Action (normally a Complex Action) by making it a Standard Action."
+    },
+    {
+        "abilityName": "Threaten",
+        "abilityCp": 8,
+        "abilityDiscipline": "Daunt",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Complex (M+40T)",
+        "abilityDescription": "This is a Burst (30) Action AoE centered on you targeting all enemies within Earshot.  Make a Command (Intimidate) action check and compare to the GRI of all targets.  For each DoS you gain on a target, they are Clumsy (-1) for the duration of the Scene.  If you are defeated, this Morale effect ends."
+    },
+    {
+        "abilityName": "Threatening Sweep",
+        "abilityCp": 8,
+        "abilityDiscipline": "Weighted_Weapons",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Standard (25T)",
+        "abilityDescription": "You make a hard swing with a Strike or Heavy Strike attack.  This targets everyone with whom you are Engaged.  Make a Command (Intimidate): GRI Action Check against Engaged Targets.  Gain +1d to this Action Check, or +2d if a Heavy Strike.  At DoS 1, the Engaged Target must make an immediate Strafe 1 yd away from you.  At DoS 2, 3, 4, and 5, the target adds +5T, +10T, +15T, and +20T, respectively, to their Initiative."
+    },
+    {
+        "abilityName": "Tight Patching",
+        "abilityCp": 4,
+        "abilityDiscipline": "Black_Powder_Weapons",
+        "abilityLevel": "Basic",
+        "abilityType": "Complex  (30T)",
+        "abilityDescription": "The gunner performs this action while loading the shot in addition to normally required reload actions to ensure the use and fit of a tight patch. This removes the Veering keyword from the next attack made with that firearm."
+    },
+    {
+        "abilityName": "Tormentous Backlash",
+        "abilityCp": 4,
+        "abilityDiscipline": "Hekikaria",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (10T)",
+        "abilityDescription": "If you are the target of a Psychic Effect, you can send memories of physical pain and torment back along the channel to your attacker. They take Disruptive Damage \u201cD\u201d (Psychic) Pervasive (9) equal to Half your Magic Power (hM)."
+    },
+    {
+        "abilityName": "Trained Professional",
+        "abilityCp": 8,
+        "abilityDiscipline": "Sneak",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Surge (2AP)",
+        "abilityDescription": "In an Infiltration Scene, reduce Suspicion by -1."
+    },
+    {
+        "abilityName": "Trample",
+        "abilityCp": 8,
+        "abilityDiscipline": "Brute",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (Free)",
+        "abilityDescription": "As a Reaction to a target falling Sprawled from a Shove Action that benefited from a \u201cBreak Through\u201d Boost.  The target is treated as having been struck by a 0 Effect Stomp Kick Unarmed Attack from you."
+    },
+    {
+        "abilityName": "Turn the Tables",
+        "abilityCp": 8,
+        "abilityDiscipline": "Trickery",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (G)",
+        "abilityDescription": "As a Reaction to a target bidding a Capitalize Boost on you, apply 1 S-TAG on the target for each S-TAG they Capitalize on you."
+    },
+    {
+        "abilityName": "Twin Strike",
+        "abilityCp": 16,
+        "abilityDiscipline": "Ambidexterity",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "Boost to an Attack Action.  On a successful attack, but before your opponent makes any reactions to the attack, you must choose to split your Effect between your two weapons. Both weapons are considered to have hit at the Effect allocated to them. Once this is done, the opponent can make any reactions as normal, though each attack must be individually reacted to. If one of these two attacks is successfully Parried or Blocked you may not react to that Parry or Block in any way."
+    },
+    {
+        "abilityName": "Twirl",
+        "abilityCp": 8,
+        "abilityDiscipline": "Spears",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (M+Special)",
+        "abilityDescription": "As a Reaction to a successful Basic Impale Attack with a Skewering Weapon, Expend Momentum to immediately switch to Wide Grip and get an immediate follow up attack with that weapon\u2019s Butt Strike or Butt Impale attack on the same or a different target you have Engaged. This follow up attack costs only half of its normal number of Ticks."
+    },
+    {
+        "abilityName": "Twitch Response",
+        "abilityCp": 4,
+        "abilityDiscipline": "Tumbling",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "Twitch Response is a Boost to a Dive or Dodge Reaction, costing Momentum.  You may opt to move 2 yds in your Dodge with this Boost, or if applied to a Dive, move 2 yds per Effect before becoming Prone."
+    },
+    {
+        "abilityName": "Unbalance",
+        "abilityCp": 8,
+        "abilityDiscipline": "Shield_Use",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Reaction (M)",
+        "abilityDescription": "A Reaction to a Block Reaction that successfully moved the attacker into Botch.  This Reaction costs Momentum.  The attacker is Dazed."
+    },
+    {
+        "abilityName": "Unhorse",
+        "abilityCp": 8,
+        "abilityDiscipline": "Mounted_Combat",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Maneuver (1 Effect)",
+        "abilityDescription": "Maneuver, costing 1 Effect, to a Melee Attack made while Moving on the Back of a Mount, while in Couch Stance.  The struck target, if also mounted, increases the Target Number on their Athletics (Prowess) check to Remain in the Saddle, by +1."
+    },
+    {
+        "abilityName": "Up Close",
+        "abilityCp": 8,
+        "abilityDiscipline": "Unbalanced_Sword",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "All \u201cCut\u201d attacks with Unbalanced Swords have their Minimum Measure (m) reduced by 1. If m was 0 they gain Handy (2), and if already Handy (2) they gain Handy (4), and if they are already Handy (4), they gain Accurate (+2)."
+    },
+    {
+        "abilityName": "Up Close and Personal",
+        "abilityCp": 8,
+        "abilityDiscipline": "Light_Blades",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "All Attacks with a Light Blade gain Efficient (4).  If an attack already benefited by Efficient (4), that attack instead gains Accurate (+2)."
+    },
+    {
+        "abilityName": "Up Close and Personal",
+        "abilityCp": 8,
+        "abilityDiscipline": "Vale_Lord",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "While in a Grapple, all of your attacks with a Light Blade gain Efficient (2) and Accuracy (+1).  "
+    },
+    {
+        "abilityName": "Viper Slash",
+        "abilityCp": 8,
+        "abilityDiscipline": "Unbalanced_Sword",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Boost (M)",
+        "abilityDescription": "A Boost to a \u201cCut\u201d attack with an Unbalanced Sword.  The attack gains Precision (+2). "
+    },
+    {
+        "abilityName": "Wail of Akun",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sahari",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (M+15T+Special)",
+        "abilityDescription": "This is a boost to any spell cast, that requires you expend Momentum, add 15 Ticks to your initiative, and expend Sarmundi Pool.  The boosted spell gains Accurate (+1) for every Sarmundi Pool spent, and you gain 1 Flare for each expended Sarmundi Pool.  If you are in Sarmundi Trance, this Flare does not grant Sarmundi Pool."
+    },
+    {
+        "abilityName": "War Shout",
+        "abilityCp": 16,
+        "abilityDiscipline": "Daunt",
+        "abilityLevel": "Advanced",
+        "abilityType": "Boost (M+10T)",
+        "abilityDescription": "This is a Boost to a Melee Attack on an Engaged target.  Make an immediate Daunt Action Check as a Boost against the target.  If this Daunt Action gains 2 or more DoS, in addition to the normal effects of a Daunt Action, the target can make no reactions against the attack."
+    },
+    {
+        "abilityName": "Watchman",
+        "abilityCp": 4,
+        "abilityDiscipline": "Sentinel",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When making the Combat Awareness Surge, in addition to the normal effects, Observation Action Checks gain Accurate (+2), and increase your Facing by +1.  This Facing modifier is limited by any helmet restrictions with the Limited Facing keyword, or other effects that restrict Facing."
+    },
+    {
+        "abilityName": "Waylay",
+        "abilityCp": 16,
+        "abilityDiscipline": "Pugilism",
+        "abilityLevel": "Advanced",
+        "abilityType": "Maneuver (Effect = BOD, +1 RP)",
+        "abilityDescription": "You may use the Waylay Maneuver with any Melee Attack that deals type I (Impact) Damage. Spend Effect equal to the target\u2019s Body Defense, and expend 1 Reserve Pool, to Stun your target."
+    },
+    {
+        "abilityName": "Waylay",
+        "abilityCp": 16,
+        "abilityDiscipline": "Weighted_Weapons",
+        "abilityLevel": "Advanced",
+        "abilityType": "Maneuver (Effect = BOD, +1 RP)",
+        "abilityDescription": "You may use the Waylay Maneuver with any Melee Attack that deals type I (Impact) Damage. Spend Effect equal to the target\u2019s Body Defense, and expend 1 Reserve Pool, to Stun your target."
+    },
+    {
+        "abilityName": "Weapon Care",
+        "abilityCp": 8,
+        "abilityDiscipline": "Black_Powder_Weapons",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Reduces the Misfire Threshold for Firearms you have Prepared to Fire by 1.  A Firearm with a Misfire (3+), becomes a Misfire (2+), for example."
+    },
+    {
+        "abilityName": "Wet Weather Fighting",
+        "abilityCp": 8,
+        "abilityDiscipline": "Black_Powder_Weapons",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "Attacks made in inclement weather increase the misfire chance by one step instead of two as normal. For example a Handgonne with a misfire threshold of 4+ would have this increased to a 5+ instead of the normal 6+ in wet weather."
+    },
+    {
+        "abilityName": "Whispered Secrets",
+        "abilityCp": 4,
+        "abilityDiscipline": "Wud",
+        "abilityLevel": "Basic",
+        "abilityType": "Boost (1AP)",
+        "abilityDescription": "As a Boost to casting a spell using the Intonations Modality, you may expend 1AP to cast the spell stealthily.  This Spell Cast does not modify your Stealth Rating, and is not detectable audibly."
+    },
+    {
+        "abilityName": "Wide Grip",
+        "abilityCp": 4,
+        "abilityDiscipline": "Spears",
+        "abilityLevel": "Basic",
+        "abilityType": "Grip",
+        "abilityDescription": "Wide Grip can be used while wielding a Hafted Weapon that has a Maximum Measure no greater than 2r with both hands, allowing you to hold the weapon with a wide handed grip. In this Grip the weapon gains the Can Parry Keyword and Accurate (-1)."
+    },
+    {
+        "abilityName": "Wild Flail",
+        "abilityCp": 8,
+        "abilityDiscipline": "Flexible_Weapons",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Complex (30T)",
+        "abilityDescription": "You spin a Flailing Weapon around in wide circles, giving you +2 Evasion until your next pass.  Until your next pass, if anyone enters into the area where they would be Threatened by you, you may make, as a Reaction, an immediate Basic Attack with your flexible weapon against them at a cost of the Weapon Speed in Ticks plus Guard.  Wild Flail persists until your next pass, or ends if you are knocked Prone or Sprawled."
+    },
+    {
+        "abilityName": "Wild Swing",
+        "abilityCp": 8,
+        "abilityDiscipline": "Bearskin_Warrior",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Melee Attack (Weapon Speed + M)",
+        "abilityDescription": "Wild Swing can be delivered by any Heavy Melee Attack (an attack delivered with both hands on the weapon).  You may make one Melee Attack Action against all Engaged Targets (one Action Check compared to each target\u2019s EVA).  This attack is Massive and Overwhelming.  On delivering this Action, you gain a C-TAG until the start of your next pass."
+    },
+    {
+        "abilityName": "Word of Cancellation",
+        "abilityCp": 16,
+        "abilityDiscipline": "Wud",
+        "abilityLevel": "Advanced",
+        "abilityType": "Reaction (G+1RP)",
+        "abilityDescription": "Counterspell: As a Reaction to spell (a magical effect with a Complexity Rating) being cast, that you have Sensed, you may attempt to interrupt and cancel the spell.  Make a Focus Magic (Banish): Target Spell Complexity.  Each Effect removes one Hit from the caster\u2019s Action Check.  If this moves the spell to Botch, the caster of the target spell gains Dazed, and the spell fails.  "
+    },
+    {
+        "abilityName": "Zoomancy I",
+        "abilityCp": 4,
+        "abilityDiscipline": "Animism",
+        "abilityLevel": "Basic",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Zoomancy spell you treat the Complexity of that spell as 1 less (to a minimum of 0).  \u000a\u000aAnimal Instincts: For 1 Segment per day (or every 6 Segments), you have the Scent ability.",
+        "complexityZoomancy": -1
+    },
+    {
+        "abilityName": "Zoomancy II",
+        "abilityCp": 8,
+        "abilityDiscipline": "Animism",
+        "abilityLevel": "Intermediate",
+        "abilityType": "Modifier",
+        "abilityDescription": "When casting any Zoomancy spell you treat the Complexity of that spell as 1 less (to a minimum of 0).  Gain +3d to Counterspell any Zoomancy Spell.  \u000a\u000aLingering Eye: You can tell If an animal is under the control of a zoomancy spell if it is within 60 yds. of you.  You do not have to be able to see or detect the animal, but when you notice the zoomancy control, you do gain Detected on the animal.",
+        "complexityZoomancy": -1
+    }
+]

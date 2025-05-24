@@ -1,0 +1,10 @@
+{
+  "projectKey": "saga-abilities",
+  "serverUrl": "http://localhost:9000",
+  "serverVersion": "10.0.0", 
+  "binding": {
+    "type": "connected",
+    "connectionId": "http-localhost-9000",
+    "projectKey": "saga-abilities"
+  }
+}

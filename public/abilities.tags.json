@@ -1,0 +1,541 @@
+{
+  "tags": {
+    "magic": {
+      "name": "Magic",
+      "description": "Abilities that involve casting spells, magic rituals, or supernatural effects",
+      "abilities": [
+        "Aeromancy I", "Aeromancy II", "Alchemy I", "Alchemy II", "Alendra's Emanation",
+        "Animist Adept", "Apsychomancy I", "Apsychomancy II", "Arcane Reinforcement",
+        "Arcanum I", "Arcanum II", "Assense the Veil", "Aura of Deflection", "Aura of Purity",
+        "Conjuration I", "Conjuration II", "Commune"
+      ]
+    },
+    "melee": {
+      "name": "Melee Combat",
+      "description": "Abilities related to close quarters combat with weapons",
+      "abilities": [
+        "Beat Aside", "Back Stance", "Choked Grip", "Chop", "Circular Cuts", "Close In Training",
+        "Feint", "Final Strike", "Find the Gaps", "Find the Weak Point"
+      ]
+    },
+    "ranged": {
+      "name": "Ranged Combat",
+      "description": "Abilities related to ranged attacks and weapons",
+      "abilities": [
+        "Arm Wrap", "Around the World", "Argus", "Extreme Distance Archery", "Extreme Distance Bolt", 
+        "Extreme Distance Shooting"
+      ]
+    },
+    "mobility": {
+      "name": "Mobility",
+      "description": "Abilities that enhance or involve movement",
+      "abilities": [
+        "Aerial Flip", "Advance!", "Combat Mobility"
+      ]
+    },
+    "reaction": {
+      "name": "Reaction",
+      "description": "Abilities that can be used as reactions to other actions",
+      "abilities": [
+        "Aerial Flip", "Beat Aside", "Confound the Conjurer", "Feint"
+      ]
+    },
+    "boost": {
+      "name": "Boost",
+      "description": "Abilities that enhance other abilities or actions",
+      "abilities": [
+        "Advance!", "Alendra's Emanation", "Chop", "Combo", "Final Strike"
+      ]
+    },
+    "defense": {
+      "name": "Defense",
+      "description": "Abilities that improve defensive capabilities",
+      "abilities": [
+        "Aura of Deflection", "Aura of Purity", "Circular Cuts", "Confound the Conjurer"
+      ]
+    },
+    "social": {
+      "name": "Social",
+      "description": "Abilities related to communication and social interaction",
+      "abilities": [
+        "Advance!", "Bestial Howl", "Fast Talk", "Feed on Fear", "Feign Weakness"
+      ]
+    },
+    "unarmed": {
+      "name": "Unarmed Combat",
+      "description": "Abilities for fighting without weapons",
+      "abilities": [
+        "Combo"
+      ]
+    },
+    "weapon_specific": {
+      "name": "Weapon Specific",
+      "description": "Abilities that apply to specific weapon types",
+      "categories": {
+        "sword": {
+          "name": "Swords",
+          "description": "Abilities for sword weapons",
+          "abilities": [
+            "Beat Aside", "Chop", "Circular Cuts", "Feint", "Find the Gaps"
+          ]
+        },
+        "flexible": {
+          "name": "Flexible Weapons",
+          "description": "Abilities for whips, chains and other flexible weapons",
+          "abilities": [
+            "Arm Wrap", "Around the World"
+          ]
+        },
+        "spear": {
+          "name": "Hafted Weapons",
+          "description": "Abilities for spears and other hafted weapons",
+          "abilities": [
+            "Choked Grip", "Close In Training"
+          ]
+        },
+        "bow": {
+          "name": "Bows",
+          "description": "Abilities for bow weapons",
+          "abilities": [
+            "Extreme Distance Archery"
+          ]
+        },
+        "crossbow": {
+          "name": "Crossbows",
+          "description": "Abilities for crossbow weapons",
+          "abilities": [
+            "Extreme Distance Bolt"
+          ]
+        },
+        "firearm": {
+          "name": "Firearms",
+          "description": "Abilities for black powder weapons",
+          "abilities": [
+            "Extreme Distance Shooting"
+          ]
+        }
+      }
+    },
+    "level": {
+      "name": "Ability Level",
+      "description": "Abilities categorized by their power/requirement level",
+      "categories": {
+        "basic": {
+          "name": "Basic",
+          "description": "Basic level abilities",
+          "abilities": [
+            "Aeromancy I", "Alchemy I", "Apsychomancy I", "Arcanum I", "Back Stance", 
+            "Choked Grip", "Chop", "Circular Cuts", "College Specialist", "Commune", 
+            "Confound the Conjurer", "Conjuration I", "Fast Talk", "Feed on Fear", "Feign Weakness"
+          ]
+        },
+        "intermediate": {
+          "name": "Intermediate",
+          "description": "Intermediate level abilities",
+          "abilities": [
+            "Advance!", "Aeromancy II", "Alchemy II", "Alendra's Emanation", "Apsychomancy II", 
+            "Arcane Reinforcement", "Arcanum II", "Arm Wrap", "Assassin Strike", "Assense the Veil", 
+            "Bestial Howl", "Beat Aside", "Close In Training", "Combat Mobility", "Combo", 
+            "Conjuration II", "Extreme Distance Archery", "Extreme Distance Bolt", 
+            "Extreme Distance Shooting", "Feint", "Find the Weak Point"
+          ]
+        },
+        "advanced": {
+          "name": "Advanced",
+          "description": "Advanced level abilities",
+          "abilities": [
+            "Aerial Flip", "Animist Adept", "Argus", "Around the World", "Aura of Deflection", 
+            "Aura of Purity", "Final Strike", "Find the Gaps"
+          ]
+        }
+      }
+    },
+    "cost": {
+      "name": "CP Cost",
+      "description": "Abilities categorized by their CP cost",
+      "categories": {
+        "low": {
+          "name": "Low Cost (4 CP)",
+          "description": "Abilities that cost 4 CP",
+          "abilities": [
+            "Aeromancy I", "Alchemy I", "Apsychomancy I", "Arcanum I", "Back Stance", 
+            "Choked Grip", "Chop", "Circular Cuts", "College Specialist", "Commune", 
+            "Confound the Conjurer", "Conjuration I", "Fast Talk", "Feed on Fear", "Feign Weakness"
+          ]
+        },
+        "medium": {
+          "name": "Medium Cost (8 CP)",
+          "description": "Abilities that cost 8 CP",
+          "abilities": [
+            "Advance!", "Aeromancy II", "Alchemy II", "Alendra's Emanation", "Apsychomancy II", 
+            "Arcane Reinforcement", "Arcanum II", "Arm Wrap", "Assassin Strike", "Assense the Veil", 
+            "Bestial Howl", "Beat Aside", "Close In Training", "Combat Mobility", "Combo", 
+            "Conjuration II", "Extreme Distance Archery", "Extreme Distance Bolt", 
+            "Extreme Distance Shooting", "Feint", "Find the Weak Point"
+          ]
+        },
+        "high": {
+          "name": "High Cost (16 CP)",
+          "description": "Abilities that cost 16 CP",
+          "abilities": [
+            "Aerial Flip", "Animist Adept", "Argus", "Around the World", "Aura of Deflection", 
+            "Aura of Purity", "Final Strike", "Find the Gaps"
+          ]
+        }
+      }
+    },
+    "action_type": {
+      "name": "Action Type",
+      "description": "Abilities categorized by their action type",
+      "categories": {
+        "boost": {
+          "name": "Boost",
+          "description": "Abilities that function as boosts",
+          "abilities": [
+            "Advance!", "Alendra's Emanation", "Argus", "Around the World", "Chop", "Combo", "Final Strike"
+          ]
+        },
+        "reaction": {
+          "name": "Reaction",
+          "description": "Abilities that function as reactions",
+          "abilities": [
+            "Aerial Flip", "Beat Aside", "Confound the Conjurer", "Feint"
+          ]
+        },
+        "complex": {
+          "name": "Complex",
+          "description": "Abilities that are complex actions",
+          "abilities": [
+            "Aura of Deflection", "Aura of Purity", "Bestial Howl"
+          ]
+        },
+        "maneuver": {
+          "name": "Maneuver",
+          "description": "Abilities that are maneuvers",
+          "abilities": [
+            "Arm Wrap", "Circular Cuts", "Find the Weak Point"
+          ]
+        },
+        "modifier": {
+          "name": "Modifier",
+          "description": "Abilities that function as modifiers",
+          "abilities": [
+            "Aeromancy I", "Aeromancy II", "Alchemy I", "Alchemy II", "Animist Adept", 
+            "Apsychomancy I", "Apsychomancy II", "Arcane Reinforcement", "Arcanum I", 
+            "Arcanum II", "Assassin Strike", "Close In Training", "College Specialist", 
+            "Conjuration I", "Conjuration II", "Extreme Distance Archery", "Extreme Distance Bolt", 
+            "Extreme Distance Shooting", "Fast Talk", "Feed on Fear", "Find the Gaps"
+          ]
+        },
+        "stance": {
+          "name": "Stance",
+          "description": "Abilities that are stances",
+          "abilities": [
+            "Back Stance"
+          ]
+        },
+        "surge": {
+          "name": "Surge",
+          "description": "Abilities that are surges",
+          "abilities": [
+            "Combat Mobility"
+          ]
+        },
+        "prep": {
+          "name": "Prep Action",
+          "description": "Abilities that are preparatory actions",
+          "abilities": [
+            "Assense the Veil"
+          ]
+        },
+        "standard": {
+          "name": "Standard Action",
+          "description": "Abilities that are standard actions",
+          "abilities": [
+            "Commune", "Feign Weakness"
+          ]
+        }
+      }
+    },
+    "discipline": {
+      "name": "Discipline",
+      "description": "Abilities organized by their discipline",
+      "categories": {
+        "animism": {
+          "name": "Animism",
+          "description": "Abilities in the Animism discipline",
+          "abilities": [
+            "Animist Adept", "Apsychomancy I", "Apsychomancy II"
+          ]
+        },
+        "balanced_sword": {
+          "name": "Balanced Sword",
+          "description": "Abilities in the Balanced Sword discipline",
+          "abilities": [
+            "Beat Aside", "Feint"
+          ]
+        },
+        "beast_tamer": {
+          "name": "Beast Tamer",
+          "description": "Abilities in the Beast Tamer discipline",
+          "abilities": [
+            "Arm Wrap", "Combat Mobility"
+          ]
+        },
+        "bearskin_warrior": {
+          "name": "Bearskin Warrior",
+          "description": "Abilities in the Bearskin Warrior discipline",
+          "abilities": [
+            "Bestial Howl", "Final Strike"
+          ]
+        },
+        "black_powder_weapons": {
+          "name": "Black Powder Weapons",
+          "description": "Abilities in the Black Powder Weapons discipline",
+          "abilities": [
+            "Extreme Distance Shooting"
+          ]
+        },
+        "bows": {
+          "name": "Bows",
+          "description": "Abilities in the Bows discipline",
+          "abilities": [
+            "Extreme Distance Archery"
+          ]
+        },
+        "crossbows": {
+          "name": "Crossbows",
+          "description": "Abilities in the Crossbows discipline",
+          "abilities": [
+            "Extreme Distance Bolt"
+          ]
+        },
+        "daunt": {
+          "name": "Daunt",
+          "description": "Abilities in the Daunt discipline",
+          "abilities": [
+            "Feed on Fear"
+          ]
+        },
+        "elementalism": {
+          "name": "Elementalism",
+          "description": "Abilities in the Elementalism discipline",
+          "abilities": [
+            "Aeromancy I", "Aeromancy II"
+          ]
+        },
+        "flexible_weapons": {
+          "name": "Flexible Weapons",
+          "description": "Abilities in the Flexible Weapons discipline",
+          "abilities": [
+            "Around the World"
+          ]
+        },
+        "footwork": {
+          "name": "Footwork",
+          "description": "Abilities in the Footwork discipline",
+          "abilities": [
+            "Combat Mobility"
+          ]
+        },
+        "inner_pillar": {
+          "name": "Inner Pillar",
+          "description": "Abilities in the Inner Pillar discipline",
+          "abilities": [
+            "Alendra's Emanation", "Arcane Reinforcement", "College Specialist"
+          ]
+        },
+        "leadership": {
+          "name": "Leadership",
+          "description": "Abilities in the Leadership discipline",
+          "abilities": [
+            "Advance!"
+          ]
+        },
+        "lictor": {
+          "name": "Lictor",
+          "description": "Abilities in the Lictor discipline",
+          "abilities": [
+            "Aura of Deflection", "Aura of Purity", "Confound the Conjurer"
+          ]
+        },
+        "light_blades": {
+          "name": "Light Blades",
+          "description": "Abilities in the Light Blades discipline",
+          "abilities": [
+            "Feint"
+          ]
+        },
+        "magus": {
+          "name": "Magus",
+          "description": "Abilities in the Magus discipline",
+          "abilities": [
+            "Arcanum I", "Arcanum II", "Assense the Veil"
+          ]
+        },
+        "melee_form": {
+          "name": "Melee Form",
+          "description": "Abilities in the Melee Form discipline",
+          "abilities": [
+            "Back Stance"
+          ]
+        },
+        "mounted_combat": {
+          "name": "Mounted Combat",
+          "description": "Abilities in the Mounted Combat discipline",
+          "abilities": [
+            "Find the Weak Point"
+          ]
+        },
+        "opportunist": {
+          "name": "Opportunist",
+          "description": "Abilities in the Opportunist discipline",
+          "abilities": [
+            "Assassin Strike"
+          ]
+        },
+        "pugilism": {
+          "name": "Pugilism",
+          "description": "Abilities in the Pugilism discipline",
+          "abilities": [
+            "Combo"
+          ]
+        },
+        "sentinel": {
+          "name": "Sentinel",
+          "description": "Abilities in the Sentinel discipline",
+          "abilities": [
+            "Argus"
+          ]
+        },
+        "sorcery": {
+          "name": "Sorcery",
+          "description": "Abilities in the Sorcery discipline",
+          "abilities": [
+            "Alchemy I", "Alchemy II", "Conjuration I", "Conjuration II"
+          ]
+        },
+        "spears": {
+          "name": "Spears",
+          "description": "Abilities in the Spears discipline",
+          "abilities": [
+            "Choked Grip", "Close In Training"
+          ]
+        },
+        "theurgy": {
+          "name": "Theurgy",
+          "description": "Abilities in the Theurgy discipline",
+          "abilities": [
+            "Commune"
+          ]
+        },
+        "trickery": {
+          "name": "Trickery",
+          "description": "Abilities in the Trickery discipline",
+          "abilities": [
+            "Fast Talk", "Feign Weakness"
+          ]
+        },
+        "tumbling": {
+          "name": "Tumbling",
+          "description": "Abilities in the Tumbling discipline",
+          "abilities": [
+            "Aerial Flip"
+          ]
+        },
+        "unbalanced_sword": {
+          "name": "Unbalanced Sword",
+          "description": "Abilities in the Unbalanced Sword discipline",
+          "abilities": [
+            "Chop", "Circular Cuts", "Feint"
+          ]
+        },
+        "vale_lord": {
+          "name": "Vale Lord",
+          "description": "Abilities in the Vale Lord discipline",
+          "abilities": [
+            "Find the Gaps"
+          ]
+        }
+      }
+    },
+    "effects": {
+      "name": "Effects",
+      "description": "Abilities categorized by their effects or benefits",
+      "categories": {
+        "damage": {
+          "name": "Increased Damage",
+          "description": "Abilities that increase damage",
+          "abilities": [
+            "Chop", "Final Strike"
+          ]
+        },
+        "accuracy": {
+          "name": "Improved Accuracy",
+          "description": "Abilities that improve accuracy or hit chance",
+          "abilities": [
+            "Back Stance", "Assassin Strike", "Argus"
+          ]
+        },
+        "area_effect": {
+          "name": "Area Effect",
+          "description": "Abilities that affect multiple targets or an area",
+          "abilities": [
+            "Around the World", "Bestial Howl", "Aura of Deflection", "Aura of Purity"
+          ]
+        },
+        "initiative": {
+          "name": "Initiative Manipulation",
+          "description": "Abilities that affect initiative",
+          "abilities": [
+            "Advance!"
+          ]
+        },
+        "complexity_reduction": {
+          "name": "Complexity Reduction",
+          "description": "Abilities that reduce spell complexity",
+          "abilities": [
+            "Aeromancy I", "Aeromancy II", "Alchemy I", "Alchemy II", "Animist Adept", 
+            "Apsychomancy I", "Apsychomancy II", "Arcanum I", "Arcanum II", "Conjuration I", 
+            "Conjuration II"
+          ]
+        },
+        "resistance": {
+          "name": "Resistance",
+          "description": "Abilities that grant resistance to damage types",
+          "abilities": [
+            "Aura of Deflection", "Aura of Purity"
+          ]
+        },
+        "control": {
+          "name": "Control",
+          "description": "Abilities that control or limit opponent actions",
+          "abilities": [
+            "Arm Wrap", "Beat Aside", "Feed on Fear", "Feign Weakness"
+          ]
+        },
+        "mobility": {
+          "name": "Mobility Enhancement",
+          "description": "Abilities that enhance movement",
+          "abilities": [
+            "Aerial Flip", "Combat Mobility"
+          ]
+        },
+        "defensive": {
+          "name": "Defensive",
+          "description": "Abilities that improve defenses",
+          "abilities": [
+            "Circular Cuts", "Confound the Conjurer", "Aura of Deflection", "Aura of Purity"
+          ]
+        },
+        "range": {
+          "name": "Range Enhancement",
+          "description": "Abilities that improve range",
+          "abilities": [
+            "Aeromancy I", "Extreme Distance Archery", "Extreme Distance Bolt", "Extreme Distance Shooting"
+          ]
+        }
+      }
+    }
+  }
+}

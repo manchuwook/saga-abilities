@@ -1,0 +1,5 @@
+{
+    "sonarQubeUri": "http://localhost:9000",
+    "projectKey": "saga-abilities",
+    "workDir": ".sonarlint"
+}
