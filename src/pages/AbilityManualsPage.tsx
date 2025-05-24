@@ -44,7 +44,7 @@ export default function AbilityManualsPage() {
   };
   const handleDeleteAbilityManual = (AbilityManual: AbilityManual) => {
     modals.openConfirmModal({
-      title: <Text c={isDark ? 'white' : 'dark.9'} fw={700}>Delete AbilityManual</Text>,
+      title: <Text c={isDark ? 'white' : 'dark.9'} fw={700}>Delete Ability Manual</Text>,
       children: (
         <Text size="sm" c={isDark ? 'gray.2' : 'dark.7'}>
           Are you sure you want to delete "{AbilityManual.name}" for {AbilityManual.character}?
@@ -97,7 +97,7 @@ export default function AbilityManualsPage() {
   return (
     <Container size="xl" py="xl">
       <Group justify="space-between" mb="xl">
-        <Title order={1} c={isDark ? 'gray.1' : 'dark.8'}>My AbilityManuals</Title>
+        <Title order={1} c={isDark ? 'gray.1' : 'dark.8'}>My Ability Manuals</Title>
         <Button
           leftSection={<IconPlus size={16} />}
           onClick={openNewModal}
@@ -113,7 +113,7 @@ export default function AbilityManualsPage() {
             You don't have any Ability Manuals yet
           </Text>
           <Text mb="xl" c={isDark ? 'gray.3' : 'dark.6'}>
-            Create your first AbilityManual to start collecting abilities for your character.
+            Create your first Ability Manual to start collecting abilities for your character.
           </Text>
           <Button onClick={openNewModal} color={isDark ? 'blue.4' : 'blue.6'}>Create Ability Manual</Button>
         </Card>
