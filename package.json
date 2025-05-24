@@ -10,6 +10,7 @@
     "build:prod": "pnpm clean && nx vite:build --config vitest.config.ts",
     "build:profile": "cross-env PROFILE=true pnpm build:prod",
     "build:measure": "cross-env MEASURE=true pnpm build:prod",
+    "deploy": "pnpm clean && pnpm build:prod && wrangler pages deploy --project-name saga-abilities dist",
     "preview": "nx vite:preview",
     "start": "nx serve",
     "clean": "rimraf dist",

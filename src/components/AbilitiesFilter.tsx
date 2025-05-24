@@ -40,86 +40,16 @@ export function AbilitiesFilter({ abilities, onFilterChange }: AbilitiesFilterPr
     return uniqueDisciplines.map(c => ({ value: c, label: c }));
   }, [abilities]);
 
-  // Organize tags into categories - memoized to prevent recalculation on every render
+  // Flatten tags: no grouping, just a flat array for MultiSelect
   const tagCategories = useMemo(() => {
     if (!AbilityTagsData?.tags || AbilityTagsData.tags.length === 0) return [];
-
-    // Group tags by their parent categories or create new categories based on tag properties
-    const categorizedData: { group: string; items: { value: string; label: string; description?: string }[] }[] = [];
-
-    // Track categories we've already created
-    const categoryMap = new Map<string, { group: string; items: { value: string; label: string; description?: string }[] }>();
-
-    // First, collect all unique parent categories from our flattened structure
-    const uniqueParentCategories = new Set<string>();
-    AbilityTagsData.tags.forEach(tag => {
-      if (tag.parentCategory) {
-        uniqueParentCategories.add(tag.parentCategory);
-      }
-    });
-
-    // Create groups for main categories and collect the tags with no parent
-    const mainCategoryItems = new Map<string, { value: string; label: string; description?: string }[]>();
-
-    // Process tags - first divide between those with parents and those without
-    AbilityTagsData.tags.forEach(tag => {
-      const tagItem = {
+    return AbilityTagsData.tags
+      .filter(tag => tag.abilities && tag.abilities.length > 0)
+      .map(tag => ({
         value: tag.tag,
-        label: `${tag.name} (${tag.abilities?.length ?? 0})`,
+        label: `${tag.name} (${tag.abilities.length})`,
         description: tag.description
-      };
-
-      if (tag.parentCategory) {
-        // This is a subcategory tag, add it to its parent category
-        if (!mainCategoryItems.has(tag.parentCategory)) {
-          mainCategoryItems.set(tag.parentCategory, []);
-        }
-        mainCategoryItems.get(tag.parentCategory)?.push(tagItem);
-      } else {
-        // This is a main category - create a group with its name as the key
-        if (!categoryMap.has(tag.name)) {
-          categoryMap.set(tag.name, {
-            group: tag.name,
-            items: []
-          });
-        }
-
-        // Only add the tag itself as a selectable option for top-level categories
-        // if it directly has abilities (not just nested ones)
-        if (tag.abilities && tag.abilities.length > 0) {
-          categoryMap.get(tag.name)?.items.push(tagItem);
-        }
-      }
-    });
-
-    // Now add all subcategory tags to their respective parent category groups
-    mainCategoryItems.forEach((items, groupName) => {
-      if (!categoryMap.has(groupName)) {
-        // Create the category if it wasn't created above
-        categoryMap.set(groupName, {
-          group: groupName,
-          items: []
-        });
-      }
-
-      // Add all subcategory items to this group
-      categoryMap.get(groupName)?.items.push(...items);
-    });
-
-    // Convert the Map to an array for the MultiSelect component
-    categoryMap.forEach(category => {
-      if (category.items.length > 0) {
-        categorizedData.push({
-          group: category.group,
-          items: category.items.sort((a, b) => a.label.localeCompare(b.label))
-        });
-      }
-    });
-
-    // Sort categories alphabetically
-    categorizedData.sort((a, b) => a.group.localeCompare(b.group));
-
-    return categorizedData;
+      }));
   }, [AbilityTagsData]);
 
   // Apply filters

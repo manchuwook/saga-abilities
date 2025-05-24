@@ -1,541 +1,1192 @@
 {
-  "tags": {
-    "magic": {
-      "name": "Magic",
-      "description": "Abilities that involve casting spells, magic rituals, or supernatural effects",
-      "abilities": [
-        "Aeromancy I", "Aeromancy II", "Alchemy I", "Alchemy II", "Alendra's Emanation",
-        "Animist Adept", "Apsychomancy I", "Apsychomancy II", "Arcane Reinforcement",
-        "Arcanum I", "Arcanum II", "Assense the Veil", "Aura of Deflection", "Aura of Purity",
-        "Conjuration I", "Conjuration II", "Commune"
-      ]
-    },
-    "melee": {
-      "name": "Melee Combat",
-      "description": "Abilities related to close quarters combat with weapons",
-      "abilities": [
-        "Beat Aside", "Back Stance", "Choked Grip", "Chop", "Circular Cuts", "Close In Training",
-        "Feint", "Final Strike", "Find the Gaps", "Find the Weak Point"
-      ]
-    },
-    "ranged": {
-      "name": "Ranged Combat",
-      "description": "Abilities related to ranged attacks and weapons",
-      "abilities": [
-        "Arm Wrap", "Around the World", "Argus", "Extreme Distance Archery", "Extreme Distance Bolt", 
-        "Extreme Distance Shooting"
-      ]
-    },
-    "mobility": {
-      "name": "Mobility",
-      "description": "Abilities that enhance or involve movement",
-      "abilities": [
-        "Aerial Flip", "Advance!", "Combat Mobility"
-      ]
-    },
-    "reaction": {
-      "name": "Reaction",
-      "description": "Abilities that can be used as reactions to other actions",
-      "abilities": [
-        "Aerial Flip", "Beat Aside", "Confound the Conjurer", "Feint"
-      ]
-    },
-    "boost": {
-      "name": "Boost",
-      "description": "Abilities that enhance other abilities or actions",
-      "abilities": [
-        "Advance!", "Alendra's Emanation", "Chop", "Combo", "Final Strike"
-      ]
-    },
-    "defense": {
-      "name": "Defense",
-      "description": "Abilities that improve defensive capabilities",
-      "abilities": [
-        "Aura of Deflection", "Aura of Purity", "Circular Cuts", "Confound the Conjurer"
-      ]
-    },
-    "social": {
-      "name": "Social",
-      "description": "Abilities related to communication and social interaction",
-      "abilities": [
-        "Advance!", "Bestial Howl", "Fast Talk", "Feed on Fear", "Feign Weakness"
-      ]
-    },
-    "unarmed": {
-      "name": "Unarmed Combat",
-      "description": "Abilities for fighting without weapons",
-      "abilities": [
-        "Combo"
-      ]
-    },
-    "weapon_specific": {
-      "name": "Weapon Specific",
-      "description": "Abilities that apply to specific weapon types",
-      "categories": {
-        "sword": {
-          "name": "Swords",
-          "description": "Abilities for sword weapons",
-          "abilities": [
-            "Beat Aside", "Chop", "Circular Cuts", "Feint", "Find the Gaps"
-          ]
-        },
-        "flexible": {
-          "name": "Flexible Weapons",
-          "description": "Abilities for whips, chains and other flexible weapons",
-          "abilities": [
-            "Arm Wrap", "Around the World"
-          ]
-        },
-        "spear": {
-          "name": "Hafted Weapons",
-          "description": "Abilities for spears and other hafted weapons",
-          "abilities": [
-            "Choked Grip", "Close In Training"
-          ]
-        },
-        "bow": {
-          "name": "Bows",
-          "description": "Abilities for bow weapons",
-          "abilities": [
-            "Extreme Distance Archery"
-          ]
-        },
-        "crossbow": {
-          "name": "Crossbows",
-          "description": "Abilities for crossbow weapons",
-          "abilities": [
-            "Extreme Distance Bolt"
-          ]
-        },
-        "firearm": {
-          "name": "Firearms",
-          "description": "Abilities for black powder weapons",
-          "abilities": [
-            "Extreme Distance Shooting"
-          ]
-        }
-      }
-    },
-    "level": {
-      "name": "Ability Level",
-      "description": "Abilities categorized by their power/requirement level",
-      "categories": {
-        "basic": {
-          "name": "Basic",
-          "description": "Basic level abilities",
-          "abilities": [
-            "Aeromancy I", "Alchemy I", "Apsychomancy I", "Arcanum I", "Back Stance", 
-            "Choked Grip", "Chop", "Circular Cuts", "College Specialist", "Commune", 
-            "Confound the Conjurer", "Conjuration I", "Fast Talk", "Feed on Fear", "Feign Weakness"
-          ]
-        },
-        "intermediate": {
-          "name": "Intermediate",
-          "description": "Intermediate level abilities",
-          "abilities": [
-            "Advance!", "Aeromancy II", "Alchemy II", "Alendra's Emanation", "Apsychomancy II", 
-            "Arcane Reinforcement", "Arcanum II", "Arm Wrap", "Assassin Strike", "Assense the Veil", 
-            "Bestial Howl", "Beat Aside", "Close In Training", "Combat Mobility", "Combo", 
-            "Conjuration II", "Extreme Distance Archery", "Extreme Distance Bolt", 
-            "Extreme Distance Shooting", "Feint", "Find the Weak Point"
-          ]
-        },
-        "advanced": {
-          "name": "Advanced",
-          "description": "Advanced level abilities",
-          "abilities": [
-            "Aerial Flip", "Animist Adept", "Argus", "Around the World", "Aura of Deflection", 
-            "Aura of Purity", "Final Strike", "Find the Gaps"
-          ]
-        }
-      }
-    },
-    "cost": {
-      "name": "CP Cost",
-      "description": "Abilities categorized by their CP cost",
-      "categories": {
-        "low": {
-          "name": "Low Cost (4 CP)",
-          "description": "Abilities that cost 4 CP",
-          "abilities": [
-            "Aeromancy I", "Alchemy I", "Apsychomancy I", "Arcanum I", "Back Stance", 
-            "Choked Grip", "Chop", "Circular Cuts", "College Specialist", "Commune", 
-            "Confound the Conjurer", "Conjuration I", "Fast Talk", "Feed on Fear", "Feign Weakness"
-          ]
-        },
-        "medium": {
-          "name": "Medium Cost (8 CP)",
-          "description": "Abilities that cost 8 CP",
-          "abilities": [
-            "Advance!", "Aeromancy II", "Alchemy II", "Alendra's Emanation", "Apsychomancy II", 
-            "Arcane Reinforcement", "Arcanum II", "Arm Wrap", "Assassin Strike", "Assense the Veil", 
-            "Bestial Howl", "Beat Aside", "Close In Training", "Combat Mobility", "Combo", 
-            "Conjuration II", "Extreme Distance Archery", "Extreme Distance Bolt", 
-            "Extreme Distance Shooting", "Feint", "Find the Weak Point"
-          ]
-        },
-        "high": {
-          "name": "High Cost (16 CP)",
-          "description": "Abilities that cost 16 CP",
-          "abilities": [
-            "Aerial Flip", "Animist Adept", "Argus", "Around the World", "Aura of Deflection", 
-            "Aura of Purity", "Final Strike", "Find the Gaps"
-          ]
-        }
-      }
-    },
-    "action_type": {
+  "tags": [
+    {
+      "tag": "Action Type",
       "name": "Action Type",
-      "description": "Abilities categorized by their action type",
-      "categories": {
-        "boost": {
-          "name": "Boost",
-          "description": "Abilities that function as boosts",
-          "abilities": [
-            "Advance!", "Alendra's Emanation", "Argus", "Around the World", "Chop", "Combo", "Final Strike"
-          ]
-        },
-        "reaction": {
-          "name": "Reaction",
-          "description": "Abilities that function as reactions",
-          "abilities": [
-            "Aerial Flip", "Beat Aside", "Confound the Conjurer", "Feint"
-          ]
-        },
-        "complex": {
-          "name": "Complex",
-          "description": "Abilities that are complex actions",
-          "abilities": [
-            "Aura of Deflection", "Aura of Purity", "Bestial Howl"
-          ]
-        },
-        "maneuver": {
-          "name": "Maneuver",
-          "description": "Abilities that are maneuvers",
-          "abilities": [
-            "Arm Wrap", "Circular Cuts", "Find the Weak Point"
-          ]
-        },
-        "modifier": {
-          "name": "Modifier",
-          "description": "Abilities that function as modifiers",
-          "abilities": [
-            "Aeromancy I", "Aeromancy II", "Alchemy I", "Alchemy II", "Animist Adept", 
-            "Apsychomancy I", "Apsychomancy II", "Arcane Reinforcement", "Arcanum I", 
-            "Arcanum II", "Assassin Strike", "Close In Training", "College Specialist", 
-            "Conjuration I", "Conjuration II", "Extreme Distance Archery", "Extreme Distance Bolt", 
-            "Extreme Distance Shooting", "Fast Talk", "Feed on Fear", "Find the Gaps"
-          ]
-        },
-        "stance": {
-          "name": "Stance",
-          "description": "Abilities that are stances",
-          "abilities": [
-            "Back Stance"
-          ]
-        },
-        "surge": {
-          "name": "Surge",
-          "description": "Abilities that are surges",
-          "abilities": [
-            "Combat Mobility"
-          ]
-        },
-        "prep": {
-          "name": "Prep Action",
-          "description": "Abilities that are preparatory actions",
-          "abilities": [
-            "Assense the Veil"
-          ]
-        },
-        "standard": {
-          "name": "Standard Action",
-          "description": "Abilities that are standard actions",
-          "abilities": [
-            "Commune", "Feign Weakness"
-          ]
-        }
-      }
+      "description": "The type of action required to use abilities",
+      "abilities": []
     },
-    "discipline": {
-      "name": "Discipline",
-      "description": "Abilities organized by their discipline",
-      "categories": {
-        "animism": {
-          "name": "Animism",
-          "description": "Abilities in the Animism discipline",
-          "abilities": [
-            "Animist Adept", "Apsychomancy I", "Apsychomancy II"
-          ]
-        },
-        "balanced_sword": {
-          "name": "Balanced Sword",
-          "description": "Abilities in the Balanced Sword discipline",
-          "abilities": [
-            "Beat Aside", "Feint"
-          ]
-        },
-        "beast_tamer": {
-          "name": "Beast Tamer",
-          "description": "Abilities in the Beast Tamer discipline",
-          "abilities": [
-            "Arm Wrap", "Combat Mobility"
-          ]
-        },
-        "bearskin_warrior": {
-          "name": "Bearskin Warrior",
-          "description": "Abilities in the Bearskin Warrior discipline",
-          "abilities": [
-            "Bestial Howl", "Final Strike"
-          ]
-        },
-        "black_powder_weapons": {
-          "name": "Black Powder Weapons",
-          "description": "Abilities in the Black Powder Weapons discipline",
-          "abilities": [
-            "Extreme Distance Shooting"
-          ]
-        },
-        "bows": {
-          "name": "Bows",
-          "description": "Abilities in the Bows discipline",
-          "abilities": [
-            "Extreme Distance Archery"
-          ]
-        },
-        "crossbows": {
-          "name": "Crossbows",
-          "description": "Abilities in the Crossbows discipline",
-          "abilities": [
-            "Extreme Distance Bolt"
-          ]
-        },
-        "daunt": {
-          "name": "Daunt",
-          "description": "Abilities in the Daunt discipline",
-          "abilities": [
-            "Feed on Fear"
-          ]
-        },
-        "elementalism": {
-          "name": "Elementalism",
-          "description": "Abilities in the Elementalism discipline",
-          "abilities": [
-            "Aeromancy I", "Aeromancy II"
-          ]
-        },
-        "flexible_weapons": {
-          "name": "Flexible Weapons",
-          "description": "Abilities in the Flexible Weapons discipline",
-          "abilities": [
-            "Around the World"
-          ]
-        },
-        "footwork": {
-          "name": "Footwork",
-          "description": "Abilities in the Footwork discipline",
-          "abilities": [
-            "Combat Mobility"
-          ]
-        },
-        "inner_pillar": {
-          "name": "Inner Pillar",
-          "description": "Abilities in the Inner Pillar discipline",
-          "abilities": [
-            "Alendra's Emanation", "Arcane Reinforcement", "College Specialist"
-          ]
-        },
-        "leadership": {
-          "name": "Leadership",
-          "description": "Abilities in the Leadership discipline",
-          "abilities": [
-            "Advance!"
-          ]
-        },
-        "lictor": {
-          "name": "Lictor",
-          "description": "Abilities in the Lictor discipline",
-          "abilities": [
-            "Aura of Deflection", "Aura of Purity", "Confound the Conjurer"
-          ]
-        },
-        "light_blades": {
-          "name": "Light Blades",
-          "description": "Abilities in the Light Blades discipline",
-          "abilities": [
-            "Feint"
-          ]
-        },
-        "magus": {
-          "name": "Magus",
-          "description": "Abilities in the Magus discipline",
-          "abilities": [
-            "Arcanum I", "Arcanum II", "Assense the Veil"
-          ]
-        },
-        "melee_form": {
-          "name": "Melee Form",
-          "description": "Abilities in the Melee Form discipline",
-          "abilities": [
-            "Back Stance"
-          ]
-        },
-        "mounted_combat": {
-          "name": "Mounted Combat",
-          "description": "Abilities in the Mounted Combat discipline",
-          "abilities": [
-            "Find the Weak Point"
-          ]
-        },
-        "opportunist": {
-          "name": "Opportunist",
-          "description": "Abilities in the Opportunist discipline",
-          "abilities": [
-            "Assassin Strike"
-          ]
-        },
-        "pugilism": {
-          "name": "Pugilism",
-          "description": "Abilities in the Pugilism discipline",
-          "abilities": [
-            "Combo"
-          ]
-        },
-        "sentinel": {
-          "name": "Sentinel",
-          "description": "Abilities in the Sentinel discipline",
-          "abilities": [
-            "Argus"
-          ]
-        },
-        "sorcery": {
-          "name": "Sorcery",
-          "description": "Abilities in the Sorcery discipline",
-          "abilities": [
-            "Alchemy I", "Alchemy II", "Conjuration I", "Conjuration II"
-          ]
-        },
-        "spears": {
-          "name": "Spears",
-          "description": "Abilities in the Spears discipline",
-          "abilities": [
-            "Choked Grip", "Close In Training"
-          ]
-        },
-        "theurgy": {
-          "name": "Theurgy",
-          "description": "Abilities in the Theurgy discipline",
-          "abilities": [
-            "Commune"
-          ]
-        },
-        "trickery": {
-          "name": "Trickery",
-          "description": "Abilities in the Trickery discipline",
-          "abilities": [
-            "Fast Talk", "Feign Weakness"
-          ]
-        },
-        "tumbling": {
-          "name": "Tumbling",
-          "description": "Abilities in the Tumbling discipline",
-          "abilities": [
-            "Aerial Flip"
-          ]
-        },
-        "unbalanced_sword": {
-          "name": "Unbalanced Sword",
-          "description": "Abilities in the Unbalanced Sword discipline",
-          "abilities": [
-            "Chop", "Circular Cuts", "Feint"
-          ]
-        },
-        "vale_lord": {
-          "name": "Vale Lord",
-          "description": "Abilities in the Vale Lord discipline",
-          "abilities": [
-            "Find the Gaps"
-          ]
-        }
-      }
+    {
+      "tag": "Boost",
+      "name": "Boost",
+      "description": "Abilities that enhance other actions",
+      "abilities": [
+        "Advance!",
+        "Alendra's Emanation",
+        "Argus",
+        "Around the World",
+        "Bind",
+        "Block and Step",
+        "Boar Killer",
+        "Booming Voice",
+        "Bounce Off",
+        "Charger",
+        "Chop",
+        "Combo",
+        "Cry Havoc",
+        "Dart",
+        "Deadly Aim",
+        "Deadly Throw",
+        "Deduce",
+        "Deep Cuts",
+        "Desperate Block",
+        "Desperate Parry",
+        "Draw Energy",
+        "Embolden",
+        "Feint",
+        "Final Strike",
+        "Finesse",
+        "Hand Switch",
+        "Hard Block",
+        "Hard Parry",
+        "Heartseeker",
+        "Heavy Block",
+        "Heavy Parry",
+        "Impetus",
+        "Improved Block",
+        "Improved Parry",
+        "Instinctive Aim",
+        "Instinctive Drill",
+        "Jarring Push",
+        "K.I.S.S.",
+        "Limb Taker",
+        "Lunge",
+        "Lunging Strike",
+        "On Target",
+        "Oomph",
+        "Over the Lip",
+        "Overwhelming Charge",
+        "Parry and Step",
+        "Parry And Strike",
+        "Pep Talk",
+        "Pinpoint",
+        "Point Control",
+        "Power Attack",
+        "Precise Shot",
+        "Precise Throw",
+        "Push Back",
+        "Quick Assessment",
+        "Quick Fire",
+        "Ravage",
+        "Ready Multiple Arrows",
+        "Reckless Assault",
+        "Revealing Light",
+        "Reverberating Shout",
+        "Sarmundi's Rapture",
+        "Set Up",
+        "Snap Shot",
+        "Spell Reinforcement",
+        "Spring",
+        "Stand With Me",
+        "Step And Shoot",
+        "Stepping Attack",
+        "Strike True",
+        "Sweeping Arc",
+        "Tackle",
+        "The Song of Making",
+        "Twitch Response",
+        "Twin Strike",
+        "Viper Slash",
+        "Wail of Akun",
+        "War Shout",
+        "Whispered Secrets"
+      ]
     },
-    "effects": {
-      "name": "Effects",
-      "description": "Abilities categorized by their effects or benefits",
-      "categories": {
-        "damage": {
-          "name": "Increased Damage",
-          "description": "Abilities that increase damage",
-          "abilities": [
-            "Chop", "Final Strike"
-          ]
-        },
-        "accuracy": {
-          "name": "Improved Accuracy",
-          "description": "Abilities that improve accuracy or hit chance",
-          "abilities": [
-            "Back Stance", "Assassin Strike", "Argus"
-          ]
-        },
-        "area_effect": {
-          "name": "Area Effect",
-          "description": "Abilities that affect multiple targets or an area",
-          "abilities": [
-            "Around the World", "Bestial Howl", "Aura of Deflection", "Aura of Purity"
-          ]
-        },
-        "initiative": {
-          "name": "Initiative Manipulation",
-          "description": "Abilities that affect initiative",
-          "abilities": [
-            "Advance!"
-          ]
-        },
-        "complexity_reduction": {
-          "name": "Complexity Reduction",
-          "description": "Abilities that reduce spell complexity",
-          "abilities": [
-            "Aeromancy I", "Aeromancy II", "Alchemy I", "Alchemy II", "Animist Adept", 
-            "Apsychomancy I", "Apsychomancy II", "Arcanum I", "Arcanum II", "Conjuration I", 
-            "Conjuration II"
-          ]
-        },
-        "resistance": {
-          "name": "Resistance",
-          "description": "Abilities that grant resistance to damage types",
-          "abilities": [
-            "Aura of Deflection", "Aura of Purity"
-          ]
-        },
-        "control": {
-          "name": "Control",
-          "description": "Abilities that control or limit opponent actions",
-          "abilities": [
-            "Arm Wrap", "Beat Aside", "Feed on Fear", "Feign Weakness"
-          ]
-        },
-        "mobility": {
-          "name": "Mobility Enhancement",
-          "description": "Abilities that enhance movement",
-          "abilities": [
-            "Aerial Flip", "Combat Mobility"
-          ]
-        },
-        "defensive": {
-          "name": "Defensive",
-          "description": "Abilities that improve defenses",
-          "abilities": [
-            "Circular Cuts", "Confound the Conjurer", "Aura of Deflection", "Aura of Purity"
-          ]
-        },
-        "range": {
-          "name": "Range Enhancement",
-          "description": "Abilities that improve range",
-          "abilities": [
-            "Aeromancy I", "Extreme Distance Archery", "Extreme Distance Bolt", "Extreme Distance Shooting"
-          ]
-        }
-      }
+    {
+      "tag": "Reaction",
+      "name": "Reaction",
+      "description": "Abilities that respond to other actions",
+      "abilities": [
+        "Aerial Flip",
+        "Beat Aside",
+        "Big Mistake",
+        "Bob and Weave",
+        "Confound the Conjurer",
+        "Conserve Momentum",
+        "Contest of Faith",
+        "Conviction",
+        "Counterspell",
+        "Counterstrike",
+        "Defensive Insight",
+        "Deny the Elementalist",
+        "En Passant",
+        "Flourish",
+        "Furtive Step",
+        "Higher Calling",
+        "Hook and Twist",
+        "Intercede",
+        "Knock Off Balance",
+        "Leverage",
+        "Mirror Step",
+        "Pounce",
+        "Pull On To Spear",
+        "Ready to Fight",
+        "Revealing Defense",
+        "Riposte",
+        "Rolling Recovery",
+        "Scathing Insult",
+        "Seal of Dissipation",
+        "Shift Focus",
+        "Spring",
+        "Stand At The Ready",
+        "Stick 'em",
+        "Telekinesis II",
+        "Trample",
+        "Turn the Tables",
+        "Twirl",
+        "Unbalance",
+        "Word of Cancellation"
+      ]
+    },
+    {
+      "tag": "Modifier",
+      "name": "Passive Modifier",
+      "description": "Abilities that provide ongoing benefits",
+      "abilities": [
+        "Aeromancy I",
+        "Aeromancy II",
+        "Alchemy I",
+        "Alchemy II",
+        "Animist Adept",
+        "Apsychomancy I",
+        "Apsychomancy II",
+        "Arcane Reinforcement",
+        "Arcanum I",
+        "Arcanum II",
+        "Assassin Strike",
+        "Blood Lust",
+        "Bluff",
+        "Bold Face",
+        "Bruiser",
+        "Burst",
+        "Calloused Soul",
+        "Close In Training",
+        "College Specialist",
+        "Conjuration I",
+        "Conjuration II",
+        "Constant Companion",
+        "Demonology I",
+        "Demonology II",
+        "Dirty Tricks",
+        "Dynamic Presence",
+        "Ear for Truth",
+        "Eldritch Adept",
+        "Elementalist Adept",
+        "Embrace the Shadows",
+        "Empowered Oaken Staff",
+        "Enhanced Modality",
+        "Enter the Circle",
+        "Eviscerate",
+        "Extreme Distance Archery",
+        "Extreme Distance Bolt",
+        "Extreme Distance Shooting",
+        "Fast Talk",
+        "Feed on Fear",
+        "Find the Gaps",
+        "Fleetness",
+        "Fluid Motion",
+        "Follow Through",
+        "Focused Defense",
+        "Grace",
+        "Guard the Left",
+        "Heroic Presence",
+        "In the Flow",
+        "Investigator",
+        "Juke",
+        "Jousting",
+        "Lead from the Front",
+        "Life is Pain",
+        "Life of the Party",
+        "Lookout",
+        "Lorimar's Equation",
+        "Lure",
+        "Marathon",
+        "Mark of Ibin Sar",
+        "Mark of Zhemotet",
+        "Mercy",
+        "My Captain!",
+        "Offhand Balance",
+        "Offhand Strength",
+        "Pain Is Fuel",
+        "Pain Train",
+        "Peer",
+        "Poised",
+        "Practiced Drill",
+        "Practiced Hands",
+        "Practiced Plays",
+        "Practiced Ritualist",
+        "Psychic Resilience",
+        "Ready to Strike",
+        "Red Rage",
+        "Running Start",
+        "S.O.P.",
+        "Sarmundi's Grace",
+        "Shank",
+        "Silf's Masterful Efficiency",
+        "Sister Stone I",
+        "Sister Stone II",
+        "Skillful Parries",
+        "Sorcerer Adept",
+        "Spear Deflection",
+        "Stalwart of the Faith",
+        "Stoic Heart",
+        "Sure Footed",
+        "Sustaining Song",
+        "Up Close",
+        "Up Close and Personal",
+        "Watchman",
+        "Weapon Care",
+        "Wet Weather Fighting"
+      ]
+    },
+    {
+      "tag": "Complex Action",
+      "name": "Complex Action",
+      "description": "Abilities that are complex actions requiring significant time",
+      "abilities": [
+        "Aura of Deflection",
+        "Aura of Purity",
+        "Bestial Howl",
+        "Bewilder the Mage",
+        "Bound in Tragedy",
+        "Break Magic",
+        "Censure",
+        "Dazzling Display",
+        "Discharge",
+        "Duck and Move",
+        "Feign Weakness",
+        "Goad",
+        "Humiliate",
+        "Invoke the Name",
+        "Mark the Wicked",
+        "Misleading Attack",
+        "Monologue",
+        "Pulse",
+        "Rebuke of Kazul",
+        "Reveal the Imp",
+        "Sever Bond",
+        "Sever Magic",
+        "Soul Healing",
+        "Soul Light",
+        "Spiritual Healing",
+        "Taunt",
+        "Threaten",
+        "Tight Patching",
+        "Tormentous Backlash",
+        "Wild Flail"
+      ]
+    },
+    {
+      "tag": "Maneuver",
+      "name": "Maneuver",
+      "description": "Special combat maneuvers",
+      "abilities": [
+        "Arm Wrap",
+        "Behind You",
+        "Bell Ringer",
+        "Circular Cuts",
+        "Double Strike",
+        "Find the Weak Point",
+        "Flair",
+        "Flurry",
+        "Grab",
+        "Hog Tie",
+        "Hook And Drag",
+        "Hook Shield",
+        "Leg Wrap",
+        "Neck Wrap",
+        "Ranged Disarm",
+        "Rhino Lift",
+        "Thousand Cuts",
+        "Unhorse",
+        "Waylay"
+      ]
+    },
+    {
+      "tag": "Stance",
+      "name": "Stance",
+      "description": "Combat stances that change fighting style",
+      "abilities": [
+        "Back Stance",
+        "Dueling Stance",
+        "Forward Stance",
+        "High Stance",
+        "Low Stance"
+      ]
+    },
+    {
+      "tag": "Surge Action",
+      "name": "Surge Action",
+      "description": "Quick actions that can be performed instantly",
+      "abilities": [
+        "Beyond The Limit",
+        "Combat Mobility",
+        "Elementary",
+        "Fluid Tactics",
+        "Size Up",
+        "Trained Professional"
+      ]
+    },
+    {
+      "tag": "Standard Action",
+      "name": "Standard Action",
+      "description": "Regular combat actions",
+      "abilities": [
+        "Brand the Witch",
+        "Chant of Kraa",
+        "Chant of Mandeus",
+        "Chant of Totmus",
+        "Glare",
+        "Quick Jab at the Face",
+        "Rile",
+        "Spinning Defense",
+        "Threatening Sweep"
+      ]
+    },
+    {
+      "tag": "Weapon Grip",
+      "name": "Weapon Grip",
+      "description": "Special ways to hold weapons",
+      "abilities": [
+        "Choked Grip",
+        "Reverse Grip",
+        "Wide Grip"
+      ]
+    },
+    {
+      "tag": "Preparatory Action",
+      "name": "Preparatory Action",
+      "description": "Actions performed before encounters",
+      "abilities": [
+        "Assense the Veil",
+        "Decipher Magic",
+        "Detailed Plan",
+        "Marking Rune",
+        "Rousing Speech"
+      ]
+    },
+    {
+      "tag": "Narrative Action",
+      "name": "Narrative Action",
+      "description": "Abilities used outside of combat",
+      "abilities": [
+        "Hold Attention",
+        "Interviewer",
+        "Key Details",
+        "Pact"
+      ]
+    },
+    {
+      "tag": "Segment Action",
+      "name": "Segment Action",
+      "description": "Actions that take a full segment to complete",
+      "abilities": [
+        "Blood Purity",
+        "Commune"
+      ]
+    },
+    {
+      "tag": "Implement",
+      "name": "Implement",
+      "description": "Magical implements and tools",
+      "abilities": [
+        "Rod of Channeling"
+      ]
+    },
+    {
+      "tag": "Gesture Modality",
+      "name": "Gesture Modality",
+      "description": "Magical gestures for spellcasting",
+      "abilities": [
+        "Form of the Willow",
+        "Form of the Yew"
+      ]
+    },
+    {
+      "tag": "Melee Attack",
+      "name": "Melee Attack",
+      "description": "Special melee attack actions",
+      "abilities": [
+        "Wild Swing"
+      ]
+    },
+    {
+      "tag": "Grapple Maneuver",
+      "name": "Grapple Maneuver",
+      "description": "Specialized grappling techniques",
+      "abilities": [
+        "Mount",
+        "Phenom",
+        "Signature Move"
+      ]
+    },
+    {
+      "tag": "Ranged Grapple Maneuver",
+      "name": "Ranged Grapple Maneuver",
+      "description": "Grappling maneuvers using ranged weapons",
+      "abilities": [
+        "Arm Wrap",
+        "Hook And Drag",
+        "Leg Wrap",
+        "Neck Wrap"
+      ]
+    },
+    {
+      "tag": "Targeting",
+      "name": "Targeting",
+      "description": "How abilities target their effects",
+      "abilities": []
+    },
+    {
+      "tag": "Self-Targeting",
+      "name": "Self-Targeting",
+      "description": "Abilities that primarily affect the user",
+      "abilities": [
+        "Aeromancy I",
+        "Aeromancy II",
+        "Alchemy I",
+        "Alchemy II",
+        "Animist Adept",
+        "Apsychomancy I",
+        "Apsychomancy II",
+        "Arcane Reinforcement",
+        "Arcanum I",
+        "Arcanum II",
+        "Back Stance",
+        "Beyond The Limit",
+        "Blood Lust",
+        "Blood Purity",
+        "Blood Rush",
+        "Booming Voice",
+        "Bruiser",
+        "Burst",
+        "Calloused Soul",
+        "Chant of Kraa",
+        "Chant of Mandeus",
+        "Chant of Totmus",
+        "Charms I",
+        "Charms II",
+        "College Specialist",
+        "Commune",
+        "Conjuration I",
+        "Conjuration II",
+        "Constant Companion",
+        "Curses I",
+        "Curses II",
+        "Decebal's Mnemonic Seal",
+        "Demonology I",
+        "Demonology II",
+        "Dreaming I",
+        "Dreaming II",
+        "Duck and Move",
+        "Dueling Stance",
+        "Dynamic Presence",
+        "Eldritch Adept",
+        "Elementalist Adept",
+        "Embrace the Shadows",
+        "Empowered Oaken Staff",
+        "Enhanced Modality",
+        "Enter the Circle",
+        "Eviscerate",
+        "Extreme Distance Archery",
+        "Extreme Distance Bolt",
+        "Extreme Distance Shooting",
+        "Fast Talk",
+        "Fleetness",
+        "Fluid Motion",
+        "Focused Defense",
+        "Form of the Willow",
+        "Form of the Yew",
+        "Forward Stance",
+        "Geomancy I",
+        "Geomancy II",
+        "Glamours I",
+        "Glamours II",
+        "Grace",
+        "Guard the Left",
+        "High Stance",
+        "Hydromancy I",
+        "Hydromancy II",
+        "In the Flow",
+        "Investigator",
+        "Juke",
+        "Jousting",
+        "Lead from the Front",
+        "Life is Pain",
+        "Lookout",
+        "Lorimar's Equation",
+        "Low Stance",
+        "Lure",
+        "Marathon",
+        "Mark of Ibin Sar",
+        "Mark of Zhemotet",
+        "Mathowny's Circulation",
+        "Necromancy I",
+        "Necromancy II",
+        "Offhand Balance",
+        "Offhand Strength",
+        "Pain Is Fuel",
+        "Peer",
+        "Phytomancy I",
+        "Phytomancy II",
+        "Poised",
+        "Practiced Drill",
+        "Practiced Hands",
+        "Practiced Plays",
+        "Practiced Ritualist",
+        "Psychic Resilience",
+        "Pyromancy I",
+        "Pyromancy II",
+        "Ready to Strike",
+        "Red Rage",
+        "Rile",
+        "Rod of Channeling",
+        "Runic I",
+        "Runic II",
+        "Running Start",
+        "S.O.P.",
+        "Sarmundi's Grace",
+        "Sarmundi's Rapture",
+        "Selifren Choir",
+        "Silf's Masterful Efficiency",
+        "Sister Stone I",
+        "Sister Stone II",
+        "Skillful Parries",
+        "Sorcerer Adept",
+        "Soul Light",
+        "Spear Deflection",
+        "Stalwart of the Faith",
+        "Stoic Heart",
+        "Sure Footed",
+        "Sustaining Song",
+        "Telekinesis I",
+        "Telekinesis II",
+        "Up Close",
+        "Up Close and Personal",
+        "Watchman",
+        "Weapon Care",
+        "Wet Weather Fighting"
+      ]
+    },
+    {
+      "tag": "Single Ally",
+      "name": "Single Ally",
+      "description": "Abilities that target one ally",
+      "abilities": [
+        "Advance!",
+        "Embolden",
+        "Lead in Prayer",
+        "Pep Talk",
+        "Rallying Cry",
+        "Soul Healing",
+        "Spiritual Healing",
+        "Stand With Me"
+      ]
+    },
+    {
+      "tag": "Multiple Allies",
+      "name": "Multiple Allies",
+      "description": "Abilities that affect multiple allies or party members",
+      "abilities": [
+        "Bestial Howl",
+        "Cry Havoc",
+        "Flair",
+        "Heroic Presence",
+        "Life of the Party",
+        "My Captain!",
+        "Rousing Speech"
+      ]
+    },
+    {
+      "tag": "Single Enemy",
+      "name": "Single Enemy",
+      "description": "Abilities that target one enemy",
+      "abilities": [
+        "Argus",
+        "Assassin Strike",
+        "Behind You",
+        "Bell Ringer",
+        "Bewilder the Mage",
+        "Boar Killer",
+        "Bounce Off",
+        "Bound in Tragedy",
+        "Brand the Witch",
+        "Censure",
+        "Circular Cuts",
+        "Dazzling Display",
+        "Deadly Aim",
+        "Deadly Throw",
+        "Deep Cuts",
+        "Defensive Insight",
+        "Double Strike",
+        "Feed on Fear",
+        "Feign Weakness",
+        "Final Strike",
+        "Find the Weak Point",
+        "Flurry",
+        "Grab",
+        "Heartseeker",
+        "Hog Tie",
+        "Hook And Drag",
+        "Hook Shield",
+        "Humiliate",
+        "Interviewer",
+        "Know My Face",
+        "Limb Taker",
+        "Mark the Wicked",
+        "Mercy",
+        "Misleading Attack",
+        "Offensive Insight",
+        "Pinpoint",
+        "Quick Jab at the Face",
+        "Scathing Insult",
+        "Set Up",
+        "Shank",
+        "Size Up",
+        "Stab and Grab",
+        "Stick 'em",
+        "Taunt",
+        "Thousand Cuts",
+        "Unhorse",
+        "Viper Slash",
+        "Waylay"
+      ]
+    },
+    {
+      "tag": "Multiple Enemies",
+      "name": "Multiple Enemies",
+      "description": "Abilities that affect multiple enemies or areas",
+      "abilities": [
+        "Around the World",
+        "Discharge",
+        "Goad",
+        "Monologue",
+        "Pulse",
+        "Threaten",
+        "Wild Swing"
+      ]
+    },
+    {
+      "tag": "Engaged Enemies",
+      "name": "Engaged Enemies",
+      "description": "Abilities that specifically target enemies you're engaged with",
+      "abilities": [
+        "Glare",
+        "Threatening Sweep"
+      ]
+    },
+    {
+      "tag": "Weapon-Targeting",
+      "name": "Weapon-Targeting",
+      "description": "Abilities that affect weapons or weapon use",
+      "abilities": [
+        "Choked Grip",
+        "Hand Switch",
+        "Ranged Disarm",
+        "Reverse Grip",
+        "Wide Grip"
+      ]
+    },
+    {
+      "tag": "Spell/Magic Targeting",
+      "name": "Spell/Magic Targeting",
+      "description": "Abilities that target spells, magic effects, or magical abilities",
+      "abilities": [
+        "Alendra's Emanation",
+        "Binding Bane",
+        "Break Magic",
+        "Confound the Conjurer",
+        "Contest of Faith",
+        "Counterspell",
+        "Decipher Magic",
+        "Deny the Elementalist",
+        "Higher Calling",
+        "Reveal the Imp",
+        "Seal of Disruption",
+        "Seal of Dissipation",
+        "Sever Bond",
+        "Sever Magic",
+        "Spelleater",
+        "Word of Cancellation"
+      ]
+    },
+    {
+      "tag": "Attack-Targeting",
+      "name": "Attack-Targeting",
+      "description": "Abilities that enhance or modify specific attacks",
+      "abilities": [
+        "Aerial Flip",
+        "Around the World",
+        "Beat Aside",
+        "Big Mistake",
+        "Bind",
+        "Block and Step",
+        "Bob and Weave",
+        "Charger",
+        "Chop",
+        "Combo",
+        "Conserve Momentum",
+        "Counterstrike",
+        "Dart",
+        "Desperate Block",
+        "Desperate Parry",
+        "Feint",
+        "Finesse",
+        "Hammer Home",
+        "Hard Block",
+        "Hard Parry",
+        "Heavy Block",
+        "Heavy Parry",
+        "Impetus",
+        "Improved Block",
+        "Improved Parry",
+        "Instinctive Aim",
+        "Instinctive Drill",
+        "Jarring Push",
+        "Knock Off Balance",
+        "Leverage",
+        "Lunge",
+        "Lunging Strike",
+        "On Target",
+        "Oomph",
+        "Over the Lip",
+        "Overwhelming Charge",
+        "Parry and Step",
+        "Parry And Strike",
+        "Point Control",
+        "Power Attack",
+        "Precise Shot",
+        "Precise Throw",
+        "Push Back",
+        "Quick Fire",
+        "Ravage",
+        "Ready Multiple Arrows",
+        "Reckless Assault",
+        "Riposte",
+        "Snap Shot",
+        "Step And Shoot",
+        "Stepping Attack",
+        "Strike True",
+        "Sweeping Arc",
+        "Tackle",
+        "Twin Strike",
+        "Unbalance",
+        "War Shout"
+      ]
+    },
+    {
+      "tag": "Area Effect",
+      "name": "Area Effect",
+      "description": "Abilities that affect specific areas or environmental targets",
+      "abilities": [
+        "Assense the Veil",
+        "Aura of Deflection",
+        "Aura of Purity",
+        "Invoke the Name",
+        "Marking Rune",
+        "Wild Flail"
+      ]
+    },
+    {
+      "tag": "Conditional Targeting",
+      "name": "Conditional Targeting",
+      "description": "Abilities with special targeting conditions or requirements",
+      "abilities": [
+        "Close In Training",
+        "Dart",
+        "En Passant",
+        "Flourish",
+        "Furtive Step",
+        "Hold Attention",
+        "Intercede",
+        "Key Details",
+        "Mirror Step",
+        "Pact",
+        "Pounce",
+        "Pull On To Spear",
+        "Ready to Fight",
+        "Revealing Defense",
+        "Rolling Recovery",
+        "Shift Focus",
+        "Spring",
+        "Stand At The Ready",
+        "Trained Professional",
+        "Trample",
+        "Turn the Tables",
+        "Twirl",
+        "Twitch Response"
+      ]
+    },
+    {
+      "tag": "Range",
+      "name": "Range",
+      "description": "The effective range of abilities",
+      "abilities": []
+    },
+    {
+      "tag": "Touch/Melee Range",
+      "name": "Touch/Melee Range",
+      "description": "Abilities that require physical contact or melee range",
+      "abilities": [
+        "Bell Ringer",
+        "Blood Purity",
+        "Circular Cuts",
+        "Double Strike",
+        "Find the Weak Point",
+        "Flurry",
+        "Grab",
+        "Hog Tie",
+        "Mount",
+        "Phenom",
+        "Rhino Lift",
+        "Sever Bond",
+        "Sever Magic",
+        "Shank",
+        "Signature Move",
+        "Soul Healing",
+        "Spiritual Healing",
+        "Stab and Grab",
+        "Stick 'em",
+        "Thousand Cuts",
+        "Unhorse",
+        "Waylay"
+      ]
+    },
+    {
+      "tag": "Close Range",
+      "name": "Close Range",
+      "description": "Abilities effective at close but not touch range",
+      "abilities": [
+        "Behind You",
+        "Bewilder the Mage",
+        "Bound in Tragedy",
+        "Glare",
+        "Mark the Wicked",
+        "Quick Jab at the Face",
+        "Scathing Insult",
+        "Taunt"
+      ]
+    },
+    {
+      "tag": "Ranged",
+      "name": "Ranged",
+      "description": "Abilities that work at significant distances",
+      "abilities": [
+        "Argus",
+        "Around the World",
+        "Bounce Off",
+        "Deadly Aim",
+        "Deadly Throw",
+        "Extreme Distance Archery",
+        "Extreme Distance Bolt",
+        "Extreme Distance Shooting",
+        "Instinctive Aim",
+        "Instinctive Drill",
+        "Long Distance Archery",
+        "Long Distance Bolt",
+        "Long Distance Shooting",
+        "On Target",
+        "Oomph",
+        "Precise Shot",
+        "Precise Throw",
+        "Quick Fire",
+        "Rapid Retrieval",
+        "Ready Multiple Arrows",
+        "Snap Shot",
+        "Stand At The Ready",
+        "Step And Shoot",
+        "Tight Patching",
+        "Weapon Care",
+        "Wet Weather Fighting"
+      ]
+    },
+    {
+      "tag": "Line of Sight",
+      "name": "Line of Sight",
+      "description": "Abilities requiring visual contact with target",
+      "abilities": [
+        "Assassin Strike",
+        "Dazzling Display",
+        "Feed on Fear",
+        "Feign Weakness",
+        "Interviewer",
+        "Know My Face",
+        "Misleading Attack",
+        "Offensive Insight",
+        "Size Up"
+      ]
+    },
+    {
+      "tag": "Burst/Area",
+      "name": "Burst/Area",
+      "description": "Abilities that affect areas or multiple targets simultaneously",
+      "abilities": [
+        "Aura of Deflection",
+        "Aura of Purity",
+        "Bestial Howl",
+        "Discharge",
+        "Invoke the Name",
+        "Monologue",
+        "Pulse",
+        "Reveal the Imp",
+        "Threaten",
+        "Wild Flail",
+        "Wild Swing"
+      ]
+    },
+    {
+      "tag": "Earshot/Audible",
+      "name": "Earshot/Audible",
+      "description": "Abilities that affect targets within hearing range",
+      "abilities": [
+        "Cry Havoc",
+        "Goad",
+        "Hold Attention",
+        "Life of the Party",
+        "My Captain!",
+        "Pep Talk",
+        "Rousing Speech"
+      ]
+    },
+    {
+      "tag": "Special Range",
+      "name": "Special Range",
+      "description": "Abilities with unique range mechanics",
+      "abilities": [
+        "Arm Wrap",
+        "Assense the Veil",
+        "Break Magic",
+        "Confound the Conjurer",
+        "Contest of Faith",
+        "Counterspell",
+        "Decipher Magic",
+        "Deny the Elementalist",
+        "Hook And Drag",
+        "Leg Wrap",
+        "Marking Rune",
+        "Neck Wrap",
+        "Over the Lip",
+        "Neck Wrap",
+        "Over the Lip",
+        "Ranged Disarm",
+        "Seal of Disruption"
+      ]
+    },
+    {
+      "tag": "Duration",
+      "name": "Duration",
+      "description": "How long ability effects last",
+      "abilities": []
+    },
+    {
+      "tag": "Instant",
+      "name": "Instant",
+      "description": "Abilities with immediate, one-time effects",
+      "abilities": [
+        "Bell Ringer",
+        "Beyond The Limit",
+        "Bounce Off",
+        "Chop",
+        "Circular Cuts",
+        "Combat Mobility",
+        "Deep Cuts",
+        "Double Strike",
+        "Elementary",
+        "Final Strike",
+        "Flurry",
+        "Grab",
+        "Heartseeker",
+        "Hog Tie",
+        "Limb Taker",
+        "Mount",
+        "Phenom",
+        "Pinpoint",
+        "Ravage",
+        "Rhino Lift",
+        "Set Up",
+        "Shank",
+        "Signature Move",
+        "Size Up",
+        "Stab and Grab",
+        "Stick 'em",
+        "Thousand Cuts",
+        "Unhorse",
+        "Viper Slash",
+        "Waylay"
+      ]
+    },
+    {
+      "tag": "Scene Duration",
+      "name": "Scene Duration",
+      "description": "Abilities that last for the duration of a scene",
+      "abilities": [
+        "Assassin Strike",
+        "Back Stance",
+        "Bound in Tragedy",
+        "Dazzling Display",
+        "Dueling Stance",
+        "Dynamic Presence",
+        "Feed on Fear",
+        "Feign Weakness",
+        "Forward Stance",
+        "High Stance",
+        "Humiliate",
+        "Know My Face",
+        "Low Stance",
+        "Misleading Attack",
+        "Offensive Insight",
+        "Taunt",
+        "Threatening Sweep"
+      ]
+    },
+    {
+      "tag": "Cycle Duration",
+      "name": "Cycle Duration",
+      "description": "Abilities that last for combat cycles",
+      "abilities": [
+        "Aura of Deflection",
+        "Aura of Purity",
+        "Censure",
+        "Monologue",
+        "Spinning Defense"
+      ]
+    },
+    {
+      "tag": "Sustained",
+      "name": "Sustained",
+      "description": "Abilities that require ongoing action/resource expenditure",
+      "abilities": [
+        "Chant of Kraa",
+        "Chant of Mandeus",
+        "Chant of Totmus",
+        "Invoke the Name",
+        "Soul Light",
+        "Sustaining Song",
+        "Wild Flail"
+      ]
+    },
+    {
+      "tag": "Permanent",
+      "name": "Permanent",
+      "description": "Abilities with permanent or long-lasting effects",
+      "abilities": [
+        "Aeromancy I",
+        "Aeromancy II",
+        "Alchemy I",
+        "Alchemy II",
+        "Animist Adept",
+        "Apsychomancy I",
+        "Apsychomancy II",
+        "Arcane Reinforcement",
+        "Arcanum I",
+        "Arcanum II",
+        "Blood Lust",
+        "Bruiser",
+        "Burst",
+        "Calloused Soul",
+        "Charms I",
+        "Charms II",
+        "College Specialist",
+        "Conjuration I",
+        "Conjuration II",
+        "Constant Companion",
+        "Curses I",
+        "Curses II",
+        "Demonology I",
+        "Demonology II",
+        "Dreaming I",
+        "Dreaming II",
+        "Eldritch Adept",
+        "Elementalist Adept",
+        "Embrace the Shadows",
+        "Empowered Oaken Staff",
+        "Enhanced Modality",
+        "Enter the Circle",
+        "Eviscerate",
+        "Extreme Distance Archery",
+        "Extreme Distance Bolt",
+        "Extreme Distance Shooting",
+        "Fast Talk",
+        "Fleetness",
+        "Fluid Motion",
+        "Focused Defense",
+        "Geomancy I",
+        "Geomancy II",
+        "Glamours I",
+        "Glamours II",
+        "Grace",
+        "Guard the Left",
+        "Hydromancy I",
+        "Hydromancy II",
+        "In the Flow",
+        "Investigator",
+        "Juke",
+        "Jousting",
+        "Lead from the Front",
+        "Life is Pain",
+        "Lookout",
+        "Lorimar's Equation",
+        "Lure",
+        "Marathon",
+        "Mark of Ibin Sar",
+        "Mark of Zhemotet",
+        "Necromancy I",
+        "Necromancy II",
+        "Offhand Balance",
+        "Offhand Strength",
+        "Pain Is Fuel",
+        "Peer",
+        "Phytomancy I",
+        "Phytomancy II",
+        "Poised",
+        "Practiced Drill",
+        "Practiced Hands",
+        "Practiced Plays",
+        "Practiced Ritualist",
+        "Psychic Resilience",
+        "Pyromancy I",
+        "Pyromancy II",
+        "Ready to Strike",
+        "Red Rage",
+        "Rod of Channeling",
+        "Runic I",
+        "Runic II",
+        "Running Start",
+        "S.O.P.",
+        "Sarmundi's Grace",
+        "Selifren Choir",
+        "Silf's Masterful Efficiency",
+        "Sister Stone I",
+        "Sister Stone II",
+        "Skillful Parries",
+        "Sorcerer Adept",
+        "Spear Deflection",
+        "Stalwart of the Faith",
+        "Stoic Heart",
+        "Sure Footed",
+        "Telekinesis I",
+        "Telekinesis II",
+        "Up Close",
+        "Up Close and Personal",
+        "Watchman",
+        "Weapon Care",
+        "Wet Weather Fighting"
+      ]
+    },
+    {
+      "tag": "Conditional Duration",
+      "name": "Conditional Duration",
+      "description": "Abilities with variable or condition-based durations",
+      "abilities": [
+        "Arm Wrap",
+        "Break Through",
+        "Goad",
+        "Hook And Drag",
+        "Leg Wrap",
+        "Mark the Wicked",
+        "Neck Wrap",
+        "Ranged Disarm"
+      ]
     }
-  }
+  ]
 }
