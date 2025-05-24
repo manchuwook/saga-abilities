@@ -1,15 +1,15 @@
 # Saga Abilities
 
-A spell management application for the SAGA tabletop role-playing game system. This web-based tool helps players and game masters manage abilities, create AbilityManuals for characters, and export spell information for reference during gameplay.
+An abilities management application for the SAGA tabletop role-playing game system. This web-based tool helps players and game masters manage abilities, create AbilityManuals for characters, and export ability information for reference during gameplay.
 
 ![Saga Abilities App](./public/assets/img/parchment1.png)
 
 ## Features
 
-- **Comprehensive Spell Browser**: Browse, search, and filter the complete SAGA spell database
+- **Comprehensive Ability Browser**: Browse, search, and filter the complete SAGA ability database
 - **Custom AbilityManuals**: Create and manage AbilityManuals for your characters
-- **Advanced Filtering**: Filter abilities by class, school, complexity, and keywords
-- **PDF Export**: Export spell lists and AbilityManuals to PDF for easy printing and reference
+- **Advanced Filtering**: Filter abilities by class, Discipline, and keywords
+- **PDF Export**: Export ability lists and AbilityManuals to PDF for easy printing and reference
 - **Dark/Light Mode**: Toggle between light and dark themes for comfortable viewing
 - **Offline Support**: Access your abilities and AbilityManuals even without an internet connection
 - **Progressive Web App**: Install on your device for quick access and offline functionality
@@ -121,9 +121,8 @@ pnpm preview
 ### Viewing Abilities
 
 The main page displays all available abilities. Use the filter panel to narrow down abilities by:
-- Spell class
-- School of magic
-- Complexity level
+- Ability class
+- Discipline
 - Keywords
 - Text search
 
