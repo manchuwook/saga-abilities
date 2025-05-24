@@ -1,0 +1,16 @@
+{
+  "name": "saga-abilities",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "src/**/*.{ts,tsx,js,jsx}",
+          "*.{js,ts,jsx,tsx,json}"
+        ]
+      }
+    }
+  }
+}

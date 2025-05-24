@@ -23,7 +23,7 @@ export function AbilityManualForm({ form, onSubmit, onCancel, submitLabel, usePa
     <form onSubmit={form.onSubmit(onSubmit)}>
       <Stack gap="md">
         <TextInput
-          label={<Text fw={600} size="sm" c={isDark ? 'gray.2' : 'dark.9'}>AbilityManual Name</Text>}
+          label={<Text fw={600} size="sm" c={isDark ? 'gray.2' : 'dark.9'}>Ability Manual Name</Text>}
           placeholder="My Wizard's AbilityManual"
           {...form.getInputProps('name')}
           styles={{

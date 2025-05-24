@@ -4,7 +4,7 @@ import { useAbilityManuals } from '../hooks/useAbilityManuals';
 import { AbilityManual } from '../context/AbilityManualsContext';
 import { notifications } from '@mantine/notifications';
 import { SafeModal } from './common/SafeModal';
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { AbilityManualForm, AbilityManualFormValues } from './common/AbilityManualForm';
 
 interface EditAbilityManualModalProps {
@@ -17,7 +17,7 @@ export function EditAbilityManualModal({ AbilityManual, opened, onClose }: EditA
   const { updateAbilityManual } = useAbilityManuals();
   const { colorScheme } = useMantineColorScheme();
   const isDark = colorScheme === 'dark';
-  
+
   const form = useForm<AbilityManualFormValues>({
     initialValues: {
       name: '',
@@ -25,7 +25,7 @@ export function EditAbilityManualModal({ AbilityManual, opened, onClose }: EditA
       description: '',
     },
     validate: {
-      name: (value) => (!value ? 'AbilityManual name is required' : null),
+      name: (value) => (!value ? 'Ability Manual name is required' : null),
       character: (value) => (!value ? 'Character name is required' : null),
     },
   });
@@ -39,51 +39,44 @@ export function EditAbilityManualModal({ AbilityManual, opened, onClose }: EditA
         description: AbilityManual.description,
       });
     }
-  }, [AbilityManual, opened, form]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [AbilityManual, opened]);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     form.reset();
     onClose();
-  };
+  }, [form, onClose]);
 
-  const renderModalContent = (AbilityManual: AbilityManual) => {
-    const handleSubmit = () => {
-      const values = form.values;
-      
-      updateAbilityManual(AbilityManual.id, {
-        name: values.name,
-        character: values.character,
-        description: values.description,
-      });
-      
-      notifications.show({
-        title: 'AbilityManual Updated',
-        message: `${values.name} has been updated`,
-        color: 'blue',
-      });
-      
-      form.reset();
-      onClose();
-    };
-
-    return (
-      <AbilityManualForm
-        form={form}
-        onSubmit={handleSubmit}
-        onCancel={handleClose}
-        submitLabel="Save Changes"
-      />
-    );
-  };
+  const handleSubmit = useCallback(() => {
+    if (!AbilityManual) return;
+    const values = form.values;
+    updateAbilityManual(AbilityManual.id, {
+      name: values.name,
+      character: values.character,
+      description: values.description,
+    });
+    notifications.show({
+      title: 'AbilityManual Updated',
+      message: `${values.name} has been updated`,
+      color: 'blue',
+    });
+    form.reset();
+    onClose();
+  }, [AbilityManual, form, onClose, updateAbilityManual]);
 
   return (
     <SafeModal
       data={AbilityManual}
       opened={opened}
       onClose={handleClose}
-      title={() => <Text fw={700} c={isDark ? 'gray.1' : 'dark.8'}>Edit AbilityManual</Text>}
+      title={() => <Text fw={700} c={isDark ? 'gray.1' : 'dark.8'}>Edit Ability Manual</Text>}
     >
-      {renderModalContent}
+      <AbilityManualForm
+        form={form}
+        onSubmit={handleSubmit}
+        onCancel={handleClose}
+        submitLabel="Save Changes"
+      />
     </SafeModal>
   );
 }

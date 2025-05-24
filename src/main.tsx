@@ -18,8 +18,9 @@ const queryClient = new QueryClient();
 // Create a color scheme manager
 const colorSchemeManager = localStorageColorSchemeManager({ key: 'saga-abilities-color-scheme' });
 
+// Temporarily remove StrictMode to avoid the double-render issue with React 19
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  <>
     <ColorSchemeScript defaultColorScheme="dark" />
     <QueryClientProvider client={queryClient}>
       <MantineProvider theme={baseTheme} defaultColorScheme="dark" colorSchemeManager={colorSchemeManager}>
@@ -31,5 +32,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </ModalsProvider>
       </MantineProvider>
     </QueryClientProvider>
-  </React.StrictMode>,
+  </>,
 );

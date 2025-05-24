@@ -6,8 +6,10 @@ ignoredBuiltDependencies:
   - mozjpeg
   - pngquant-bin
 onlyBuiltDependencies:
+  - core-js
   - cwebp-bin
   - esbuild
+  - nx
   - optipng-bin
 overrides:
   got@<11.8.5: '>=11.8.5'

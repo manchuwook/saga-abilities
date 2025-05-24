@@ -3,6 +3,10 @@
     "nx-mcp": {
       "type": "http",
       "url": "http://localhost:9429/mcp"
+    },
+    "my-development-projects": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "X:\\dev\\*"]
     }
   }
 }

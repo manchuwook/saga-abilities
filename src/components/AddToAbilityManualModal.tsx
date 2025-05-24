@@ -58,7 +58,7 @@ export function AddToAbilityManualModal({ ability, opened, onClose }: AddToAbili
         style={{ height: '100%', margin: 0 }}
       >
         <Text mb="md" c={isDark ? 'gray.2' : 'dark.7'}>
-          Add <strong>{ability.abilityName}</strong> to one of your AbilityManuals:
+          Add <strong>{ability.abilityName}</strong> to one of your Ability Manuals:
         </Text>
 
         <Select
@@ -86,7 +86,7 @@ export function AddToAbilityManualModal({ ability, opened, onClose }: AddToAbili
             marginBottom: '0.5rem'
           }}
         >
-          Add to AbilityManual
+          Add to Ability Manual
         </Button>
       </Paper>
     );
@@ -94,7 +94,7 @@ export function AddToAbilityManualModal({ ability, opened, onClose }: AddToAbili
 
   // Define title component outside the render function
   const ModalTitle = (ability: Ability) => (
-    <Text c={isDark ? 'white' : 'dark.9'} fw={700} size="xl">Add to AbilityManual</Text>
+    <Text c={isDark ? 'white' : 'dark.9'} fw={700} size="xl">Add to Ability Manual</Text>
   );
   return (
     <SafeModal

@@ -52,7 +52,7 @@ export default function AbilityManualDetailPage() {
         <Text ta="center" mb="xl" c={isDark ? 'white' : 'dark.6'} fw={isDark ? 500 : 400}>The AbilityManual you're looking for doesn't exist or has been deleted.</Text>
         <Group justify="center">
           <Button onClick={() => navigate('/AbilityManuals')} color={isDark ? 'blue.4' : 'blue.6'}>
-            Back to AbilityManuals
+            Back to Ability Manuals
           </Button>
         </Group>
       </Paper>
@@ -126,7 +126,7 @@ export default function AbilityManualDetailPage() {
           onClick={() => navigate('/AbilityManuals')}
           color={isDark ? 'gray.4' : 'dark.4'}
         >
-          Back to AbilityManuals
+          Back to Ability Manuals
         </Button>
       </Group>      <Group justify="space-between" mb="xl">
         <Stack gap={0}>
@@ -140,9 +140,9 @@ export default function AbilityManualDetailPage() {
             onClick={openEditModal}
             color={isDark ? 'blue.4' : 'blue.6'}
           >
-            Edit AbilityManual
+            Edit Ability Manual
           </Button>
-          <AbilityManualExportButton AbilityManual={AbilityManual} label="Export AbilityManual" />
+          <AbilityManualExportButton AbilityManual={AbilityManual} label="Export Ability Manual" />
         </Group>
       </Group>      {AbilityManual.description && (
         <Text mb="xl" c={isDark ? 'white' : 'dark.7'} fw={isDark ? 500 : 400}>{AbilityManual.description}</Text>

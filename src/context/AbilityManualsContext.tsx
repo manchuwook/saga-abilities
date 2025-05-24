@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useMemo } from 'react';
+import { createContext, ReactNode, useMemo, useCallback } from 'react';
 import { useLocalStorage } from '@mantine/hooks';
 import { Ability } from '../models/abilities.zod';
 
@@ -45,7 +45,8 @@ export function AbilityManualsProvider({ children }: { children: ReactNode }) {
     deserialize: (value) => {
       const parsed = JSON.parse(value ?? '[]');
       return parsed.map((AbilityManual: any) => ({
-        ...AbilityManual,        // Sort abilities alphabetically when loading from localStorage
+        ...AbilityManual,
+        // Sort abilities alphabetically when loading from localStorage
         abilities: [...(AbilityManual.abilities || [])].sort((a, b) =>
           a.abilityName.localeCompare(b.abilityName)
         ),
@@ -55,7 +56,8 @@ export function AbilityManualsProvider({ children }: { children: ReactNode }) {
     },
   });
 
-  const addAbilityManual = (AbilityManual: Omit<AbilityManual, 'id' | 'createdAt' | 'updatedAt'>) => {
+  // ✅ Fixed: Use functional state updates to avoid dependency on AbilityManuals
+  const addAbilityManual = useCallback((AbilityManual: Omit<AbilityManual, 'id' | 'createdAt' | 'updatedAt'>) => {
     const now = new Date();
     const newAbilityManual: AbilityManual = {
       ...AbilityManual,
@@ -64,12 +66,12 @@ export function AbilityManualsProvider({ children }: { children: ReactNode }) {
       updatedAt: now,
     };
 
-    setAbilityManuals([...AbilityManuals, newAbilityManual]);
-  };
+    setAbilityManuals(prevAbilityManuals => [...prevAbilityManuals, newAbilityManual]);
+  }, [setAbilityManuals]);
 
-  const updateAbilityManual = (id: string, updatedFields: Partial<Omit<AbilityManual, 'id' | 'createdAt' | 'updatedAt'>>) => {
-    setAbilityManuals(
-      AbilityManuals.map((AbilityManual) =>
+  const updateAbilityManual = useCallback((id: string, updatedFields: Partial<Omit<AbilityManual, 'id' | 'createdAt' | 'updatedAt'>>) => {
+    setAbilityManuals(prevAbilityManuals =>
+      prevAbilityManuals.map((AbilityManual) =>
         AbilityManual.id === id
           ? {
             ...AbilityManual,
@@ -79,17 +81,19 @@ export function AbilityManualsProvider({ children }: { children: ReactNode }) {
           : AbilityManual
       )
     );
-  };
+  }, [setAbilityManuals]);
 
-  const deleteAbilityManual = (id: string) => {
-    setAbilityManuals(AbilityManuals.filter((AbilityManual) => AbilityManual.id !== id));
-  };
+  const deleteAbilityManual = useCallback((id: string) => {
+    setAbilityManuals(prevAbilityManuals => prevAbilityManuals.filter((AbilityManual) => AbilityManual.id !== id));
+  }, [setAbilityManuals]);
 
-  const getAbilityManual = (id: string) => {
+  const getAbilityManual = useCallback((id: string) => {
     return AbilityManuals.find((AbilityManual) => AbilityManual.id === id);
-  }; const addAbilityToAbilityManual = (AbilityManualId: string, ability: Ability) => {
-    setAbilityManuals(
-      AbilityManuals.map((AbilityManual) => {
+  }, [AbilityManuals]);
+
+  const addAbilityToAbilityManual = useCallback((AbilityManualId: string, ability: Ability) => {
+    setAbilityManuals(prevAbilityManuals =>
+      prevAbilityManuals.map((AbilityManual) => {
         if (AbilityManual.id === AbilityManualId) {
           // Check if ability already exists in the AbilityManual
           const abilityExists = AbilityManual.abilities.some(
@@ -114,10 +118,11 @@ export function AbilityManualsProvider({ children }: { children: ReactNode }) {
         return AbilityManual;
       })
     );
-  };
-  const removeAbilityFromAbilityManual = (AbilityManualId: string, abilityName: string) => {
-    setAbilityManuals(
-      AbilityManuals.map((AbilityManual) => {
+  }, [setAbilityManuals]);
+
+  const removeAbilityFromAbilityManual = useCallback((AbilityManualId: string, abilityName: string) => {
+    setAbilityManuals(prevAbilityManuals =>
+      prevAbilityManuals.map((AbilityManual) => {
         if (AbilityManual.id === AbilityManualId) {
           // Filter out the ability to remove and keep the alphabetical order
           const updatedAbilities = AbilityManual.abilities
@@ -133,7 +138,9 @@ export function AbilityManualsProvider({ children }: { children: ReactNode }) {
         return AbilityManual;
       })
     );
-  };  // Use useMemo to prevent unnecessary re-renders
+  }, [setAbilityManuals]);
+
+  // ✅ Fixed: Only depend on AbilityManuals for the context value, not the callbacks
   const contextValue = useMemo(() => ({
     AbilityManuals,
     addAbilityManual,
@@ -142,7 +149,7 @@ export function AbilityManualsProvider({ children }: { children: ReactNode }) {
     getAbilityManual,
     addAbilityToAbilityManual,
     removeAbilityFromAbilityManual,
-  }), [AbilityManuals]);
+  }), [AbilityManuals, addAbilityManual, updateAbilityManual, deleteAbilityManual, getAbilityManual, addAbilityToAbilityManual, removeAbilityFromAbilityManual]);
 
   return (
     <AbilityManualsContext.Provider value={contextValue}>

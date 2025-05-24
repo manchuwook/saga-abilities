@@ -21,16 +21,16 @@ export function Prefetcher() {
   };
 
   // Prefetch critical resources on initial render
-  useEffect(() => {
-    prefetchInitialResources();
-  }, []);
+  // useEffect(() => {
+  //   prefetchInitialResources();
+  // }, [prefetchInitialResources]);
 
   // Prefetch adjacent routes when location changes
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
-      prefetchAdjacentRoutes();
-    }
-  }, [location.pathname]);
+  // useEffect(() => {
+  //   if (process.env.NODE_ENV === 'production') {
+  //     prefetchAdjacentRoutes();
+  //   }
+  // }, [location.pathname, prefetchAdjacentRoutes]);
 
   // Function to prefetch initial critical resources
   const prefetchInitialResources = async () => {

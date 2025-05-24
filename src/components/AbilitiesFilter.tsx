@@ -161,7 +161,7 @@ export function AbilitiesFilter({ abilities, onFilterChange }: AbilitiesFilterPr
 
       return textMatch && disciplineMatch && tagMatch && cpMatch && levelMatch;
     }); onFilterChange(filtered);
-  }, [searchText, selectedDisciplines, complexityRange, selectedTags, selectedCpCost, selectedLevel, AbilityTagsData, abilities]);
+  }, [searchText, selectedDisciplines, complexityRange, selectedTags, selectedCpCost, selectedLevel, AbilityTagsData, abilities, onFilterChange]);
   const resetFilters = () => {
     setSearchText('');
     setSelectedDisciplines([]);

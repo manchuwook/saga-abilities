@@ -103,19 +103,19 @@ export default function AbilityManualsPage() {
           onClick={openNewModal}
           color={isDark ? 'blue.4' : 'blue.6'}
         >
-          New AbilityManual
+          New Ability Manual
         </Button>
       </Group>
 
       {AbilityManuals.length === 0 ? (
         <Card withBorder p="xl" ta="center" bg={isDark ? 'dark.6' : 'white'}>
           <Text size="lg" fw={500} mb="md" c={isDark ? 'gray.1' : 'dark.8'}>
-            You don't have any AbilityManuals yet
+            You don't have any Ability Manuals yet
           </Text>
           <Text mb="xl" c={isDark ? 'gray.3' : 'dark.6'}>
             Create your first AbilityManual to start collecting abilities for your character.
           </Text>
-          <Button onClick={openNewModal} color={isDark ? 'blue.4' : 'blue.6'}>Create AbilityManual</Button>
+          <Button onClick={openNewModal} color={isDark ? 'blue.4' : 'blue.6'}>Create Ability Manual</Button>
         </Card>
       ) : (
         <SimpleGrid
@@ -147,7 +147,7 @@ export default function AbilityManualsPage() {
                         <IconEye size={16} />
                       </ActionIcon>
                     </Tooltip>
-                    <Tooltip label="Edit AbilityManual">
+                    <Tooltip label="Edit Ability Manual">
                       <ActionIcon
                         variant="subtle"
                         color={isDark ? 'yellow.4' : 'yellow.6'}
