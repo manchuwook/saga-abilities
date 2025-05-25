@@ -113,7 +113,7 @@ export const exportAbilitiesToPDF = (abilities: Ability[]) => {
 
 // Add page header and footer
 // Helper function for adding headers and footers to PDF pages (currently unused but kept for future use)
-// @ts-ignore - This function is not currently used but kept for future use
+// @ts-expect-error - This function is not currently used but kept for future use
 const addHeaderAndFooter = (doc: jsPDF, pageInfo: { pageNumber: number, pageCount: number }, title: string) => {
   // Header
   doc.setFontSize(8);

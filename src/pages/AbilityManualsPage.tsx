@@ -45,11 +45,10 @@ export default function AbilityManualsPage() {
   const handleDeleteAbilityManual = (AbilityManual: AbilityManual) => {
     modals.openConfirmModal({
       title: <Text c={isDark ? 'white' : 'dark.9'} fw={700}>Delete Ability Manual</Text>,
-      children: (
-        <Text size="sm" c={isDark ? 'gray.2' : 'dark.7'}>
-          Are you sure you want to delete "{AbilityManual.name}" for {AbilityManual.character}?
-          This action cannot be undone.
-        </Text>
+      children: (<Text size="sm" c={isDark ? 'gray.2' : 'dark.7'}>
+        Are you sure you want to delete &quot;{AbilityManual.name}&quot; for {AbilityManual.character}?
+        This action cannot be undone.
+      </Text>
       ),
       labels: { confirm: 'Delete', cancel: 'Cancel' },
       confirmProps: { color: isDark ? 'red.4' : 'red.6' },
@@ -108,11 +107,9 @@ export default function AbilityManualsPage() {
       </Group>
 
       {AbilityManuals.length === 0 ? (
-        <Card withBorder p="xl" ta="center" bg={isDark ? 'dark.6' : 'white'}>
-          <Text size="lg" fw={500} mb="md" c={isDark ? 'gray.1' : 'dark.8'}>
-            You don't have any Ability Manuals yet
-          </Text>
-          <Text mb="xl" c={isDark ? 'gray.3' : 'dark.6'}>
+        <Card withBorder p="xl" ta="center" bg={isDark ? 'dark.6' : 'white'}>          <Text size="lg" fw={500} mb="md" c={isDark ? 'gray.1' : 'dark.8'}>
+          You don&apos;t have any Ability Manuals yet
+        </Text><Text mb="xl" c={isDark ? 'gray.3' : 'dark.6'}>
             Create your first Ability Manual to start collecting abilities for your character.
           </Text>
           <Button onClick={openNewModal} color={isDark ? 'blue.4' : 'blue.6'}>Create Ability Manual</Button>

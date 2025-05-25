@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { 
-  Button, 
-  Stack, 
-  Title, 
+import {
+  Button,
+  Stack,
+  Title,
   Group,
   Paper,
   Accordion,
@@ -31,8 +31,7 @@ export const ThemeCustomizer: React.FC<ThemeCustomizerProps> = ({ opened }) => {
     fontScale: colors.fontScale,
     imageEnabled: colors.imageEnabled
   });
-
-  const handleChange = (name: string, value: any) => {
+  const handleChange = (name: string, value: unknown) => {
     setFormValues(prev => ({
       ...prev,
       [name]: value,
@@ -55,15 +54,15 @@ export const ThemeCustomizer: React.FC<ThemeCustomizerProps> = ({ opened }) => {
   ];
 
   return (
-    <Paper 
-      p="md" 
-      withBorder 
-      shadow="sm" 
-      style={{ 
-        position: 'fixed', 
-        bottom: '20px', 
-        right: '20px', 
-        zIndex: 1000, 
+    <Paper
+      p="md"
+      withBorder
+      shadow="sm"
+      style={{
+        position: 'fixed',
+        bottom: '20px',
+        right: '20px',
+        zIndex: 1000,
         maxWidth: '400px',
         display: opened ? 'block' : 'none'
       }}
@@ -71,7 +70,7 @@ export const ThemeCustomizer: React.FC<ThemeCustomizerProps> = ({ opened }) => {
       <Group justify="space-between" mb="md">
         <Title order={4}>Theme Settings</Title>
         <Group>
-          <Switch 
+          <Switch
             checked={colorScheme === 'dark'}
             onChange={() => toggleColorScheme()}
             size="md"
@@ -89,14 +88,14 @@ export const ThemeCustomizer: React.FC<ThemeCustomizerProps> = ({ opened }) => {
           <Accordion.Item value="colors">
             <Accordion.Control>Colors</Accordion.Control>
             <Accordion.Panel>
-              <Stack gap="xs">                  
+              <Stack gap="xs">
                 <Select
                   label="Primary Color"
                   value={formValues.primaryColor}
                   onChange={(value) => handleChange('primaryColor', value ?? 'blue.6')}
                   data={primaryColorOptions}
                 />
-                
+
                 <Select
                   label="Accent Color"
                   value={formValues.accentColor}
@@ -120,7 +119,7 @@ export const ThemeCustomizer: React.FC<ThemeCustomizerProps> = ({ opened }) => {
                   ]}
                   fullWidth
                 />
-                
+
                 <div>
                   <p>Border Radius</p>
                   <Slider
@@ -137,7 +136,7 @@ export const ThemeCustomizer: React.FC<ThemeCustomizerProps> = ({ opened }) => {
                     ]}
                   />
                 </div>
-                
+
                 <div>
                   <p>Font Size</p>
                   <Slider
@@ -158,7 +157,7 @@ export const ThemeCustomizer: React.FC<ThemeCustomizerProps> = ({ opened }) => {
             </Accordion.Panel>
           </Accordion.Item>
         </Accordion>
-        
+
         <Button onClick={handleSave} mt="md">
           Apply Changes
         </Button>

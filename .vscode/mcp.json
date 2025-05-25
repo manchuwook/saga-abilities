@@ -6,7 +6,7 @@
     },
     "my-development-projects": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "X:\\dev\\*"]
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "X:\\dev\\"]
     }
   }
 }

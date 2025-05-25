@@ -10,7 +10,8 @@
     "typescript.tsdk": "./node_modules/typescript/lib",
     "typescript.enablePromptUseWorkspaceTsdk": true,
     "nxConsole.generateAiAgentRules": true,
-    "nxConsole.nxWorkspacePath": ""
+    "nxConsole.nxWorkspacePath": "",
+    "cSpell.words": ["tabler"]
   },
   "tasks": {
     "version": "2.0.0",

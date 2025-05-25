@@ -1,6 +1,6 @@
 import { describe, it, vi, expect, beforeEach } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { AbilitiesFilter } from './AbilitiesFilter';
+import { AbilitiesFilter } from '../components/AbilitiesFilter';
 import { Spell } from '../models/abilities.zod';
 import { MantineProvider } from '@mantine/core';
 import '@testing-library/jest-dom';

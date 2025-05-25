@@ -41,17 +41,16 @@ export function AbilityManualsProvider({ children }: { children: ReactNode }) {
         return value instanceof Date ? value.toISOString() : value;
       }
       return value;
-    }),
-    deserialize: (value) => {
+    }), deserialize: (value) => {
       const parsed = JSON.parse(value ?? '[]');
-      return parsed.map((AbilityManual: any) => ({
-        ...AbilityManual,
+      return parsed.map((abilityManual: Record<string, unknown>) => ({
+        ...abilityManual,
         // Sort abilities alphabetically when loading from localStorage
-        abilities: [...(AbilityManual.abilities || [])].sort((a, b) =>
+        abilities: [...((abilityManual.abilities as Array<Ability>) || [])].sort((a, b) =>
           a.abilityName.localeCompare(b.abilityName)
         ),
-        createdAt: new Date(AbilityManual.createdAt),
-        updatedAt: new Date(AbilityManual.updatedAt),
+        createdAt: new Date(abilityManual.createdAt as string),
+        updatedAt: new Date(abilityManual.updatedAt as string),
       }));
     },
   });

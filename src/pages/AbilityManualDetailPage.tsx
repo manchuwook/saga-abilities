@@ -16,7 +16,7 @@ import { SafeTabs } from '../components/common/SafeTabs';
 import { useDisclosure } from '@mantine/hooks';
 import { IconArrowLeft, IconEdit, IconPlus, IconSearch, IconBooks } from '@tabler/icons-react';
 import { useAbilityManuals } from '../hooks/useAbilityManuals';
-import { AbilityCard } from '../components/AbilityCard';
+import { AbilityCardWide } from '../components/AbilityCardWide';
 import { AbilityDetailsModal } from '../components/AbilityDetailsModal';
 import { EditAbilityManualModal } from '../components/EditAbilityManualModal';
 import { AbilityManualExportButton } from '../components/AbilityManualExportButton';
@@ -49,7 +49,7 @@ export default function AbilityManualDetailPage() {
     return (
       <Container size="md" py="xl">        <Paper p="xl" withBorder radius="md" bg={isDark ? 'dark.6' : 'white'}>
         <Title order={2} ta="center" mb="md" c={isDark ? 'white' : 'dark.8'}>AbilityManual Not Found</Title>
-        <Text ta="center" mb="xl" c={isDark ? 'white' : 'dark.6'} fw={isDark ? 500 : 400}>The AbilityManual you're looking for doesn't exist or has been deleted.</Text>
+        <Text ta="center" mb="xl" c={isDark ? 'white' : 'dark.6'} fw={isDark ? 500 : 400}>The Ability Manual you&apos;re looking for doesn&apos;t exist or has been deleted.</Text>
         <Group justify="center">
           <Button onClick={() => navigate('/AbilityManuals')} color={isDark ? 'blue.4' : 'blue.6'}>
             Back to Ability Manuals
@@ -67,10 +67,9 @@ export default function AbilityManualDetailPage() {
     const modalStyles = styleService.getModalStyles();
 
     modals.openConfirmModal({
-      title: <Text c={isDark ? 'white' : 'dark.9'} fw={700}>Remove Ability</Text>,
-      children: (
+      title: <Text c={isDark ? 'white' : 'dark.9'} fw={700}>Remove Ability</Text>, children: (
         <Text size="sm" c={isDark ? 'gray.2' : 'dark.7'}>
-          Are you sure you want to remove "{abilityName}" from this Ability Manual?
+          Are you sure you want to remove &quot;{abilityName}&quot; from this Ability Manual?
         </Text>
       ),
       labels: { confirm: 'Remove', cancel: 'Cancel' },
@@ -158,24 +157,22 @@ export default function AbilityManualDetailPage() {
               <Card withBorder p="xl" ta="center" bg={isDark ? 'dark.6' : 'white'}>
                 <Text size="lg" fw={500} mb="md" c={isDark ? 'gray.1' : 'dark.8'}>
                   This Ability Manual is empty
-                </Text>
-                <Text mb="xl" c={isDark ? 'white' : 'dark.6'} fw={isDark ? 500 : 400}>
-                  Go to the "Add Abilities" tab to start adding abilities to this Ability Manual.
+                </Text>                <Text mb="xl" c={isDark ? 'white' : 'dark.6'} fw={isDark ? 500 : 400}>
+                  Go to the &quot;Add Abilities&quot; tab to start adding abilities to this Ability Manual.
                 </Text>
                 <Button onClick={() => setActiveTab('add-abilities')} color={isDark ? 'blue.4' : 'blue.6'}>Add Abilities</Button>
-              </Card>
-            ) : (<SimpleGrid cols={{ base: 1, xs: 2, md: 3, lg: 4 }} spacing="md">
-              {[...AbilityManual.abilities]
-                .sort((a, b) => a.abilityName.localeCompare(b.abilityName)).map((ability) => (
-                  <AbilityCard
-                    key={`${ability.abilityName} (${ability.abilityDiscipline})`}
-                    ability={ability}
-                    onViewDetails={handleViewDetails}
-                    onRemoveFromAbilityManual={handleRemoveAbility}
-                    showRemoveButton
-                  />
-                ))}
-            </SimpleGrid>
+              </Card>) : (<SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+                {[...AbilityManual.abilities]
+                  .sort((a, b) => a.abilityName.localeCompare(b.abilityName)).map((ability) => (
+                    <AbilityCardWide
+                      key={`${ability.abilityName} (${ability.abilityDiscipline})`}
+                      ability={ability}
+                      onViewDetails={handleViewDetails}
+                      onRemoveFromAbilityManual={handleRemoveAbility}
+                      showRemoveButton
+                    />
+                  ))}
+              </SimpleGrid>
             )
           },
           {
@@ -188,11 +185,11 @@ export default function AbilityManualDetailPage() {
                 onFilterChange={handleFilterChange}
               /><Text c={isDark ? 'white' : 'dark.7'} fw={isDark ? 500 : 400}>
                   {filteredAbilities.length} available {filteredAbilities.length === 1 ? 'ability' : 'abilities'}
-                </Text>                <SimpleGrid cols={{ base: 1, xs: 2, md: 3, lg: 4 }} spacing="md">
+                </Text>                <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
                   {[...filteredAbilities]
                     .sort((a, b) => a.abilityName.localeCompare(b.abilityName))
                     .map((ability) => (
-                      <AbilityCard
+                      <AbilityCardWide
                         key={`${ability.abilityName} (${ability.abilityDiscipline})`}
                         ability={ability}
                         onViewDetails={handleViewDetails}

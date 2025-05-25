@@ -1,4 +1,4 @@
-import { createTheme } from '@mantine/core';
+import { createTheme, MantineTheme, MantineThemeOverride } from '@mantine/core';
 
 /**
  * Base Mantine Theme Configuration
@@ -6,17 +6,18 @@ import { createTheme } from '@mantine/core';
  * This provides the foundational theme settings for the application.
  * It will be extended by the StyleService to incorporate user preferences.
  */
-export const baseTheme = createTheme({
+export const baseTheme: MantineThemeOverride = createTheme({
   fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif',
   fontFamilyMonospace: 'Monaco, Courier, monospace',
+  fontSmoothing: true,
   headings: { fontFamily: 'Inter, sans-serif' },
-  
+
   // Color scheme settings
   primaryColor: 'brown',
-  
+
   // Enable autoContrast for better text visibility on colored backgrounds
   autoContrast: true,
-  
+
   // Colors palette - these will be available throughout the app
   colors: {
     // Blue shades
@@ -32,7 +33,7 @@ export const baseTheme = createTheme({
       '#3b5bdb', // 8
       '#364fc7', // 9
     ],
-    
+
     // Brown/amber shades for AbilityManual theme
     amber: [
       '#fff8e1', // 0
@@ -46,7 +47,7 @@ export const baseTheme = createTheme({
       '#ff8f00', // 8
       '#ff6f00', // 9
     ],
-    
+
     // Custom brown for fantasy theme
     brown: [
       '#f5f0e6', // 0
@@ -60,7 +61,7 @@ export const baseTheme = createTheme({
       '#4e301c', // 8
       '#3a2415', // 9
     ],
-    
+
     // Dark mode colors
     dark: [
       '#C1C2C5', // 0: Text color 
@@ -75,7 +76,7 @@ export const baseTheme = createTheme({
       '#101113', // 9: Darkest elements
     ],
   },
-  
+
   // Default components styling
   components: {
     // Button styling
@@ -90,36 +91,36 @@ export const baseTheme = createTheme({
         },
       },
     },
-    
+
     // ActionIcon styling
     ActionIcon: {
       defaultProps: {
         color: 'blue',
       },
     },
-    
+
     // Card styling
     Card: {
-      styles: (theme: any) => ({
+      styles: (theme) => ({
         root: {
           backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : '#fffcf5',
           borderColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.brown[2],
         },
       }),
     },
-    
+
     // AppShell styling
     AppShell: {
-      styles: (theme: any) => ({
+      styles: (theme) => ({
         main: {
           backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0],
         },
       }),
     },
-    
+
     // Modal styling
     Modal: {
-      styles: (theme: any) => ({
+      styles: (theme) => ({
         header: {
           backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.white,
         },
@@ -128,7 +129,7 @@ export const baseTheme = createTheme({
         },
       }),
     },
-    
+
     // Badge styling
     Badge: {
       styles: {
