@@ -18,8 +18,19 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }  },
+    }
+  },
   "include": ["src"],
-  "exclude": ["**/*.test.tsx", "**/*.test.ts", "**/*.spec.tsx", "**/*.spec.ts", "src/test"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "exclude": [
+    "**/*.test.tsx",
+    "**/*.test.ts",
+    "**/*.spec.tsx",
+    "**/*.spec.ts",
+    "src/test"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
