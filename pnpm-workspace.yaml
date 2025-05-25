@@ -6,6 +6,7 @@ ignoredBuiltDependencies:
   - mozjpeg
   - pngquant-bin
 onlyBuiltDependencies:
+  - '@swc/core'
   - core-js
   - cwebp-bin
   - esbuild
