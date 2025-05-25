@@ -1,4 +1,4 @@
-import { AppShell, Group, Title, UnstyledButton, rem, useMantineColorScheme } from '@mantine/core';
+import { AppShell, Group, Title, UnstyledButton, Text, rem, Box, Collapse, ActionIcon } from '@mantine/core';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { ThemeCustomizer } from './components/ThemeCustomizer';
 import { ColorSchemeToggle } from './components/ColorSchemeToggle';
@@ -7,12 +7,18 @@ import { useTheme } from './context/ThemeContext';
 import { useStyles } from './hooks/useStyles';
 import { Prefetcher } from './components/Prefetcher';
 import { useState } from 'react';
+import { useDisclosure } from '@mantine/hooks';
+import { IconChevronRight, IconChevronDown, IconBook, IconMenu2 } from '@tabler/icons-react';
+import { useAbilityManuals } from './hooks/useAbilityManuals';
 
 export default function App() {
   const location = useLocation();
   const { colors } = useTheme();
   const { isDark } = useStyles(); // Use the isDark from useStyles which gets it from Mantine
   const [themeSettingsOpened, setThemeSettingsOpened] = useState(false);
+  const [navbarCollapsed, { toggle: toggleNavbar }] = useDisclosure(false);
+  const [manualsExpanded, { toggle: toggleManuals }] = useDisclosure(false);
+  const { AbilityManuals } = useAbilityManuals();
 
   // Generate inline styles based on theme settings
   const getComponentStyles = () => ({
@@ -49,16 +55,29 @@ export default function App() {
     }
     return isDark ? 'gray.3' : 'dark.6';
   };
-
   return (
     <AppShell
       header={{ height: 60 }}
-      navbar={{ width: 300, breakpoint: 'sm' }}
+      navbar={{
+        width: 300,
+        breakpoint: 'sm',
+        collapsed: { desktop: navbarCollapsed, mobile: true }
+      }}
       padding="md"
     >
       <AppShell.Header p="md" style={styles.header}>
         <Group h="100%" px="md" justify="space-between">
-          <Title order={1} size="h3" c="white">SAGA Abilities Manager</Title>
+          <Group>
+            <ActionIcon
+              variant="subtle"
+              color={isDark ? 'gray.0' : 'dark.0'}
+              onClick={toggleNavbar}
+              aria-label="Toggle navigation"
+            >
+              <IconMenu2 size={24} />
+            </ActionIcon>
+            <Title order={1} size="h3" c="white">SAGA Abilities Manager</Title>
+          </Group>
           <ColorSchemeToggle />
         </Group>
       </AppShell.Header>
@@ -80,18 +99,53 @@ export default function App() {
             Abilities Library
           </UnstyledButton>
 
-          <UnstyledButton
-            component={Link}
-            to="/AbilityManuals"
-            fw={location.pathname.includes('/AbilityManuals') ? 'bold' : 'normal'}
-            c={getNavLinkColor(location.pathname.includes('/AbilityManuals'))}
-            display="block"
-            style={styles.navButton}
-          >
-            My Ability Manuals
-          </UnstyledButton>
+          <Box mb={rem(10)}>
+            <Group justify="space-between" style={{ ...styles.navButton, cursor: 'pointer' }} onClick={toggleManuals}>
+              <UnstyledButton
+                component={Link}
+                to="/AbilityManuals"
+                fw={location.pathname.includes('/AbilityManuals') ? 'bold' : 'normal'}
+                c={getNavLinkColor(location.pathname.includes('/AbilityManuals'))}
+                style={{ flex: 1 }}
+              >
+                My Ability Manuals
+              </UnstyledButton>
+              {manualsExpanded ?
+                <IconChevronDown size={16} color={isDark ? 'var(--mantine-color-gray-5)' : 'var(--mantine-color-dark-3)'} /> :
+                <IconChevronRight size={16} color={isDark ? 'var(--mantine-color-gray-5)' : 'var(--mantine-color-dark-3)'} />
+              }
+            </Group>
+
+            <Collapse in={manualsExpanded}>
+              <Box pl={20} pt={5}>
+                {AbilityManuals.length === 0 ? (
+                  <Text size="sm" c={isDark ? 'gray.5' : 'gray.6'} fs="italic">No ability manuals</Text>
+                ) : (
+                  AbilityManuals.map((manual) => (
+                    <UnstyledButton
+                      key={manual.id}
+                      component={Link}
+                      to={`/AbilityManuals/${manual.id}`}
+                      fw={location.pathname === `/AbilityManuals/${manual.id}` ? 'bold' : 'normal'}
+                      c={getNavLinkColor(location.pathname === `/AbilityManuals/${manual.id}`)}
+                      mb={rem(5)}
+                      display="block"
+                      style={{ ...styles.navButton, fontSize: `${(colors.fontScale * 0.85)}rem` }}
+                    >
+                      <Group gap={5}>
+                        <IconBook size={14} />
+                        <Text truncate>{manual.name}</Text>
+                      </Group>
+                    </UnstyledButton>
+                  ))
+                )}
+              </Box>
+            </Collapse>
+          </Box>
         </AppShell.Section>
-      </AppShell.Navbar>        <AppShell.Main style={styles.main}>
+      </AppShell.Navbar>
+
+      <AppShell.Main style={styles.main}>
         {/* Invisible component that prefetches critical resources */}
         <Prefetcher />
         <Outlet />
