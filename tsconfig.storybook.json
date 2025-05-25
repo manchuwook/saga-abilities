@@ -1,8 +1,15 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "outDir": ""
+    "outDir": "",
+    "forceConsistentCasingInFileNames": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "moduleResolution": "Node"
+    }
   },
   "exclude": [
     "src/**/*.spec.ts",

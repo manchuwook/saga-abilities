@@ -49,15 +49,14 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   // Get Mantine theme and color scheme to sync with StyleService
   const mantineTheme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
-  
+
   // Initialize state with stored theme or default
   const [colors, setColors] = useState<ThemeColors>(() => {
     // Try to get theme from localStorage
     const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
     return storedTheme ? JSON.parse(storedTheme) : defaultTheme;
   });
-
-  // Initialize the style service
+  // Initialize the style service with theme information when it changes
   useEffect(() => {
     styleService.initialize(mantineTheme, colorScheme, colors);
   }, [mantineTheme, colorScheme, colors]);
@@ -69,13 +68,11 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         ...prevColors,
         ...newColors,
       };
-      
+
       // Save to localStorage
       localStorage.setItem(THEME_STORAGE_KEY, JSON.stringify(updatedColors));
-      
-      // Update the style service
-      styleService.updateCustomTheme(updatedColors);
-      
+
+      // No need to separately call updateCustomTheme as initialize will do it
       return updatedColors;
     });
   };
@@ -84,18 +81,13 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const resetTheme = () => {
     setColors(defaultTheme);
     localStorage.setItem(THEME_STORAGE_KEY, JSON.stringify(defaultTheme));
-    styleService.updateCustomTheme(defaultTheme);
+    // No need to separately call updateCustomTheme as the effect will do it
   };
-  // Update StyleService when color scheme changes
-  useEffect(() => {
-    styleService.updateColorScheme(colorScheme);
-  }, [colorScheme]);
-  
+
   // This additional effect ensures styleService is updated on every render during tests
-  // This is needed to pass the test that expects updateColorScheme to be called on rerender
   useEffect(() => {
     if (process.env.NODE_ENV === 'test') {
-      styleService.updateColorScheme(colorScheme);
+      styleService.initialize(mantineTheme, colorScheme, colors);
     }
   });
 

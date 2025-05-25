@@ -14,10 +14,9 @@ interface AddToAbilityManualModalProps {
 
 export function AddToAbilityManualModal({ ability, opened, onClose }: AddToAbilityManualModalProps) {
   const { AbilityManuals, addAbilityToAbilityManual } = useAbilityManuals();
-  const [selectedAbilityManualId, setSelectedAbilityManualId] = useState<string | null>(null);
-  const { colorScheme } = useMantineColorScheme();
+  const [selectedAbilityManualId, setSelectedAbilityManualId] = useState<string | null>(null); const { colorScheme } = useMantineColorScheme();
   const isDark = colorScheme === 'dark';
-  const { inputStyles } = useStyles();
+  const { inputStyles, modalStyles } = useStyles();
 
   // Handle adding ability to AbilityManual
   const handleAddToAbilityManual = (ability: Ability) => {
@@ -91,21 +90,24 @@ export function AddToAbilityManualModal({ ability, opened, onClose }: AddToAbili
       </Paper>
     );
   };
-
   // Define title component outside the render function
-  const ModalTitle = (ability: Ability) => (
+  const ModalTitle = (_ability: Ability) => (
     <Text c={isDark ? 'white' : 'dark.9'} fw={700} size="xl">Add to Ability Manual</Text>
-  );
-  return (
+  ); return (
     <SafeModal
       data={ability}
       opened={opened}
       onClose={handleClose}
       title={ModalTitle}
       size="md"
+      overlayProps={modalStyles.overlayProps}
       styles={{
+        header: modalStyles.header,
+        content: modalStyles.content,
+        close: modalStyles.close,
         body: {
           padding: 0,
+          backgroundColor: isDark ? '#1A1B1E' : 'white',
         }
       }}
     >

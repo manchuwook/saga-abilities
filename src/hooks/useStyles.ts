@@ -1,31 +1,18 @@
-import { useMantineColorScheme, useMantineTheme, MantineTheme } from '@mantine/core';
+import { useMantineColorScheme, MantineTheme } from '@mantine/core';
 import { useTheme } from '../context/ThemeContext';
 import { styleService } from '../services/StyleService';
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 
 /**
- * A custom hook that provides access to the StyleService
- * while ensuring it stays in sync with the current theme and color scheme.
- * This hook is designed to integrate with Mantine's theme system.
+ * A custom hook that provides access to the StyleService and Mantine theme.
+ * This hook provides consistent styling across the application.
+ * It uses Mantine's color scheme directly for dark mode detection.
  */
 export function useStyles() {
   const { colors } = useTheme();
   const { colorScheme } = useMantineColorScheme();
-  const mantineTheme = useMantineTheme();
   const isDark = colorScheme === 'dark';
 
-  // Keep StyleService in sync with the current theme and color scheme
-  useEffect(() => {
-    styleService.updateColorScheme(colorScheme);
-    styleService.updateCustomTheme(colors);
-  }, [colorScheme, colors]);
-
-  // Initialize StyleService with the Mantine theme when it's available
-  useEffect(() => {
-    if (mantineTheme) {
-      styleService.initialize(mantineTheme, colorScheme, colors);
-    }
-  }, [mantineTheme, colorScheme, colors]);
   // Memoize the theme to avoid unnecessary re-renders
   const theme = useMemo<MantineTheme>(() => styleService.getTheme(), [
     colorScheme,

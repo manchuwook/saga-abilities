@@ -4,14 +4,14 @@ import { ThemeCustomizer } from './components/ThemeCustomizer';
 import { ColorSchemeToggle } from './components/ColorSchemeToggle';
 import { ThemeToggle } from './components/ThemeToggle';
 import { useTheme } from './context/ThemeContext';
+import { useStyles } from './hooks/useStyles';
 import { Prefetcher } from './components/Prefetcher';
 import { useState } from 'react';
 
 export default function App() {
   const location = useLocation();
   const { colors } = useTheme();
-  const { colorScheme } = useMantineColorScheme();
-  const isDark = colorScheme === 'dark';
+  const { isDark } = useStyles(); // Use the isDark from useStyles which gets it from Mantine
   const [themeSettingsOpened, setThemeSettingsOpened] = useState(false);
 
   // Generate inline styles based on theme settings

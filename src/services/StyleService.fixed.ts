@@ -66,7 +66,9 @@ export class StyleService {
             StyleService.instance = new StyleService();
         }
         return StyleService.instance;
-    }    /**
+    }
+
+    /**
      * Initialize the service with theme information
      */
     public initialize(mantineTheme: MantineTheme, colorScheme: MantineColorScheme, customTheme: ThemeColors): void {
@@ -77,20 +79,33 @@ export class StyleService {
     }
 
     /**
+     * Update the Mantine color scheme
+     * This is still needed for tests and initialization
+     */
+    public updateColorScheme(colorScheme: MantineColorScheme): void {
+        this._colorScheme = colorScheme;
+    }
+
+    /**
      * Update the custom theme settings and regenerate Mantine theme
      */
     public updateCustomTheme(customTheme: Partial<ThemeColors>): void {
         this.customTheme = { ...this.customTheme, ...customTheme };
         this.updateMantineTheme();
     }
+
     /**
      * Update Mantine theme based on custom theme settings
      * This method creates a new Mantine theme that incorporates our custom settings
-     */    private updateMantineTheme(): void {        // Safety check - if mantineTheme is not properly initialized, don't update
+     */
+    private updateMantineTheme(): void {
+        // Safety check - if mantineTheme is not properly initialized, don't update
         if (!this.mantineTheme?.colors) {
             console.warn('Cannot update Mantine theme: theme or theme.colors is undefined');
             return;
-        } try {
+        }
+
+        try {
             // Default colors if customTheme is undefined
             if (!this.customTheme) {
                 this.customTheme = {
@@ -144,10 +159,9 @@ export class StyleService {
             const fontSizeMd = `${16 * fontScale}px`;
             const fontSizeLg = `${18 * fontScale}px`;
             const fontSizeXl = `${20 * fontScale}px`;
-            // Create custom theme extensions
+
             // Make sure primaryColorName is one of the valid Mantine color names, not a custom format with a dot
-            const safeColorName = primaryColorName.includes('.') ? primaryColorName.split('.')[0] : primaryColorName;            // Get touch-friendly styles for tablet devices
-            const touchStyles = this.getTouchFriendlyStyles();
+            const safeColorName = primaryColorName.includes('.') ? primaryColorName.split('.')[0] : primaryColorName;
 
             const customExtensions = createTheme({
                 primaryColor: safeColorName,
@@ -172,23 +186,6 @@ export class StyleService {
                     xl: fontSizeXl
                 },
                 components: {
-                    // ActionIcon styling - make touch-friendly
-                    ActionIcon: {
-                        styles: {
-                            root: {
-                                minWidth: touchStyles.actionIcon.minWidth,
-                                minHeight: touchStyles.actionIcon.minHeight,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                '& svg': {
-                                    width: '20px',
-                                    height: '20px',
-                                }
-                            }
-                        }
-                    },
-
                     // Card styling
                     Card: {
                         styles: (theme: ThemeWithColorScheme) => ({
@@ -216,15 +213,14 @@ export class StyleService {
                                 color: theme.colorScheme === 'dark' ? 'white' : 'black',
                             },
                         }),
-                    },                    // Text input styling
+                    },
+                    // Text input styling
                     TextInput: {
                         styles: (theme: ThemeWithColorScheme) => ({
                             input: {
                                 backgroundColor: theme.colorScheme === 'dark' ? 'var(--mantine-color-dark-5)' : 'white',
                                 borderColor: theme.colorScheme === 'dark' ? 'var(--mantine-color-dark-4)' : 'var(--mantine-color-gray-4)',
                                 fontSize: `${this.customTheme.fontScale}rem`,
-                                minHeight: touchStyles.control.minHeight, // Touch-friendly height
-                                padding: '10px 14px', // Better padding for touch
                             },
                             label: {
                                 color: theme.colorScheme === 'dark' ? 'var(--mantine-color-gray-2)' : 'var(--mantine-color-dark-8)',
@@ -233,79 +229,25 @@ export class StyleService {
                         }),
                     },
 
-                    // Select input styling - touch friendly
-                    Select: {
-                        styles: (theme: ThemeWithColorScheme) => ({
-                            input: {
-                                backgroundColor: theme.colorScheme === 'dark' ? 'var(--mantine-color-dark-5)' : 'white',
-                                borderColor: theme.colorScheme === 'dark' ? 'var(--mantine-color-dark-4)' : 'var(--mantine-color-gray-4)',
-                                fontSize: `${this.customTheme.fontScale}rem`,
-                                minHeight: touchStyles.control.minHeight, // Touch-friendly height
-                                padding: '10px 14px', // Better padding for touch
-                            },
-                            item: {
-                                padding: '10px 14px', // Touch-friendly dropdown items
-                                height: 'auto',
-                                minHeight: '40px',
-                            },
-                        }),
-                    },
-
-                    // MultiSelect input styling - touch friendly
-                    MultiSelect: {
-                        styles: (theme: ThemeWithColorScheme) => ({
-                            input: {
-                                backgroundColor: theme.colorScheme === 'dark' ? 'var(--mantine-color-dark-5)' : 'white',
-                                borderColor: theme.colorScheme === 'dark' ? 'var(--mantine-color-dark-4)' : 'var(--mantine-color-gray-4)',
-                                fontSize: `${this.customTheme.fontScale}rem`,
-                                minHeight: touchStyles.control.minHeight, // Touch-friendly height
-                                padding: '10px 14px', // Better padding for touch
-                            },
-                            item: {
-                                padding: '10px 14px', // Touch-friendly dropdown items
-                                height: 'auto',
-                                minHeight: '40px',
-                            },
-                        }),
-                    },// Tabs styling
+                    // Tabs styling
                     Tabs: {
                         defaultProps: {
                             autoContrast: true
                         },
                         styles: (theme: ThemeWithColorScheme) => ({
                             tab: {
-                                // Base styles for all tabs
-                                color: theme.colorScheme === 'dark' ? 'var(--mantine-color-gray-2)' : 'var(--mantine-color-dark-6)',
                                 backgroundColor: theme.colorScheme === 'dark' ? 'var(--mantine-color-dark-7)' : 'var(--mantine-color-white)',
-                                fontWeight: 500,
-                                transition: 'all 0.2s ease',
-                                // Touch-friendly sizing
-                                minHeight: touchStyles.tab.minHeight,
-                                padding: touchStyles.tab.padding,
-
+                                '&[dataActive="true"]': {
+                                    backgroundColor: theme.colorScheme === 'dark'
+                                        ? `var(--mantine-color-${this.customTheme?.accentColor?.split('.')[0] || 'blue'}-9)`
+                                        : `var(--mantine-color-${this.customTheme?.accentColor?.split('.')[0] || 'blue'}-2)`,
+                                },
                                 '&:hover': {
                                     backgroundColor: theme.colorScheme === 'dark' ? 'var(--mantine-color-dark-6)' : 'var(--mantine-color-gray-1)',
                                 },
-
-                                // Active tab styles with correct attribute selector
-                                '&[data-active="true"]': {
-                                    color: theme.colorScheme === 'dark' ? 'white' : 'var(--mantine-color-dark-9)',
-                                    fontWeight: 600, // Make active tab text bold
-                                    backgroundColor: theme.colorScheme === 'dark' ? 'var(--mantine-color-dark-6)' : 'var(--mantine-color-white)',
-                                    borderColor: theme.colorScheme === 'dark'
-                                        ? `var(--mantine-color-${this.customTheme?.accentColor?.split('.')[0] || 'blue'}-4)`
-                                        : `var(--mantine-color-${this.customTheme?.accentColor?.split('.')[0] || 'blue'}-6)`,
-                                    borderWidth: '0 0 2px 0',
-                                    borderStyle: 'solid',
-                                },
                             },
                             tabsList: {
-                                borderBottomColor: theme.colorScheme === 'dark' ? 'var(--mantine-color-dark-4)' : 'var(--mantine-color-gray-3)',
-                                borderBottomWidth: '1px',
-                                borderBottomStyle: 'solid',
-                            },
-                            panel: {
-                                paddingTop: '20px', // Add spacing between tabs and content
+                                borderBottomColor: theme.colorScheme === 'dark' ? 'var(--mantine-color-dark-3)' : 'var(--mantine-color-gray-3)',
                             },
                         }),
                     },
@@ -338,7 +280,9 @@ export class StyleService {
                 };
             }
         }
-    }    /**
+    }
+
+    /**
      * Check if dark mode is enabled
      */
     public get isDark(): boolean {
@@ -391,12 +335,14 @@ export class StyleService {
             bg: this.isDark ? 'dark.6' : 'white',
         };
     }
+
     /**
      * Get shell/container styles for main app layout
      */
     public getShellStyles() {
         const spacingXs = this.mantineTheme.spacing?.xs;
         const spacingSm = this.mantineTheme.spacing?.sm;
+
         // Helper function to convert px string or number to rem
         const pxToRem = (pxValue: string | number): string => {
             // If pxValue is already a number, use it directly
@@ -406,7 +352,9 @@ export class StyleService {
             // Otherwise parse it as a string
             const numValue = Number(String(pxValue || '').replace('px', ''));
             return isNaN(numValue) ? '0.875rem' : `${numValue / 16}rem`;
-        };        // Helper function to get primary color with shade
+        };
+
+        // Helper function to get primary color with shade
         const getPrimaryColorWithShade = () => {
             try {
                 if (!this.customTheme?.primaryColor) {
@@ -462,9 +410,10 @@ export class StyleService {
             style: { borderRadius: this.mantineTheme.radius?.md || '4px' },
         };
     }
+
     /**
-       * Get text styles for different purposes
-       */
+     * Get text styles for different purposes
+     */
     public getTextStyles(purpose: 'heading' | 'body' | 'label' = 'body') {
         // Helper function to determine text size
         const getTextSize = () => {
@@ -491,7 +440,9 @@ export class StyleService {
             c: getTextColor(),
             ...(this.isDark && { fw: purpose === 'body' ? 500 : undefined }) // Add font weight in dark mode for body text
         };
-    }    /**
+    }
+
+    /**
      * Get color for active/inactive navigation items
      */
     public getNavLinkColor(isActive: boolean): string {
@@ -499,31 +450,28 @@ export class StyleService {
             return this.customTheme?.accentColor || 'blue.6';
         }
         return this.isDark ? 'gray.3' : 'dark.6';
-    }    /**
+    }
+
+    /**
      * Get form input styles with consistent theming
-     * Makes inputs touch-friendly on tablet devices
      */
     public getInputStyles() {
-        // Get touch-friendly styles
-        const touchStyles = this.getTouchFriendlyStyles();
-
         return {
             input: {
                 backgroundColor: this.isDark ? 'var(--mantine-color-dark-5)' : 'white',
                 borderColor: this.isDark ? 'var(--mantine-color-dark-4)' : 'var(--mantine-color-gray-4)',
                 borderRadius: this.mantineTheme.radius?.sm || '3px',
                 fontSize: this.mantineTheme.fontSizes?.sm || '14px',
-                minHeight: touchStyles.control.minHeight, // Touch-friendly height
-                padding: '10px 14px', // Add more padding for touch interactions
             },
             label: {
                 color: this.isDark ? 'var(--mantine-color-gray-2)' : 'var(--mantine-color-dark-8)',
                 fontSize: this.mantineTheme.fontSizes?.sm || '14px',
             }
         };
-    }/**
+    }
+
+    /**
      * Get button styles with consistent theming
-     * Ensures buttons are touch-friendly on tablet devices
      */
     public getButtonStyles(variant: 'primary' | 'secondary' | 'outline' = 'primary') {
         // Helper function to determine button color
@@ -537,114 +485,60 @@ export class StyleService {
             return this.isDark ? 'gray.4' : 'dark.4';
         };
 
-        // Get touch-friendly styles
-        const touchStyles = this.getTouchFriendlyStyles();
-
         return {
             color: getButtonColor(),
             variant: variant === 'outline' ? 'outline' : 'filled',
             radius: this.mantineTheme.radius?.sm || '3px',
             size: 'sm',
-            styles: {
-                root: {
-                    minHeight: touchStyles.button.minHeight,
-                    padding: touchStyles.button.padding,
-                }
-            }
         };
-    }    /**
-   * Get tab styles with consistent theming
-   * Ensures tabs are touch-friendly on tablet devices
-   */
+    }
+
+    /**
+     * Get tab styles with consistent theming
+     */
     public getTabsStyles() {
-        // Get touch-friendly styles
-        const touchStyles = this.getTouchFriendlyStyles();
+        // Get the theme's Tabs styles or fallback to our custom styles if not defined
+        const themeTabsStyles = this.mantineTheme.components?.Tabs?.styles;
 
-        // Always define our own styles for consistency
+        if (themeTabsStyles) {
+            // If theme has Tabs styles defined, use those
+            try {
+                return {
+                    ...themeTabsStyles(this.mantineTheme as unknown as ThemeWithColorScheme),
+                    autoContrast: true
+                };
+            } catch (error) {
+                console.warn('Error applying Tabs styles:', error);
+                // Fall through to default styles
+            }
+        }
+
+        // Otherwise return our custom styles
         return {
-            root: {
-                // Apply autoContrast for better text visibility
-                autoContrast: true,
-            },
             tab: {
-                // Base styles for all tabs
-                color: this.isDark ? 'var(--mantine-color-gray-2)' : 'var(--mantine-color-dark-6)',
+                color: this.isDark ? 'white' : 'black', // Simple white/black text for maximum contrast
                 backgroundColor: this.isDark ? 'var(--mantine-color-dark-7)' : 'var(--mantine-color-white)',
-                fontWeight: 500,
-                transition: 'all 0.2s ease',
-                // Touch-friendly sizing
-                minHeight: touchStyles.tab.minHeight,
-                padding: touchStyles.tab.padding,
-
                 '&:hover': {
                     backgroundColor: this.isDark ? 'var(--mantine-color-dark-6)' : 'var(--mantine-color-gray-1)',
                 },
-
-                // Active tab styles using the correct attribute selector syntax
-                '&[data-active="true"]': {
-                    color: this.isDark ? 'white' : 'var(--mantine-color-dark-9)',
+                '&[dataActive="true"]': {
+                    color: this.isDark ? 'white' : 'black', // Keep text white in dark mode, black in light mode
+                    borderColor: this.isDark
+                        ? `var(--mantine-color-${this.customTheme?.accentColor?.split('.')[0] || 'blue'}-3)` // Matching border color with fallback
+                        : `var(--mantine-color-${this.customTheme?.accentColor?.split('.')[0] || 'blue'}-6)`,
                     fontWeight: 600, // Make active tab text bold
                     backgroundColor: this.isDark ? 'var(--mantine-color-dark-6)' : 'var(--mantine-color-white)',
-                    borderColor: this.isDark
-                        ? `var(--mantine-color-${this.customTheme?.accentColor?.split('.')[0] || 'blue'}-4)`
-                        : `var(--mantine-color-${this.customTheme?.accentColor?.split('.')[0] || 'blue'}-6)`,
-                    borderWidth: '0 0 2px 0',
-                    borderStyle: 'solid',
                 },
             },
             tabsList: {
-                borderBottomColor: this.isDark ? 'var(--mantine-color-dark-4)' : 'var(--mantine-color-gray-3)',
-                borderBottomWidth: '1px',
-                borderBottomStyle: 'solid',
+                borderBottomColor: this.isDark ? 'var(--mantine-color-dark-3)' : 'var(--mantine-color-gray-3)',
+                borderBottomWidth: this.isDark ? '2px' : '1px', // Thicker border in dark mode for better visibility
             },
             panel: {
-                paddingTop: '20px', // Add spacing between tabs and content
                 color: this.isDark ? 'var(--mantine-color-white)' : 'var(--mantine-color-dark-8)',
             },
+            autoContrast: true,
         };
-    }
-
-    /**
-     * Get touch-friendly styles for interactive components on tablet devices
-     * Following accessibility standards, touch targets should be at least 44x44px
-     */
-    public getTouchFriendlyStyles() {
-        return {
-            // Apply to action icons
-            actionIcon: {
-                minWidth: '44px',
-                minHeight: '44px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                svg: {
-                    width: '20px',
-                    height: '20px',
-                },
-            },
-            // Apply to buttons
-            button: {
-                minHeight: '44px',
-                padding: '10px 16px',
-            },
-            // Apply to tabs
-            tab: {
-                minHeight: '44px',
-                padding: '10px 16px',
-            },
-            // Apply to select and input controls
-            control: {
-                minHeight: '44px',
-            },
-        };
-    }
-
-    /**
-     * Update the Mantine color scheme
-     * This is still needed for tests and initialization
-     */
-    public updateColorScheme(colorScheme: MantineColorScheme): void {
-        this._colorScheme = colorScheme;
     }
 }
 

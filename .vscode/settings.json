@@ -5,15 +5,6 @@
     "projectKey": "saga-abilities"
   },
   "sonarlint.pathToCompileCommands": "${workspaceFolder}",
-  "sonarlint.workDir": "${workspaceFolder}/.sonarlint/work",
-  "sonarlint.disableTelemetry": true,
-  "sonarlint.ls.javaHome": null,
-  "sonarlint.output.showAnalyzerLogs": true,
-  "sonarlint.analysisProperties": {
-    "sonar.exclusions": "**/node_modules/**,**/dist/**,**/build/**,**/coverage/**,**/*.test.*,**/*.spec.*",
-    "sonar.typescript.exclusions": "**/node_modules/**,**/dist/**,**/build/**,**/coverage/**",
-    "sonar.javascript.exclusions": "**/node_modules/**,**/dist/**,**/build/**,**/coverage/**"
-  },
   "editor.fontLigatures": true,
   "editor.fontFamily": "JetBrains Mono, Fira Code, Fira Mono, Consolas, 'Courier New', monospace",
   "cSpell.words": [
@@ -28,6 +19,7 @@
     "Assense",
     "Counterspell",
     "Counterspelling",
+    "cssmodule",
     "Deathstroke",
     "Decebal's",
     "Domseras",

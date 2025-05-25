@@ -21,12 +21,12 @@ interface SafeTabsProps {
    * Array of tab items to render
    */
   tabs: readonly TabItem[];
-  
+
   /**
    * The currently active tab's value
    */
   activeTab: string;
-  
+
   /**
    * Function to handle tab changes
    */
@@ -38,31 +38,30 @@ interface SafeTabsProps {
  * Avoids having to use manual tab checking and conditional rendering in parent components
  */
 export function SafeTabs({ tabs, activeTab, onTabChange }: SafeTabsProps) {
-  const { styleService } = useStyles();
-  const tabStyles = styleService.getTabsStyles();
-  
+  const { tabsStyles } = useStyles();
+
   return (
     <>      <Tabs
-        value={activeTab}
-        onChange={onTabChange}
-        styles={tabStyles}
-        variant="outline"
-        autoContrast
-      >
-        <Tabs.List>
-          {tabs.map((tab) => (
-            <Tabs.Tab
-              key={tab.value}
-              value={tab.value}
-              leftSection={tab.leftSection}
-              rightSection={tab.rightSection}
-            >
-              {tab.label}
-            </Tabs.Tab>
-          ))}
-        </Tabs.List>
-      </Tabs>
-      
+      value={activeTab}
+      onChange={onTabChange}
+      styles={tabsStyles}
+      variant="outline"
+      autoContrast
+    >
+      <Tabs.List>
+        {tabs.map((tab) => (
+          <Tabs.Tab
+            key={tab.value}
+            value={tab.value}
+            leftSection={tab.leftSection}
+            rightSection={tab.rightSection}
+          >
+            {tab.label}
+          </Tabs.Tab>
+        ))}
+      </Tabs.List>
+    </Tabs>
+
       {/* Render the content for the active tab */}
       {tabs.find(tab => tab.value === activeTab)?.content}
     </>
