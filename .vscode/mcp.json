@@ -19,6 +19,13 @@
     "cloudflare-docs": {
       "command": "npx",
       "args": ["mcp-remote", "https://docs.mcp.cloudflare.com/sse"]
+    },
+    "mantine": {
+      "command": "npx",
+      "args": ["@hakxel/mantine-ui-server"],
+      "env": {
+        "MANTINE_VERSION": "7.17.7" // Optional: specify version
+      }
     }
   }
 }
