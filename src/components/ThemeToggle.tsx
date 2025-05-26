@@ -19,12 +19,7 @@ export function ThemeToggle({ onToggle }: ThemeToggleProps) {
         radius="md"
         aria-label="Open theme settings"
         color={isDark ? 'gray.4' : 'gray.7'}
-        style={{ 
-          position: 'fixed', 
-          bottom: '20px', 
-          left: '20px', 
-          zIndex: 1000
-        }}
+        style={{}}
       >
         <IconSettings size={18} />
       </ActionIcon>

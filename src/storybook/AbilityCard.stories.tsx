@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { AbilityCard } from './AbilityCard';
+import { AbilityCard } from '../components/AbilityCard';
 import { Ability } from '../models/abilities.zod';
 import { MantineProvider, ColorSchemeScript, localStorageColorSchemeManager } from '@mantine/core';
 import { ThemeProvider } from '../context/ThemeContext';

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ThemeToggle } from './ThemeToggle';
+import { ThemeToggle } from '../components/ThemeToggle';
 import { MantineProvider, ColorSchemeScript, localStorageColorSchemeManager } from '@mantine/core';
 import { ThemeProvider } from '../context/ThemeContext';
 import { baseTheme } from '../theme/mantineTheme';

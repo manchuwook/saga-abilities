@@ -1,0 +1,43 @@
+.navbar {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  transform-origin: left center;
+}
+
+.closed {
+  opacity: 0.5;
+  transform: translateX(-5px);
+}
+
+.header {
+  padding: var(--mantine-spacing-md);
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+}
+
+/* Apply different border color in dark mode */
+:root[data-mantine-color-scheme='dark'] .header {
+  border-bottom-color: var(--mantine-color-dark-4);
+}
+
+.links {
+  flex: 1;
+}
+
+.linksInner {
+  padding-top: var(--mantine-spacing-md);
+  padding-bottom: var(--mantine-spacing-md);
+}
+
+.footer {
+  margin-top: auto;
+  border-top: 1px solid var(--mantine-color-gray-3);
+}
+
+/* Apply different border color in dark mode */
+:root[data-mantine-color-scheme='dark'] .footer {
+  border-top-color: var(--mantine-color-dark-4);
+}
