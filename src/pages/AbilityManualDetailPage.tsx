@@ -93,7 +93,8 @@ export default function AbilityManualDetailPage() {
         }
       },
     });
-  }; const handleAddAbility = (ability: Ability) => {
+  };
+  const handleAddAbility = (ability: Ability) => {
     if (id) {
       addAbilityToAbilityManual(id, ability);
 
@@ -111,7 +112,8 @@ export default function AbilityManualDetailPage() {
       });
       // Removed auto-switching to abilities tab to keep user on add-abilities tab
     }
-  };  // Filter out abilities that are already in the AbilityManual and sort alphabetically
+  };
+  // Filter out abilities that are already in the AbilityManual and sort alphabetically
   const availableAbilities = allAbilities?.filter(
     (ability: Ability) => !AbilityManual.abilities.some((s: Ability) => s.abilityName === ability.abilityName)
   )?.sort((a, b) => a.abilityName.localeCompare(b.abilityName)) || [];
@@ -127,7 +129,8 @@ export default function AbilityManualDetailPage() {
         >
           Back to Ability Manuals
         </Button>
-      </Group>      <Group justify="space-between" mb="xl">
+      </Group>
+      <Group justify="space-between" mb="xl">
         <Stack gap={0}>
           <Title order={1} c={isDark ? 'gray.1' : 'dark.8'}>{AbilityManual.name}</Title>
           <Text size="lg" c={isDark ? 'gray.3' : 'dimmed'} fw={isDark ? 500 : 400}>Character: {AbilityManual.character}</Text>
@@ -143,21 +146,24 @@ export default function AbilityManualDetailPage() {
           </Button>
           <AbilityManualExportButton AbilityManual={AbilityManual} label="Export Ability Manual" />
         </Group>
-      </Group>      {AbilityManual.description && (
+      </Group>
+      {AbilityManual.description && (
         <Text mb="xl" c={isDark ? 'white' : 'dark.7'} fw={isDark ? 500 : 400}>{AbilityManual.description}</Text>
-      )}      <SafeTabs
+      )}
+      <SafeTabs
         activeTab={activeTab}
         onTabChange={(value) => value && setActiveTab(value)}
         tabs={[
           {
             value: 'abilities',
-            label: `AbilityManual Contents (${AbilityManual.abilities.length})`,
+            label: `${AbilityManual.name} Abilities (${AbilityManual.abilities.length})`,
             leftSection: <IconSearch size={16} />,
             content: AbilityManual.abilities.length === 0 ? (
               <Card withBorder p="xl" ta="center" bg={isDark ? 'dark.6' : 'white'}>
                 <Text size="lg" fw={500} mb="md" c={isDark ? 'gray.1' : 'dark.8'}>
                   This Ability Manual is empty
-                </Text>                <Text mb="xl" c={isDark ? 'white' : 'dark.6'} fw={isDark ? 500 : 400}>
+                </Text>
+                <Text mb="xl" c={isDark ? 'white' : 'dark.6'} fw={isDark ? 500 : 400}>
                   Go to the &quot;Add Abilities&quot; tab to start adding abilities to this Ability Manual.
                 </Text>
                 <Button onClick={() => setActiveTab('add-abilities')} color={isDark ? 'blue.4' : 'blue.6'}>Add Abilities</Button>
@@ -180,12 +186,15 @@ export default function AbilityManualDetailPage() {
             label: 'Add Abilities',
             leftSection: <IconPlus size={16} />,
             content: (
-              <Stack gap="lg">                <AbilitiesFilter
-                abilities={availableAbilities}
-                onFilterChange={handleFilterChange}
-              /><Text c={isDark ? 'white' : 'dark.7'} fw={isDark ? 500 : 400}>
+              <Stack gap="lg">
+                <AbilitiesFilter
+                  abilities={availableAbilities}
+                  onFilterChange={handleFilterChange}
+                />
+                <Text c={isDark ? 'white' : 'dark.7'} fw={isDark ? 500 : 400}>
                   {filteredAbilities.length} available {filteredAbilities.length === 1 ? 'ability' : 'abilities'}
-                </Text>                <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+                </Text>
+                <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
                   {[...filteredAbilities]
                     .sort((a, b) => a.abilityName.localeCompare(b.abilityName))
                     .map((ability) => (
@@ -201,7 +210,8 @@ export default function AbilityManualDetailPage() {
             )
           }
         ]}
-      />      <AbilityDetailsModal
+      />
+      <AbilityDetailsModal
         ability={selectedAbility}
         opened={detailsModalOpened}
         onClose={closeDetailsModal}

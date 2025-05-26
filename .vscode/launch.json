@@ -1,35 +1,22 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "Launch Chrome against SAGA Abilities",
-            "url": "http://localhost:5173",
-            "webRoot": "${workspaceFolder}",
-            "sourceMaps": true,
-            "sourceMapPathOverrides": {
-                "/@fs/*": "${webRoot}/*",
-                "webpack:///./~/*": "${webRoot}/node_modules/*",
-                "webpack://?:*/*": "${webRoot}/*"
-            },
-            "userDataDir": "${workspaceFolder}/.vscode/chrome-debug-profile",
-            "preLaunchTask": "npm: dev",
-            "runtimeArgs": [
-                "--remote-debugging-port=9222",
-                "--user-data-dir=${workspaceFolder}/.vscode/chrome-debug-profile"
-            ]
-        },        {
-            "type": "chrome",
-            "request": "attach",
-            "name": "Attach to Chrome",
-            "port": 9222,
-            "webRoot": "${workspaceFolder}",
-            "sourceMaps": true,
-            "urlFilter": "http://localhost:5173/*",
-            "restart": true
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "vscode-edge-devtools.debug",
+      "request": "launch",
+      "name": "Launch Microsoft Edge and open the Edge DevTools",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Launch Edge against localhost",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/src"
+    }
+  ]
 }

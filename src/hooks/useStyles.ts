@@ -2,6 +2,7 @@ import { useMantineColorScheme, MantineTheme } from '@mantine/core';
 import { useTheme } from '../context/ThemeContext';
 import { styleService } from '../services/StyleService';
 import { useMemo } from 'react';
+import { adaptMantineTabsStylesForReact } from '../utils/suppressReactWarnings';
 
 /**
  * A custom hook that provides access to the StyleService and Mantine theme.
@@ -28,7 +29,8 @@ export function useStyles() {
   const textStyles = useMemo(() => styleService.getTextStyles(), [colorScheme, colors]);
   const inputStyles = useMemo(() => styleService.getInputStyles(), [colorScheme, colors]);
   const buttonStyles = useMemo(() => styleService.getButtonStyles(), [colorScheme, colors]);
-  const tabsStyles = useMemo(() => styleService.getTabsStyles(), [colorScheme, colors]);
+  // Adapt tab styles for React's camelCase expectations
+  const tabsStyles = useMemo(() => adaptMantineTabsStylesForReact(styleService.getTabsStyles()), [colorScheme, colors]);
 
   // Memoize callback functions
   const getNavLinkColor = useMemo(() =>

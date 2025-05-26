@@ -285,10 +285,8 @@ export class StyleService {
 
                                 '&:hover': {
                                     backgroundColor: theme.colorScheme === 'dark' ? 'var(--mantine-color-dark-6)' : 'var(--mantine-color-gray-1)',
-                                },
-
-                                // Active tab styles with correct attribute selector
-                                '&[data-active="true"]': {
+                                },                                // Active tab styles with React's expected camelCase attribute
+                                '&[dataActive="true"]': {
                                     color: theme.colorScheme === 'dark' ? 'white' : 'var(--mantine-color-dark-9)',
                                     fontWeight: 600, // Make active tab text bold
                                     backgroundColor: theme.colorScheme === 'dark' ? 'var(--mantine-color-dark-6)' : 'var(--mantine-color-white)',
@@ -578,10 +576,8 @@ export class StyleService {
 
                 '&:hover': {
                     backgroundColor: this.isDark ? 'var(--mantine-color-dark-6)' : 'var(--mantine-color-gray-1)',
-                },
-
-                // Active tab styles using the correct attribute selector syntax
-                '&[data-active="true"]': {
+                },                // Active tab styles using React's expected camelCase attribute
+                '&[dataActive="true"]': {
                     color: this.isDark ? 'white' : 'var(--mantine-color-dark-9)',
                     fontWeight: 600, // Make active tab text bold
                     backgroundColor: this.isDark ? 'var(--mantine-color-dark-6)' : 'var(--mantine-color-white)',

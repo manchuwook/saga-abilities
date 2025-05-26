@@ -124,7 +124,7 @@ function MockedAbilityManualDetailPage({ id = "123456", notFound = false }) {
                 tabs={[
                     {
                         value: 'abilities',
-                        label: `AbilityManual Contents (${AbilityManual.abilities.length})`,
+                        label: `Manual Abilities (${AbilityManual.abilities.length})`,
                         leftSection: <span>🔍</span>, // Using emoji instead of icon
                         content: AbilityManual.abilities.length === 0 ? (
                             <Card withBorder p="xl" ta="center" bg={isDark ? 'dark.6' : 'white'}>

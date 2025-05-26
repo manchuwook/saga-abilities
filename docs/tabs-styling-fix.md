@@ -1,3 +1,5 @@
+<!-- filepath: x:\dev\saga-abilities\docs\tabs-styling-fix.md -->
+
 # Tabs Styling Fix
 
 ## Problem
@@ -6,14 +8,17 @@ The application was experiencing issues with the tabs component styling, particu
 
 ## Root Causes
 
-1. Incorrect CSS selector for active tabs - using `&[dataActive="true"]` instead of `&[data-active="true"]`
+1. Incorrect CSS selector for active tabs - React expects `&[dataActive="true"]` (camelCase) while CSS would normally use `&[data-active="true"]` (kebab-case)
 2. Inconsistent styling application between the direct `getTabsStyles()` method and the Mantine theme integration
 3. Over-reliance on conditional theme styles that weren't being applied correctly
 4. Inconsistent color contrast in dark mode
 
 ## Solution
 
-1. Fixed the CSS selector for active tabs to use `&[data-active="true"]`
+1. Fixed the CSS selector issue by:
+   - Creating a utility function to transform data attributes in selectors to React's expected format
+   - Converting selectors using `&[data-active="true"]` to `&[dataActive="true"]`
+   - Adapting the tab styles in the useStyles hook
 2. Standardized the tab styling across both the `getTabsStyles()` method and the Mantine theme configuration
 3. Added specific styling for all tab states (normal, hover, active) with consistent color scheme integration
 4. Enhanced the tab color contrast, especially in dark mode
@@ -29,6 +34,7 @@ The application was experiencing issues with the tabs component styling, particu
 - More maintainable code with a single source of truth for tab styling
 - Smoother transitions between tab states with added animation
 - Better integration with Mantine's theme system
+- No more React warnings for unsupported style properties
 
 ## Styling Details
 
@@ -37,3 +43,9 @@ The application was experiencing issues with the tabs component styling, particu
 - Added consistent font weight changes (500 normal, 600 active)
 - Applied proper border styling to indicate the active tab
 - Consistent hover effect with subtle background color changes
+
+## Technical Note
+
+React automatically converts kebab-case attributes like `data-active` to camelCase properties like `dataActive` in JSX.
+This conversion causes issues when using CSS selectors in React's CSS-in-JS styling systems because React doesn't
+recognize the kebab-case version in the style objects. A utility function was created to handle this conversion.
