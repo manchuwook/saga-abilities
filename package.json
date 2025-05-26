@@ -56,7 +56,6 @@
     "zod": "^3.25.28"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.2.4",
     "@nx/eslint": "^21.1.2",
     "@nx/js": "21.1.2",
     "@nx/react": "^21.1.2",
