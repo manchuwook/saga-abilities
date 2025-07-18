@@ -31,6 +31,7 @@ export interface NavbarNestedProps {
     headerComponent?: React.ReactNode;
     footerComponent?: React.ReactNode;
     showUserInfo?: boolean;
+    className?: string;
 }
 
 export function NavbarNested({
@@ -38,6 +39,7 @@ export function NavbarNested({
     headerComponent,
     footerComponent,
     showUserInfo = true,
+    className,
 }: NavbarNestedProps) {
     const location = useLocation();
     const { AbilityManuals } = useAbilityManuals();
@@ -85,7 +87,10 @@ export function NavbarNested({
         />
     ));
 
-    const navbarClassName = opened ? classes.navbar : `${classes.navbar} ${classes.closed}`;
+    const navbarClassName = [
+        opened ? classes.navbar : `${classes.navbar} ${classes.closed}`,
+        className
+    ].filter(Boolean).join(' ');
 
     return (
         <nav
@@ -95,7 +100,11 @@ export function NavbarNested({
             aria-label="Main Navigation"
             tabIndex={-1}
         >
-            {headerComponent && <div className={classes.header}>{headerComponent}</div>}
+            {headerComponent && (
+                <div className={classes.header}>
+                    {headerComponent}
+                </div>
+            )}
             <ScrollArea className={classes.links} scrollbarSize={6}>
                 <div className={classes.linksInner} aria-label="Navigation Menu">
                     {items}
