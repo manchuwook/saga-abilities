@@ -1,24 +1,18 @@
 import { AppShell, Group, Title, ActionIcon } from '@mantine/core';
-import { Outlet, Link, useLocation } from 'react-router-dom';
-import { ThemeCustomizer } from './components/ThemeCustomizer';
+import { Outlet, useLocation } from 'react-router-dom';
 import { ColorSchemeToggle } from './components/ColorSchemeToggle';
-import { ThemeToggle } from './components/ThemeToggle';
 import { useTheme } from './context/ThemeContext';
 import { useStyles } from './hooks/useStyles';
 import { Prefetcher } from './components/Prefetcher';
-import { useState } from 'react';
 import { useDisclosure } from '@mantine/hooks';
 import { IconMenu2 } from '@tabler/icons-react';
-import { useAbilityManuals } from './hooks/useAbilityManuals';
 import { NavbarNested } from './components/NavbarNested';
 
 export default function App() {
-  const location = useLocation();
   const { colors } = useTheme();
   const { isDark } = useStyles(); // Use the isDark from useStyles which gets it from Mantine
-  const [themeSettingsOpened, setThemeSettingsOpened] = useState(false);
   const [navbarCollapsed, { toggle: toggleNavbar }] = useDisclosure(false);
-  const { AbilityManuals } = useAbilityManuals();
+  const location = useLocation();
 
   // Generate inline styles based on theme settings
   const getComponentStyles = () => ({
@@ -78,7 +72,7 @@ export default function App() {
         />
       </AppShell.Navbar>
 
-      <AppShell.Main style={styles.main}>
+      <AppShell.Main style={styles.main} key={location.pathname}>
         {/* Invisible component that prefetches critical resources */}
         <Prefetcher />
         <Outlet />

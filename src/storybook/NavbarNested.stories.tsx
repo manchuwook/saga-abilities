@@ -10,9 +10,9 @@ import { AbilityManualsContext } from '../context/AbilityManualsContext';
 // Mock data for AbilityManuals
 const mockAbilityManualsContext = {
     AbilityManuals: [
-        { id: '1', name: 'Warrior Abilities', character: 'Warrior Character', abilities: [], createdAt: new Date(), updatedAt: new Date() },
-        { id: '2', name: 'Mage Abilities', character: 'Mage Character', abilities: [], createdAt: new Date(), updatedAt: new Date() },
-        { id: '3', name: 'Rogue Abilities', character: 'Rogue Character', abilities: [], createdAt: new Date(), updatedAt: new Date() }
+        { id: '1', name: 'Warrior Abilities', character: 'Warrior Character', description: 'Warrior abilities manual', abilities: [], createdAt: new Date(), updatedAt: new Date() },
+        { id: '2', name: 'Mage Abilities', character: 'Mage Character', description: 'Mage abilities manual', abilities: [], createdAt: new Date(), updatedAt: new Date() },
+        { id: '3', name: 'Rogue Abilities', character: 'Rogue Character', description: 'Rogue abilities manual', abilities: [], createdAt: new Date(), updatedAt: new Date() }
     ],
     addAbilityManual: () => { },
     updateAbilityManual: () => { },

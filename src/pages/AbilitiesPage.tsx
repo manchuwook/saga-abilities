@@ -5,17 +5,15 @@ import {
   Text,
   Loader,
   Center,
-  SimpleGrid,
   Group,
   useMantineColorScheme,
   Paper
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useAbilities } from '../hooks/useAbilities';
-import { AbilityCard } from '../components/AbilityCard';
 import { AbilityDetailsModal } from '../components/AbilityDetailsModal';
 import { AddToAbilityManualModal } from '../components/AddToAbilityManualModal';
-import { AbilitiesFilter } from '../components/AbilitiesFilter';
+import { AbilityGroupView } from '../components/AbilityGroupView';
 import { ExportButton } from '../components/ExportButton';
 import { Ability } from '../models/abilities.zod';
 
@@ -86,25 +84,15 @@ export default function AbilitiesPage() {
         <ExportButton abilities={filteredAbilities} label="Export Abilities" />
       </Group>
 
-      <AbilitiesFilter
-        abilities={abilities || []}
+      <AbilityGroupView
+        abilities={filteredAbilities}
+        allAbilities={abilities || []}
         onFilterChange={handleFilterChange}
-      />      <Text mt="md" mb="md" c={isDark ? 'gray.3' : 'dark.7'}>
-        {filteredAbilities.length} {filteredAbilities.length === 1 ? 'ability' : 'abilities'} found
-      </Text>
+        onViewDetails={handleViewDetails}
+        onAddToAbilityManual={handleAddToAbilityManual}
+      />
 
-      <SimpleGrid
-        cols={{ base: 1, xs: 2, md: 3, lg: 4 }}
-        spacing="md"
-        mt="xl"      >        {filteredAbilities.map((ability) => (
-          <AbilityCard
-            key={`${ability.abilityName} (${ability.abilityDiscipline})`}
-            ability={ability}
-            onViewDetails={handleViewDetails}
-            onAddToAbilityManual={handleAddToAbilityManual}
-          />
-        ))}
-      </SimpleGrid>      <AbilityDetailsModal
+      <AbilityDetailsModal
         ability={selectedAbility}
         opened={detailsModalOpened}
         onClose={closeDetailsModal}

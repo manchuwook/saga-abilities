@@ -15,7 +15,7 @@ import {
   useMantineColorScheme
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { IconEye, IconEdit, IconTrash, IconPlus } from '@tabler/icons-react';
 import { useAbilityManuals } from '../hooks/useAbilityManuals';
 import { AbilityManual } from '../context/AbilityManualsContext';
@@ -23,13 +23,13 @@ import { NewAbilityManualModal } from '../components/NewAbilityManualModal';
 import { EditAbilityManualModal } from '../components/EditAbilityManualModal';
 import { modals } from '@mantine/modals';
 import { notifications } from '@mantine/notifications';
-
+import { useNavigate } from 'react-router-dom';
 export default function AbilityManualsPage() {
   const { AbilityManuals, deleteAbilityManual } = useAbilityManuals();
-  const navigate = useNavigate();
   const [selectedAbilityManual, setSelectedAbilityManual] = useState<AbilityManual | null>(null);
   const { colorScheme } = useMantineColorScheme();
   const isDark = colorScheme === 'dark';
+  const navigate = useNavigate();
 
   const [newModalOpened, { open: openNewModal, close: closeNewModal }] = useDisclosure(false);
   const [editModalOpened, { open: openEditModal, close: closeEditModal }] = useDisclosure(false);
@@ -39,9 +39,14 @@ export default function AbilityManualsPage() {
     openEditModal();
   };
 
+  /**
+   * Navigates to the AbilityManual detail page.
+   * @param id - The id of the AbilityManual to view.
+   */
   const handleViewAbilityManual = (id: string) => {
     navigate(`/AbilityManuals/${id}`);
   };
+
   const handleDeleteAbilityManual = (AbilityManual: AbilityManual) => {
     modals.openConfirmModal({
       title: <Text c={isDark ? 'white' : 'dark.9'} fw={700}>Delete Ability Manual</Text>,
@@ -57,22 +62,6 @@ export default function AbilityManualsPage() {
         backgroundOpacity: 0.65,
         blur: 3,
         color: isDark ? 'black' : '#e6d9c2',
-      },
-      styles: {
-        header: {
-          backgroundColor: isDark ? '#1A1B1E' : 'white',
-          color: isDark ? 'white' : 'black',
-          borderBottom: isDark ? '1px solid #2C2E33' : 'inherit',
-        },
-        content: {
-          backgroundColor: isDark ? '#1A1B1E' : 'white',
-        },
-        body: {
-          backgroundColor: isDark ? '#1A1B1E' : 'white',
-        },
-        close: {
-          color: isDark ? 'white' : 'black',
-        }
       },
       onConfirm: () => {
         deleteAbilityManual(AbilityManual.id);
@@ -107,9 +96,11 @@ export default function AbilityManualsPage() {
       </Group>
 
       {AbilityManuals.length === 0 ? (
-        <Card withBorder p="xl" ta="center" bg={isDark ? 'dark.6' : 'white'}>          <Text size="lg" fw={500} mb="md" c={isDark ? 'gray.1' : 'dark.8'}>
-          You don&apos;t have any Ability Manuals yet
-        </Text><Text mb="xl" c={isDark ? 'gray.3' : 'dark.6'}>
+        <Card withBorder p="xl" ta="center" bg={isDark ? 'dark.6' : 'white'}>
+          <Text size="lg" fw={500} mb="md" c={isDark ? 'gray.1' : 'dark.8'}>
+            You don&apos;t have any Ability Manuals yet
+          </Text>
+          <Text mb="xl" c={isDark ? 'gray.3' : 'dark.6'}>
             Create your first Ability Manual to start collecting abilities for your character.
           </Text>
           <Button onClick={openNewModal} color={isDark ? 'blue.4' : 'blue.6'}>Create Ability Manual</Button>
@@ -119,7 +110,7 @@ export default function AbilityManualsPage() {
           cols={{ base: 1, sm: 2, lg: 3 }}
           spacing="md"
         >
-          {AbilityManuals.map((AbilityManual) => (
+          {AbilityManuals.map((AbilityManual: AbilityManual) => (
             <Card
               key={AbilityManual.id}
               withBorder
@@ -135,15 +126,16 @@ export default function AbilityManualsPage() {
                 <Group justify="space-between">
                   <Title order={3} c={isDark ? 'gray.1' : 'dark.8'}>{AbilityManual.name}</Title>
                   <Group gap={5}>
-                    <Tooltip label="View AbilityManual">
-                      <ActionIcon
-                        variant="subtle"
-                        color={isDark ? 'blue.4' : 'blue.6'}
-                        onClick={() => handleViewAbilityManual(AbilityManual.id)}
-                      >
-                        <IconEye size={16} />
-                      </ActionIcon>
-                    </Tooltip>
+                    <NavLink to={`/AbilityManuals/${AbilityManual.id}`} aria-label={`View ${AbilityManual.name}`}>
+                      <Tooltip label="View AbilityManual">
+                        <ActionIcon
+                          variant="subtle"
+                          color={isDark ? 'blue.4' : 'blue.6'}
+                        >
+                          <IconEye size={16} />
+                        </ActionIcon>
+                      </Tooltip>
+                    </NavLink>
                     <Tooltip label="Edit Ability Manual">
                       <ActionIcon
                         variant="subtle"

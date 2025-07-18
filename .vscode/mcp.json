@@ -3,30 +3,57 @@
     "nx-mcp": {
       "type": "stdio",
       "command": "npx",
-      "args": ["nx-mcp@latest", "/path/to/your/workspace"]
+      "args": [
+        "nx-mcp@latest",
+        "/path/to/your/workspace"
+      ]
     },
     "my-development-projects": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "X:\\dev\\"]
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "X:\\dev\\"
+      ]
     },
     "cloudflare-observability": {
       "command": "npx",
-      "args": ["mcp-remote", "https://observability.mcp.cloudflare.com/sse"]
+      "args": [
+        "mcp-remote",
+        "https://observability.mcp.cloudflare.com/sse"
+      ]
     },
     "cloudflare-analytics": {
       "command": "npx",
-      "args": ["mcp-remote", "https://dns-analytics.mcp.cloudflare.com/sse"]
+      "args": [
+        "mcp-remote",
+        "https://dns-analytics.mcp.cloudflare.com/sse"
+      ]
     },
     "cloudflare-docs": {
       "command": "npx",
-      "args": ["mcp-remote", "https://docs.mcp.cloudflare.com/sse"]
+      "args": [
+        "mcp-remote",
+        "https://docs.mcp.cloudflare.com/sse"
+      ]
     },
     "mantine": {
       "command": "npx",
-      "args": ["@hakxel/mantine-ui-server"],
+      "args": [
+        "@hakxel/mantine-ui-server"
+      ],
       "env": {
         "MANTINE_VERSION": "7.17.7" // Optional: specify version
       }
+    },
+    "MongoDB": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mongodb-mcp-server",
+        "--connectionString",
+        "mongodb://admin:0Sugar+0Calories@localhost:27017",
+      ]
     }
   }
 }

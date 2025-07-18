@@ -23,6 +23,7 @@ import { AbilityManualExportButton } from '../components/AbilityManualExportButt
 import { Ability } from '../models/abilities.zod';
 import { useAbilities } from '../hooks/useAbilities';
 import { AbilitiesFilter } from '../components/AbilitiesFilter';
+import { AbilityGroupView } from '../components/AbilityGroupView';
 import { modals } from '@mantine/modals';
 import { notifications } from '@mantine/notifications';
 import { useStyles } from '../hooks/useStyles';
@@ -167,18 +168,14 @@ export default function AbilityManualDetailPage() {
                   Go to the &quot;Add Abilities&quot; tab to start adding abilities to this Ability Manual.
                 </Text>
                 <Button onClick={() => setActiveTab('add-abilities')} color={isDark ? 'blue.4' : 'blue.6'}>Add Abilities</Button>
-              </Card>) : (<SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
-                {[...AbilityManual.abilities]
-                  .sort((a, b) => a.abilityName.localeCompare(b.abilityName)).map((ability) => (
-                    <AbilityCardWide
-                      key={`${ability.abilityName} (${ability.abilityDiscipline})`}
-                      ability={ability}
-                      onViewDetails={handleViewDetails}
-                      onRemoveFromAbilityManual={handleRemoveAbility}
-                      showRemoveButton
-                    />
-                  ))}
-              </SimpleGrid>
+              </Card>
+            ) : (
+              <AbilityGroupView
+                abilities={AbilityManual.abilities}
+                onViewDetails={handleViewDetails}
+                onRemoveFromAbilityManual={handleRemoveAbility}
+                showRemoveButton
+              />
             )
           },
           {
