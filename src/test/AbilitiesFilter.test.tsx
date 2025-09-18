@@ -1,20 +1,21 @@
 import { describe, it, vi, expect, beforeEach } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { AbilitiesFilter } from '../components/AbilitiesFilter';
-import { Spell } from '../models/abilities.zod';
+import { Ability } from '../models/abilities.zod';
 import { MantineProvider } from '@mantine/core';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import '@testing-library/jest-dom';
 
 // Mock required components and hooks
-vi.mock('../hooks/useSpellTags', () => ({
-  useSpellTags: () => ({
+vi.mock('../hooks/useAbilityTags', () => ({
+  useAbilityTags: () => ({
     data: {
       tags: [
-        { tag: 'offensive', name: 'Offensive', matches: ['spell1'] },
-        { tag: 'defensive', name: 'Defensive', matches: ['spell2'] },
-        { tag: 'fire', name: 'Fire', matches: ['spell1'] },
-        { tag: 'water', name: 'Water', matches: ['spell3'] },
-        { tag: 'healing', name: 'Healing', matches: ['spell4'] }
+        { tag: 'offensive', name: 'Offensive', abilities: ['spell1'] },
+        { tag: 'defensive', name: 'Defensive', abilities: ['spell2'] },
+        { tag: 'fire', name: 'Fire', abilities: ['spell1'] },
+        { tag: 'water', name: 'Water', abilities: ['spell3'] },
+        { tag: 'healing', name: 'Healing', abilities: ['spell4'] }
       ]
     },
     isLoading: false
@@ -33,50 +34,40 @@ vi.mock('../context/ThemeContext', () => ({
 }));
 
 const renderWithProviders = (ui: React.ReactElement) => {
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: false,
+      },
+    },
+  });
+
   return render(
-    <MantineProvider defaultColorScheme="light">
-      {ui}
-    </MantineProvider>
+    <QueryClientProvider client={queryClient}>
+      <MantineProvider defaultColorScheme="light">
+        {ui}
+      </MantineProvider>
+    </QueryClientProvider>
   );
 };
 
 describe('AbilitiesFilter', () => {
-  const mockAbilities: Spell[] = [
+  const mockAbilities: Ability[] = [
     {
-      spellName: 'Fireball',
-      spellClass: 'Wizard',
-      school: 'Evocation',
-      complexity: 3,
-      description: 'A ball of fire',
-      keywords: 'offensive, fire, damage',
-      range: '120 feet',
-      duration: 'Instantaneous',
-      action: '1 action',
-      target: 'Area',
-      check: 'None',
-      flare: 2,
-      focus: 'Arcane',
-      skill: 'None',
-      spellType: 'Offensive',
-      altDescription: null
+      abilityName: 'Fireball',
+      abilityCp: 3,
+      abilityDiscipline: 'Elementalism',
+      abilityLevel: 'Intermediate',
+      abilityType: 'Offensive',
+      abilityDescription: 'A ball of fire that deals damage to enemies'
     },
     {
-      spellName: 'Healing Word',
-      spellClass: 'Cleric',
-      school: 'Healing',
-      complexity: 2,
-      description: 'A healing spell',
-      keywords: 'healing, restoration',
-      range: '60 feet',
-      duration: 'Instantaneous',
-      action: '1 bonus action',
-      target: 'Single creature',
-      check: 'None',
-      flare: 1,
-      focus: 'Divine',
-      skill: 'None',
-      spellType: 'Healing',
-      altDescription: null
+      abilityName: 'Healing Touch',
+      abilityCp: 2,
+      abilityDiscipline: 'Animism',
+      abilityLevel: 'Basic',
+      abilityType: 'Healing',
+      abilityDescription: 'A healing ability that restores health'
     }
   ];
 

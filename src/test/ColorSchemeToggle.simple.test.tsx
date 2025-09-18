@@ -36,8 +36,8 @@ describe('ColorSchemeToggle', () => {
   it('renders correctly in light mode', () => {
     render(<ColorSchemeToggle />);
 
-    // Check that the toggle button exists
-    const toggleButton = screen.getByRole('button', { name: /toggle color scheme/i });
+    // Check that the toggle button exists - use the actual aria-label
+    const toggleButton = screen.getByRole('button', { name: /dark mode/i });
     expect(toggleButton).toBeInTheDocument();
 
     // In light mode, it should show the moon icon
@@ -47,7 +47,7 @@ describe('ColorSchemeToggle', () => {
   it('calls toggleColorScheme when clicked', () => {
     render(<ColorSchemeToggle />);
 
-    const toggleButton = screen.getByRole('button', { name: /toggle color scheme/i });
+    const toggleButton = screen.getByRole('button', { name: /dark mode/i });
     fireEvent.click(toggleButton);
 
     expect(mockToggleColorScheme).toHaveBeenCalledTimes(1);

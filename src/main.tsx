@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { MantineProvider, ColorSchemeScript, localStorageColorSchemeManager } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
@@ -13,7 +12,16 @@ import '@mantine/notifications/styles.css';
 import '@mantine/dates/styles.css';
 
 // Create a client
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      refetchOnReconnect: false,
+      retry: 1,
+      staleTime: 5 * 60 * 1000, // 5 minutes
+    },
+  },
+});
 
 // Create a color scheme manager
 const colorSchemeManager = localStorageColorSchemeManager({ key: 'saga-abilities-color-scheme' });

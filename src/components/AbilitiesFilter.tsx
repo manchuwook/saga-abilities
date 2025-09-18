@@ -1,5 +1,6 @@
 // filepath: x:\dev\saga-abilities\src\components\AbilitiesFilter.tsx
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useCallback } from 'react';
+import { useDebouncedValue } from '@mantine/hooks';
 import {
   TextInput,
   MultiSelect,
@@ -23,6 +24,7 @@ interface AbilitiesFilterProps {
 
 export function AbilitiesFilter({ abilities, onFilterChange }: AbilitiesFilterProps) {
   const [searchText, setSearchText] = useState('');
+  const [debouncedSearchText] = useDebouncedValue(searchText, 300);
   const [selectedDisciplines, setSelectedDisciplines] = useState<string[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [complexityRange, setComplexityRange] = useState<[number, number]>([0, 10]);
@@ -61,10 +63,10 @@ export function AbilitiesFilter({ abilities, onFilterChange }: AbilitiesFilterPr
     }
 
     const filtered = abilities.filter(Ability => {
-      // Text search
-      const textMatch = searchText === '' ||
-        Ability.abilityName?.toLowerCase().includes(searchText.toLowerCase()) ||
-        Ability.abilityDescription?.toLowerCase().includes(searchText.toLowerCase());
+      // Text search with debounced value
+      const textMatch = debouncedSearchText === '' ||
+        Ability.abilityName?.toLowerCase().includes(debouncedSearchText.toLowerCase()) ||
+        Ability.abilityDescription?.toLowerCase().includes(debouncedSearchText.toLowerCase());
 
       // Discipline filter
       const disciplineMatch = selectedDisciplines.length === 0 ||
@@ -91,7 +93,7 @@ export function AbilitiesFilter({ abilities, onFilterChange }: AbilitiesFilterPr
 
       return textMatch && disciplineMatch && tagMatch && cpMatch && levelMatch;
     }); onFilterChange(filtered);
-  }, [searchText, selectedDisciplines, complexityRange, selectedTags, selectedCpCost, selectedLevel, AbilityTagsData, abilities, onFilterChange]);
+  }, [debouncedSearchText, selectedDisciplines, complexityRange, selectedTags, selectedCpCost, selectedLevel, AbilityTagsData, abilities, onFilterChange]);
   const resetFilters = () => {
     setSearchText('');
     setSelectedDisciplines([]);

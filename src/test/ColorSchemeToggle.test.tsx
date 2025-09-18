@@ -12,14 +12,15 @@ vi.mock('@mantine/core', async () => {
       colorScheme: 'light',
       toggleColorScheme: mockToggleColorScheme,
     }),
-    Tooltip: ({ children, label }: { children: React.ReactNode, label: string }) =>
-      <div role="tooltip">{label} {children}</div>, ActionIcon: ({ onClick, children, 'aria-label': ariaLabel }: {
-        onClick?: () => void;
-        children: React.ReactNode;
-        'aria-label'?: string
-      }) => (
-        <button onClick={onClick} aria-label={ariaLabel}>{children}</button>
-      ),
+    ActionIcon: ({ onClick, children, 'aria-label': ariaLabel, title, ...props }: {
+      onClick?: () => void;
+      children: React.ReactNode;
+      'aria-label'?: string;
+      title?: string;
+      [key: string]: any;
+    }) => (
+      <button onClick={onClick} aria-label={ariaLabel} title={title} {...props}>{children}</button>
+    ),
   };
 });
 
@@ -35,19 +36,18 @@ describe('ColorSchemeToggle', () => {
   it('renders correctly in light mode', () => {
     render(<ColorSchemeToggle />);
 
-    // Check that the toggle button exists
-    const toggleButton = screen.getByRole('button', { name: /toggle color scheme/i });
+    // Check that the toggle button exists - use the actual aria-label
+    const toggleButton = screen.getByRole('button', { name: /dark mode/i });
     expect(toggleButton).toBeInTheDocument();
     // In light mode, it should show the moon icon
     expect(toggleButton.textContent).toBe('Moon Icon');
-    // Check tooltip content
-    const tooltip = screen.getByRole('tooltip');
-    expect(tooltip.textContent).toContain('Dark mode');
+    // Check title attribute for tooltip functionality
+    expect(toggleButton).toHaveAttribute('title', 'Dark mode');
   });
   it('calls toggleColorScheme when clicked', () => {
     render(<ColorSchemeToggle />);
 
-    const toggleButton = screen.getByRole('button', { name: /toggle color scheme/i });
+    const toggleButton = screen.getByRole('button', { name: /dark mode/i });
     fireEvent.click(toggleButton);
 
     expect(mockToggleColorScheme).toHaveBeenCalledTimes(1);

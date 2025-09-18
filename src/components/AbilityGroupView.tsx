@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import {
     Paper,
     Text,
@@ -46,20 +46,15 @@ export function AbilityGroupView({
     showRemoveButton = false
 }: AbilityGroupViewProps) {
     const [groupingType, setGroupingType] = useState<GroupingType>('discipline');
-    const [displayAbilities, setDisplayAbilities] = useState<Ability[]>(abilities);
+
+    // Memoize displayed abilities to prevent unnecessary re-renders
+    const displayAbilities = useMemo(() => abilities, [abilities]);
+
     const { colorScheme } = useMantineColorScheme();
     const isDark = colorScheme === 'dark';
 
-    // Update displayed abilities when the input abilities change
-    useEffect(() => {
-        if (abilities.length !== displayAbilities.length) {
-            setDisplayAbilities(abilities);
-        }
-    }, [abilities, displayAbilities]);
-
     // Handle filter changes
     const handleFilterChange = (filtered: Ability[]) => {
-        setDisplayAbilities(filtered);
         if (onFilterChange) {
             onFilterChange(filtered);
         }
